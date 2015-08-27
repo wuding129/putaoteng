@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <!--移动设备浏览器会将页面宽度设为屏幕宽度，并根据initial-scale=1禁用缩放-->
     <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;}
+        .main{
+            width: 366px;
+            margin: 0 auto;
+            padding-left: 4px;
+        }
+        .box{
+            width: 116px;
+            height: 116px;
+            background-color: #e8830d;
+            border: 1px solid #f6cd98;
+            float: left;
+            margin-right: 4px;
+            margin-bottom: 3px;
+            border-radius: 15px;
+            /*兼容早期Firefox和Safari等，同时兼容ie6-8*/
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            position: relative;z-index: 2;
+            behavior: url(iecss3.htc);
+        }
+        .clearfloat{
+            clear: both;
+        }
+    </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="clearfloat"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="clearfloat"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 </body>
 </html>
