@@ -7,7 +7,6 @@
         body,p,ul,li{
             margin: 0;
             padding: 0;
-            font-size: 16px;
         }
         ul{
             list-style: none;
@@ -29,16 +28,16 @@
         .main{
             margin: 0 auto;
             /*width: 640px;*/
-            color: #ffffff;font-size: 1.5em;
-            /*24/16*/
+            color: #ffffff;
             font-family: '微软雅黑', serif;
         }
         p{
             width: 70.3125%;
-            padding: 19.0625% 15.625% 27.96875% 15.625%;
-            font-size: 1.25em;
+            margin: 18.90625% auto 28.125%;
+            font-size: 30px;
             /*30/24*/
             line-height: 53px;
+            /*53px;*/
         }
         .back{
             width: 55px;
@@ -52,17 +51,42 @@
             /*padding-right: 9.84375%;*/
             display: block;
         }
+        .footer{
+            width: 64.375%;
+            margin: 0 17.8125%;
+
+        }
         ul{
-            float: left;
-            text-align: center;
-            width: 18.4375%;
+            display: inline-block;
+            /*margin: 0 auto;*/
         }
         li{
-            padding-bottom: 22px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
         }
         .people{
-            padding-left: 19.0625%;
-            padding-right: 27.34375%;
+            /*margin-right: 38.10679611650485%;*/
+            /*/!*175px-17px=157*!/*/
+            float: left;
+        }
+        .logo{
+            float: right;
+        }
+        img{
+            max-width: 100%;
+        }
+        li img{
+            padding: 0 14.40677966101695% 22px;
+        }
+        @media screen and (max-width: 699px){/* 可视区域小于 699px, 设置更小font-size属性 */
+            p{
+                font-size:1.1875em;
+                line-height: 40px;
+            }
+            li{
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -78,14 +102,16 @@
             <img src="images/back.png" class="back" alt=""/>
             <img src="images/mainlogo.png" class="mainlogo" alt=""/>
             <p>葡萄藤轻游戏专注于桌游领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，以下线下聚会桌游道具。</p>
-            <ul class="people">
-                <li><img src="images/people1.png" alt=""/></li>
-                <li>290560933</li>
-            </ul>
-            <ul class="logo">
-                <li><img src="images/logo.png" alt=""/></li>
-                <li>BJPTTeng</li>
-            </ul>
+            <div class="footer">
+                <ul class="people">
+                    <li><img src="images/people1.png" alt=""/></li>
+                    <li>290560933</li>
+                </ul>
+                <ul class="logo">
+                    <li><img src="images/logo.png" alt=""/></li>
+                    <li>BJPTTeng</li>
+                </ul>
+            </div>
         </div>
     <!--</div>-->
 </body>
