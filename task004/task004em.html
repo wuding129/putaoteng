@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0">
+    <title>结果页</title>
+	<script type="text/javascript">
+                var jsVer = 22;
+                var phoneWidth = parseInt(window.screen.width);
+                var phoneScale = phoneWidth/640;
+
+                var ua = navigator.userAgent;
+                if (/Android (\d+\.\d+)/.test(ua)){
+                        var version = parseFloat(RegExp.$1);
+                        // andriod 2.3
+                        if(version>2.3){
+                                document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                        // andriod 2.3以上
+                        }else{
+                                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+                        }
+                        // 其他系统
+                } else {
+                        document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+                }
+        </script>
+    <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,dl{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: 0;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .box{
+            margin: 0 auto;
+            width: 40em;/*640px*/
+            color: #ffffff;
+            font-family: "微软雅黑",宋体,sans-serif;
+        }
+        .header{
+            width: 40em;
+            /*height: 64px;*/
+            background-color: #29bde0;
+            /*padding: 16px 20px 0;*/
+            /*line-height: 64px;*/
+            text-align: center;
+            position: relative;
+        }
+        .header span{
+            font-weight: normal;
+            font-size: 2.125em;
+            line-height: 4em;
+            /*text-align: center;*/
+        }
+        .header .home{
+            position: absolute;
+            left: 1.25em;
+            top: .625em;
+            /*float: left;*/
+        }
+        .header .help{
+            position: absolute;
+            right: 1.25em;
+            top: .625em;
+            /*float: right;*/
+        }
+        .main{
+            font-size: 1.625em;/*26px*/
+
+        }
+        .result{
+            /*height: 360px;/!*高度自适应，此处临时设置*!/*/
+            padding: 0.9615384615384615em 2.769230769230769em 0;/*25px 72px 0;*/
+            background-color: #29bde0;
+            font-size: 1.269230769230769em;/*33px*/
+        }
+        .head{
+            margin: 0 auto 0.6060606060606061em;
+            height: 6.212121212121212em;
+            width: 10.63636363636364em;
+            position:relative ;
+        }
+        .head img{
+            position: absolute;
+            z-index: 1;
+        }
+        .head h2{
+            width: 7.3125em;
+            position: absolute;
+            bottom: 0.3333333333333333em;
+            /*padding-top: 120px;
+            padding-bottom: 40px;*/
+            font-weight: bold;
+            text-align: center;
+            /*width: 352px;
+            height: 205px;*/
+            font-size: 1.454545454545455em;
+            /*line-height: 51px;*/
+            /*background: url('images/win.png') no-repeat center;*/
+            z-index: 10;
+        }
+        .result p{
+            font-weight: bold;
+            color: #ffc865;
+            padding-bottom: 1.575757575757576em;
+        }
+        .detail{
+            background-color: #29bde0;
+            /*height: 240px;/!*高度自适应，此处临时设置*!/*/
+            padding: 0 2.769230769230769em 0.3846153846153846em;
+        }
+        .detail p{
+            padding-bottom: 0.3846153846153846em;
+        }
+        .day{
+            /*height: 165px;*/
+            border-bottom: 0.0384615384615385em solid #dddddd;
+            border-top: 0.0384615384615385em solid #dddddd;
+            padding: 0.7307692307692308em 2.769230769230769em 0.8846153846153846em;
+
+        }
+        .day h3,.day h5{
+            font-weight:normal;
+            display: inline-block;
+        }
+        .day h3{
+            color: #515151;
+            font-size: 1.153846153846154em;
+            float: left;
+        }
+        .day h5{
+            padding-top: 0.5384615384615385em;
+            color: #d5d5d5;
+            font-size: 0.7692307692307692em;
+            float: right;
+        }
+        .day p{
+            padding-top: 0.5em;
+            color: #a6a6a6;
+            clear: both;
+        }
+        .footer{
+            width: 37.5rem;
+            position: fixed;
+            z-index: 20;
+            /*position: absolute;*/
+            bottom: 0;
+            padding: 1.375rem 1.25rem;
+            background-color:rgba(41,189,224,0.48);
+            /*#29bde0;*/
+
+            /*filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+            -khtml-opacity: 0.5;
+            opacity: 0.5;*/
+
+        }
+        .footer a{
+            display: inline-block;
+            height: 5.375rem;
+            width: 17.25rem;
+            font-size: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 2.15em;
+        }
+        .footer .again{
+            background-color: #f66f6f;
+            /*rgba(246,111,111,0.5);*/
+            float: left;
+        }
+        .footer .share{
+            background-color: #fbb435;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <a href="#"><img class="home" src="images/home.png" alt="home"/></a>
+            <span>游戏结果</span>
+            <a href="#"><img class="help" src="images/help.png" alt="help"/></a>
+        </div>
+        <div class="main">
+            <div class="result">
+                <div class="head">
+                    <img src="images/win.png" alt="win"/>
+                    <h2>卧底胜利</h2>
+                </div>
+                <p>
+                    太棒了!你知道么？在捉鬼游戏中 只有20%的卧底取得游戏最终的 胜利哦！
+                </p>
+            </div>
+            <div class="detail">
+
+                <p>本次游戏共计用时0小时25分钟</p>
+                <p>
+                    <span>杀&nbsp;&nbsp;&nbsp;&nbsp;手0人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>警&nbsp;&nbsp;&nbsp;&nbsp;察1人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>平&nbsp;&nbsp;&nbsp;&nbsp;民6人</span><br/>
+                    <span>狙击手0人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>医&nbsp;&nbsp;&nbsp;&nbsp;生1人</span>
+                </p>
+                <p>卧底词汇：爱新觉罗</p>
+                <p>水民词汇：努尔哈赤</p>
+
+            </div>
+            <div class="game">
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="#" class="again">再来一局</a>
+            <a href="#" class="share">上传并分享</a>
+        </div>
+    </div>
+</body>
+</html>
