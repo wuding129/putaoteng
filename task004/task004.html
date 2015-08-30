@@ -1,71 +1,220 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <title>结果页</title>
-</head>
-<style>
-    body,h1,h2,h3,p,ul,input{
-        padding: 0;
-        margin: 0;
-    }
-    li{
-        list-style: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    img{
-        border: none;vertical-align: middle;
-    }
+    <style>
+        body,p,h1,h2,h3,h4,h5,h6,ul,dl{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: 0;
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        body{
+            position: relative;/*底部定位*/
+        }
+        .box{
+            /*height: 1300px;/!*高度自适应，此处临时设置*!/*/
+            margin: 0 auto;
+            width: 640px;
+            color: #ffffff;
+            font-family: "微软雅黑",宋体,sans-serif;
+        }
+        .header{
+            width: 640px;
+            /*height: 64px;*/
+            background-color: #29bde0;
+            /*padding: 16px 20px 0;*/
+            /*line-height: 64px;*/
+            text-align: center;
+            position: relative;
+        }
+        .header span{
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 64px;
+            /*text-align: center;*/
+        }
+        .header .home{
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            /*float: left;*/
+        }
+        .header .help{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            /*float: right;*/
+        }
+        .main{
+            font-size: 26px;
 
-</style>
+        }
+        .result{
+            /*height: 360px;/!*高度自适应，此处临时设置*!/*/
+            padding: 25px 72px 0;
+            background-color: #29bde0;
+            font-size: 33px;
+        }
+        .head{
+            margin: 0 auto 20px;
+            height: 205px;
+            width: 351px;
+            position:relative ;
+        }
+        .head img{
+            position: absolute;
+            z-index: 1;
+        }
+        .head h2{
+            width: 351px;
+            position: absolute;
+            bottom: 11px;
+            /*padding-top: 120px;
+            padding-bottom: 40px;*/
+            font-weight: bold;
+            text-align: center;
+            /*width: 352px;
+            height: 205px;*/
+            font-size: 48px;
+            /*line-height: 51px;*/
+            /*background: url('images/win.png') no-repeat center;*/
+            z-index: 10;
+        }
+        .result p{
+            font-weight: bold;
+            color: #ffc865;
+            padding-bottom: 52px;
+        }
+        .detail{
+            background-color: #29bde0;
+            /*height: 240px;/!*高度自适应，此处临时设置*!/*/
+            padding: 0 72px 10px;
+        }
+        .detail p{
+            padding-bottom: 10px;
+        }
+        .day{
+            /*height: 165px;*/
+            border-bottom: 1px solid #dddddd;
+            border-top: 1px solid #dddddd;
+            padding: 19px 72px 23px;
+
+        }
+        .day h3,.day h5{
+            font-weight:normal;
+            display: inline-block;
+        }
+        .day h3{
+            color: #515151;
+            font-size: 30px;
+            float: left;
+        }
+        .day h5{
+            padding-top: 14px;
+            color: #d5d5d5;
+            font-size: 20px;
+            float: right;
+        }
+        .day p{
+            padding-top: 13px;
+            color: #a6a6a6;
+            clear: both;
+        }
+        .footer{
+            width: 600px;
+            position: fixed;
+            /*position: absolute;*/
+            bottom: 0;
+            padding: 22px 20px;
+            background-color:rgba(41,189,224,0.48);
+            /*#29bde0;*/
+
+            /*filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+            -khtml-opacity: 0.5;
+            opacity: 0.5;*/
+
+        }
+        .footer a{
+            display: inline-block;
+            height: 86px;
+            width: 276px;
+            font-size: 40px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 86px;
+        }
+        .footer .again{
+            background-color: #f66f6f;
+            /*rgba(246,111,111,0.5);*/
+            float: left;
+        }
+        .footer .share{
+            background-color: #fbb435;
+            float: right;
+        }
+    </style>
+</head>
 <body>
-    <div class="wrapper">
-        <div class="top">
-            <img src="imges/home.png" alt="home"/>
-            <h1>游戏结果</h1>
-            <img src="imges/help.png" alt="help"/>
+    <div class="box">
+        <div class="header">
+            <a href="#"><img class="home" src="images/home.png" alt="home"/></a>
+            <span>游戏结果</span>
+            <a href="#"><img class="help" src="images/help.png" alt="help"/></a>
         </div>
-        <div class="center">
+        <div class="main">
             <div class="result">
-                <img src="imges/win.png" alt="win"/>
+                <div class="head">
+                    <img src="images/win.png" alt="win"/>
+                    <h2>卧底胜利</h2>
+                </div>
                 <p>
                     太棒了!你知道么？在捉鬼游戏中 只有20%的卧底取得游戏最终的 胜利哦！
                 </p>
-                <p>
-                    本次游戏共计用时0小时25分钟 <br/>
-                    杀   手0人     警   察1人  平   民6人 <br/>
-                    狙击手0人   医   生1人 <br/>
-                    卧底词汇：爱新觉罗 <br/>
-                    水民词汇：努尔哈赤
+            </div>
+            <div class="detail">
 
-                </p>
-            </div>
-            <div class="day1">
-                <h2>第一天</h2><span>0小时07分</span>
+                <p>本次游戏共计用时0小时25分钟</p>
                 <p>
-                    晚上：5号被杀手杀死，5号是水民 <br/>
-                    白天：8号被全民投票投死，8号是杀手
+                    <span>杀&nbsp;&nbsp;&nbsp;&nbsp;手0人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>警&nbsp;&nbsp;&nbsp;&nbsp;察1人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>平&nbsp;&nbsp;&nbsp;&nbsp;民6人</span><br/>
+                    <span>狙击手0人</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>医&nbsp;&nbsp;&nbsp;&nbsp;生1人</span>
                 </p>
+                <p>卧底词汇：爱新觉罗</p>
+                <p>水民词汇：努尔哈赤</p>
+
             </div>
-            <div class="day2">
-                <h2>第二天</h2><span>0小时07分</span>
-                <p>
-                    晚上：5号被杀手杀死，5号是水民 <br/>
-                    白天：8号被全民投票投死，8号是杀手
-                </p>
-            </div>
-            <div class="day3">
-                <h2>第三天</h2><span>0小时07分</span>
-                <p>
-                    晚上：5号被杀手杀死，5号是水民 <br/>
-                    白天：8号被全民投票投死，8号是杀手
-                </p>
+            <div class="game">
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
+                <div class="day">
+                    <h3>第一天</h3>
+                    <h5>0小时07分</h5>
+                    <p>晚上：5号被杀手杀死，5号是水民</p>
+                    <p>白天：8号被全民投票投死，8号是杀手</p>
+                </div>
             </div>
         </div>
         <div class="footer">
-            <a href="#">再来一局</a><a href="#">上传并分享</a>
+            <a href="#" class="again">再来一局</a>
+            <a href="#" class="share">上传并分享</a>
         </div>
     </div>
 </body>
