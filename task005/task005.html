@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0">
     <title></title>
     <script>
+        /*--开始自适应--*/
+        var jsVer = 22;
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth/640;
+
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            // andriod 2.3
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                // andriod 2.3以上
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+            // 其他系统
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+        /*--结束自适应--*/
         var timer=null;
         var oMain=document.getElementById('bMain');
 
@@ -135,7 +155,7 @@
             display: inline-block;
             /*line-height: 40px;*/
             /*height: 40px;*/
-            width: 274px;
+            width: 270px;
             /*width: 302px;*/
             padding-left: 28px;
             font-size: 30px;
