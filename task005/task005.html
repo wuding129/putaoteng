@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var timer=null;
+        var oMain=document.getElementById('bMain');
+
+        function startMove(iMenu,iMain,iTop)
+        {
+            var oMenu=document.getElementById('bMenu');
+            var oMain=document.getElementById('bMain');
+            clearInterval(timer);
+            timer=setInterval(function (){
+                var speed=0;
+                var topspeed=0;
+                if(oMenu.offsetLeft<iMenu)
+                {
+                    speed=25;
+                }
+                else
+                {
+                    speed=-25;
+                }
+                if(Math.abs(iMenu-oMenu.offsetLeft)<=25)
+                {
+                    clearInterval(timer);
+
+                    oMenu.style.left=iMenu+'px';
+                }
+                else
+                {
+                    oMenu.style.left=oMenu.offsetLeft+speed+'px';
+                }
+               /*--end menu--*/
+               /*--start main--*/
+                if(oMain.offsetLeft<iMain)
+                {
+                    speed=25;
+                }
+                else
+                {
+                    speed=-25;
+                }
+
+                if(Math.abs(iMain-oMain.offsetLeft)<=25)
+                {
+                    clearInterval(timer);
+
+                    oMain.style.left=iMain+'px';
+                }
+                else
+                {
+                    oMain.style.left=oMain.offsetLeft+speed+'px';
+                }
+
+                /*--start top--*/
+                if(oMain.offsetTop<iTop)
+                {
+                    topspeed=3;
+                }
+                else if(oMain.offsetTop>=iTop)
+                {
+                    topspeed=-3;
+                }
+                if(Math.abs(iTop-oMain.offsetTop)<=0)
+                {
+                    clearInterval(timer);
+
+                    oMain.style.top=iTop+'px';
+                }
+                else
+                {
+                    oMain.style.top=oMain.offsetTop+topspeed+'px';
+                }
+            }, 30);
+            clickDisplay();
+        }
+        function clickDisplay(){
+            var oDiv=document.getElementById('div1');
+
+            if(oDiv.style.display=='block')
+            {
+                oDiv.style.display='none';
+            }
+            else
+            {
+                oDiv.style.display='block';
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;padding:0;
+            font-family:"微软雅黑", 宋体, sans-serif;
+        }
+        img{
+            border: 0;vertical-align: middle
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        ul{
+            list-style: none;
+        }
+        .container{
+            margin: 0 auto;
+            width: 640px;
+            /*overflow: hidden;*/
+            position: relative;
+
+            background-color: #29bde0;
+        }
+        .boxMenu{
+            width: 440px;
+            display: inline-block;
+            height: 100%;
+            /*margin-left: -75.1%;*/
+            position: absolute;
+            background-color: #ffffff;
+            left: -440px;
+            margin-top: 80px;
+            z-index: 10;
+        }
+        .boxMenu a{
+            display: block;
+            color: #29bde0;
+            height: 40px;
+            padding: 17px 45px 17px 30px;
+            border-bottom: 1px solid #d6d6d6;
+        }
+        .boxMenu a span{
+            display: inline-block;
+            /*line-height: 40px;*/
+            /*height: 40px;*/
+            width: 274px;
+            /*width: 302px;*/
+            padding-left: 28px;
+            font-size: 30px;
+        }
+        .boxMenu li .icon{
+            float: left;
+        }
+        .boxMenu li .comeinblue{
+            float: right;
+        }
+        .boxMain{
+            width: 640px;
+            position: relative;
+            left: 0;
+            /*left: 76%;*/
+            top: 0;
+            z-index: 5;
+        }
+        .header{
+            height: 80px;
+            background-color: #29bde0;
+            line-height: 80px;
+        }
+        .game{
+            padding: 25px 36px 60px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        .lastGame{
+            width: 566px;/*566px*/
+            height: 115px;
+            border: 1px solid #cecece;
+            line-height: 115px;
+            background:url("images/comeinwhite.png")  no-repeat 95.40636042402827%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .lastGame h3{
+            color: #9a9a9a;font-size: 35px;
+            font-weight: normal;
+        }
+        .nowGame{
+            border: 1px solid #cecece;
+            text-align: center;
+            padding-bottom: 8px;
+
+        }
+        .nowGame h3{
+            height: 90px;
+            color: #fbb435;
+            line-height: 90px;
+            font-size: 38px;
+            font-weight: normal;
+            border-bottom: 1px solid #fdd793;
+        }
+        .nowGame .detail{
+            border-top: 1px solid #fde1ae;
+            /*background: url("images/next.png") no-repeat 98.76325088339223%;*/
+            padding-top: 30px;
+            /*position: relative;*/
+        }
+        .lastGame,.nowGame{
+            background-color: #ffffff;
+        }
+        .lastGame,.nowGame,.nowGame .mode a{
+            border-radius: 10px;
+        }
+        /*.nowGame .detail .next{
+            position: relative;
+            right: 8px;
+        }*/
+        .nowGame .mode .modeButton{
+            margin: 0 auto;
+            display: inline-block;
+            height: 134px;
+            width: 81.80212014134276%;/*463/566*/
+            background-color: #69d1e9;
+            line-height: 134px;
+            font-size: 32px;
+        }
+        .nowGame .mode p{
+            height: 77px;
+            line-height: 77px;
+            color: #9a9a9a;
+            font-size: 24px;
+        }
+        .nowGame .nextBox{
+            position: relative;
+        }
+        .next{
+            position: absolute;
+            right: 8px;
+            line-height: 134px;
+            display: inline-block;
+        }
+        #div1{
+            z-index:1000;
+            width: 190px;
+            height: 100%;
+            position: absolute;
+            display: none;
+            /*visibility: hidden;*/
+            right: 0;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="div1" onclick="startMove(-450,0,0)"></div>
+        <div class="boxMenu" id="bMenu">
+            <!--<div class="header">
+            </div>-->
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/publish.png" class="icon" alt="publish"/>
+                        <span>公告</span>
+                        <img src="images/comeinblue.png" class="comeinblue" alt="comeinblue"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/setting.png" class="icon" alt="publish"/>
+                        <span>设置</span>
+                        <img src="images/comeinblue.png" class="comeinblue" alt="comeinblue"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/help.png" class="icon" alt="publish"/>
+                        <span>帮助</span>
+                        <img src="images/comeinblue.png" class="comeinblue" alt="comeinblue"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/about.png" class="icon" alt="publish"/>
+                        <span>关于</span>
+                        <img src="images/comeinblue.png" class="comeinblue" alt="comeinblue"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="boxMain" id="bMain">
+            <div class="header">
+                <img src="images/menu.png" id="menu" alt="menu" onclick="startMove(0,450,80)"/>
+                <!--<input type="button" style="width:50px;" onclick="startMove(-450,0,0)"/>-->
+
+            </div>
+            <div class="game">
+                <div class="lastGame">
+                    <a href="#"><h3>上次游戏：捉鬼猜词版</h3></a>
+                    
+                </div>
+                <div class="nowGame">
+                    <h3>捉鬼游戏</h3>
+                    <div class="detail">
+                        <div class="mode">
+                            <a href="javascript:" class="modeButton">简化版</a>
+                            <p>有1133个用户正在玩此款游戏</p>
+                        </div>
+                        <div class="mode">
+                            <div class="nextBox">
+                                <a href="javascript:" class="modeButton">猜词版</a>
+                                <a href="javascript:" class="next"><img src="images/next.png" alt=""/></a>
+                            </div>
+                            <p>有1133个用户正在玩此款游戏</p>
+                        </div>
+                        <div class="mode">
+                            <a href="javascript:" class="modeButton">白痴版</a>
+                            <p>有1133个用户正在玩此款游戏</p>
+                        </div>
+                        <img src="images/dotblue.png" alt="dotblue"/>
+                        <img src="images/dotwhite.png" alt="dotwhite"/>
+                        <img src="images/dotwhite.png" alt="dotwhite"/>
+                        <img src="images/dotwhite.png" alt="dotwhite"/>
+                        <img src="images/dotwhite.png" alt="dotwhite"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
