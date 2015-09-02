@@ -2,8 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0" />
     <title>投票</title>
-    <link rel="stylesheet" href="style.css"/>
     <style>
         *{
             margin: 0;
@@ -23,7 +23,10 @@
         .container{
             margin: 0 auto;
             width: 640px;
+            height: 1300px;
+            overflow: hidden;
             background-color: #29bde0;
+            position: relative;
         }
         .header{
             padding: 0 20px;
@@ -36,6 +39,18 @@
             width: 490px;
             font-size: 34px;
             color: #ffffff;
+        }
+        .header a{
+            display: inline-block;
+            width: 49px;
+            height: 45px;
+            background: url("images/imgSpirit.png");
+        }
+        a.e{
+            background-position: 0 -183px;
+        }
+        a.f{
+            background-position: 0 -135px;
         }
         .playlog{
             height: 83px;
@@ -50,13 +65,15 @@
         }
         .angel{
             height: 12px;
-            position: relative;
+            /*position: relative;*/
+            background: url("images/imgSpirit.png") no-repeat;
+            margin-left: 72px;
         }
-        .angel img{
+        /*.angel img{
             position: absolute;
             left: 72px;
             top: 0;
-        }
+        }*/
         .main{
             padding:0 40px;
         }
@@ -65,21 +82,21 @@
             color: #ffffff;
             padding: 15px 0 44px 25px;
         }
-        .main ul{
-            height: 208px;
-            width: 138px;
+        .main .model{
+            height: 203px;
+            width: 141px;
             float: left;
         }
         .main .middle{
-            margin: 0 69px;
+            margin: 0 68px;
         }
         /*二级ul的border怎么会变成了以及ul的了？*/
-        .main ul ul{
+        .main ul .name{
             border: 6px solid #ffffff;
             width: 126px;
             height: 128px;
         }
-        .main ul ul .job{
+        .main ul .name .job{
             width: 100%;
             height: 98px;
             text-align: center;
@@ -94,40 +111,74 @@
             background-color: #83b09a;
         }
         .main ul .icons{
-            text-align: center;
-            height: 63px;
-            line-height: 63px;
+            /*text-align: center;*/
+            height: 48px;
             visibility: hidden;
+            padding-top: 16px;
         }
-        #show1{
+        .icons a{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background: url("images/imgSpirit.png") no-repeat;
+        }
+        .icons .a{
+            background-position:0 -11px;
+        }
+        .icons .b{
+            background-position: 0 -41px;
+        }
+        .icons .c{
+            background-position: 0 -71px;
+        }
+        .icons .d{
+            background-position: 0 -101px;
+        }
+       #show1{
             visibility: visible;
         }
         .footer{
-            margin: 0 40px ;
+            width: 556px;
+            margin-left:40px;
             border-top: 1px solid #ffffff;
             clear: both;
             height: 188px;
-
-            /*line-height: 188px;*/
             font-size: 40px;
+            position: fixed;
+            bottom: 0;
+            background-color: #29bde0;
         }
         .footer a{
+
             margin: 40px auto;
             display: block;
             height: 90px;
             line-height: 90px;
             text-align: center;
-            width: 490px;
             background-color: #fbb435;
-        }
-        .icons a{
-            background: url("images/imgSpirit.png") no-repeat;
-        }
-        .a{
-            background-position: 0 -6px;
         }
     </style>
     <script>
+        /*--开始自适应--*/
+        var jsVer = 22;
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth/640;
+
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)){
+            var version = parseFloat(RegExp.$1);
+            // andriod 2.3
+            if(version>2.3){
+                document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+                // andriod 2.3以上
+            }else{
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+            // 其他系统
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+        /*--结束自适应--*/
         function playMusic(){
             var myMusic = document.getElementById('music');
             myMusic.play();
@@ -137,21 +188,19 @@
 <body>
 <div class="container">
     <div class="header">
-        <a href="#"><img src="images/menu.png" alt="menu"/></a>
+        <a href="#" class="e"></a>
         <span>投票</span>
-        <a href="#"><img src="images/close.png" alt="close"/></a>
+        <a href="#" class="f"></a>
     </div>
     <div class="playlog">
         <span>发言讨论结束，大家请投票</span>
         <img id="play" src="images/play.png" alt="play" onclick="playMusic()"/>
         <audio id="music" src="music.mp3" preload="auto" hidden="hidden"></audio>
     </div>
-    <div class="angel">
-        <img src="images/angel.png" alt="angel"/>
-    </div>
+    <div class="angel"></div>
     <div class="main">
         <p>点击得票数最多人的头像</p>
-        <ul>
+        <ul class="model">
             <li class="name">
                 <ul>
                     <li class="job">水民</li>
@@ -162,12 +211,12 @@
                 <a href="#" class="a"></a>
                 <a href="#" class="b"></a>
                 <a href="#" class="c"></a>
-                <a href="#" class="e"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul class="middle">
-            <li>
-                <ul >
+        <ul class="model middle">
+            <li class="name">
+                <ul>
                     <li class="job">水民</li>
                     <li class="number">2号</li>
                 </ul>
@@ -176,148 +225,147 @@
                 <a href="#" class="a"></a>
                 <a href="#" class="b"></a>
                 <a href="#" class="c"></a>
-                <a href="#" class="e"></a>
-
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">3号</li>
                 </ul>
             </li>
             <li class="icons" id="show3">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">4号</li>
                 </ul>
             </li>
             <li class="icons" id="show4">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul class="middle">
-            <li>
+        <ul class="model middle">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">5号</li>
                 </ul>
             </li>
             <li class="icons" id="show5">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">6号</li>
                 </ul>
             </li>
             <li class="icons" id="show6">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">7号</li>
                 </ul>
             </li>
             <li class="icons" id="show7">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul class="middle">
-            <li>
+        <ul class="model middle">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">8号</li>
                 </ul>
             </li>
             <li class="icons" id="show8">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">9号</li>
                 </ul>
             </li>
             <li class="icons" id="show9">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">10号</li>
                 </ul>
             </li>
             <li class="icons" id="show10">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul class="middle">
-            <li>
+        <ul class="model middle">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">11号</li>
                 </ul>
             </li>
             <li class="icons" id="show11">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
-        <ul>
-            <li>
+        <ul class="model">
+            <li class="name">
                 <ul>
                     <li class="job">水民</li>
                     <li class="number">12号</li>
                 </ul>
             </li>
             <li class="icons" id="show12">
-                <img src="images/kill.png" alt=""/>
-                <img src="images/search.png" alt=""/>
-                <img src="images/aim.png" alt=""/>
-                <img src="images/add.png" alt=""/>
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="d"></a>
             </li>
         </ul>
     </div>
