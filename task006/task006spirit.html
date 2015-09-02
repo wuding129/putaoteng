@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑",宋体, sans-serif;
+        }
+        img{
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        li{
+            list-style: none;
+        }
+        .container{
+            margin: 0 auto;
+            width: 640px;
+            background-color: #29bde0;
+        }
+        .header{
+            padding: 0 20px;
+            height: 80px;
+            line-height: 80px;
+        }
+        .header span{
+            text-align: center;
+            display: inline-block;
+            width: 490px;
+            font-size: 34px;
+            color: #ffffff;
+        }
+        .playlog{
+            height: 83px;
+            line-height: 83px;
+            padding: 0 20px 0 48px;
+            background-color: #b9e9f5;
+            font-size: 26px;
+        }
+        .playlog span{
+            width: 500px;
+            display: inline-block;
+        }
+        .angel{
+            height: 12px;
+            position: relative;
+        }
+        .angel img{
+            position: absolute;
+            left: 72px;
+            top: 0;
+        }
+        .main{
+            padding:0 40px;
+        }
+        .main p{
+            font-size: 24px;
+            color: #ffffff;
+            padding: 15px 0 44px 25px;
+        }
+        .main ul{
+            height: 208px;
+            width: 138px;
+            float: left;
+        }
+        .main .middle{
+            margin: 0 69px;
+        }
+        /*二级ul的border怎么会变成了以及ul的了？*/
+        .main ul ul{
+            border: 6px solid #ffffff;
+            width: 126px;
+            height: 128px;
+        }
+        .main ul ul .job{
+            width: 100%;
+            height: 98px;
+            text-align: center;
+            line-height: 98px;
+            background-color: #f5c97b;
+            font-size: 30px;
+            color: #565656;
+        }
+        .main ul ul .number{
+            font-size: 23px;
+            color: #e0ebe6;
+            background-color: #83b09a;
+        }
+        .main ul .icons{
+            text-align: center;
+            height: 63px;
+            line-height: 63px;
+            visibility: hidden;
+        }
+        #show1{
+            visibility: visible;
+        }
+        .footer{
+            margin: 0 40px ;
+            border-top: 1px solid #ffffff;
+            clear: both;
+            height: 188px;
+
+            /*line-height: 188px;*/
+            font-size: 40px;
+        }
+        .footer a{
+            margin: 40px auto;
+            display: block;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            width: 490px;
+            background-color: #fbb435;
+        }
+        .icons a{
+            background: url("images/imgSpirit.png") no-repeat;
+        }
+        .a{
+            background-position: 0 -6px;
+        }
+    </style>
+    <script>
+        function playMusic(){
+            var myMusic = document.getElementById('music');
+            myMusic.play();
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <a href="#"><img src="images/menu.png" alt="menu"/></a>
+        <span>投票</span>
+        <a href="#"><img src="images/close.png" alt="close"/></a>
+    </div>
+    <div class="playlog">
+        <span>发言讨论结束，大家请投票</span>
+        <img id="play" src="images/play.png" alt="play" onclick="playMusic()"/>
+        <audio id="music" src="music.mp3" preload="auto" hidden="hidden"></audio>
+    </div>
+    <div class="angel">
+        <img src="images/angel.png" alt="angel"/>
+    </div>
+    <div class="main">
+        <p>点击得票数最多人的头像</p>
+        <ul>
+            <li class="name">
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">1号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show1">
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="e"></a>
+            </li>
+        </ul>
+        <ul class="middle">
+            <li>
+                <ul >
+                    <li class="job">水民</li>
+                    <li class="number">2号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show2">
+                <a href="#" class="a"></a>
+                <a href="#" class="b"></a>
+                <a href="#" class="c"></a>
+                <a href="#" class="e"></a>
+
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">3号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show3">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">4号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show4">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul class="middle">
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">5号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show5">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">6号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show6">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">7号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show7">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul class="middle">
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">8号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show8">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">9号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show9">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">10号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show10">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul class="middle">
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">11号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show11">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li class="job">水民</li>
+                    <li class="number">12号</li>
+                </ul>
+            </li>
+            <li class="icons" id="show12">
+                <img src="images/kill.png" alt=""/>
+                <img src="images/search.png" alt=""/>
+                <img src="images/aim.png" alt=""/>
+                <img src="images/add.png" alt=""/>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <a href="#">投死</a>
+    </div>
+</div>
+</body>
+</html>
