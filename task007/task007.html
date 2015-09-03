@@ -3,16 +3,142 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>首页</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: '微软雅黑', 宋体, sans-serif;
+            font-weight: normal;
+        }
+        img{vertical-align: middle;}
+        a{text-decoration: none;
+            color: #ffffff;
+        }
+        li{
+            list-style: none;
+        }
+        .wrapper{
+            width: 100%;
+            height: 3013px;
+        }
+        .header{
+            width: 100%;
+            height: 738px;
+        }
+        .top{
+            padding: 0 18.75% 0 18.90625%;
+        }
+        .top{
+            height: 39px;
+            line-height: 39px;
+            background-color: #ffffff;
+            font-size: 14px;
+            color: #29b078;
+            position: relative;
+        }
+        .login{
+            position: absolute;
+            right: 18.90625%;
+            top: 7px;
+        }
+        .login a{
+            display: inline-block;
+            height: 24px;
+            width: 25px;
+            background: url("images/spirit.png");
+        }
+        #wechat{
+            background-position: 0 0;
+        }
+        #qq{
+            background-position: -26px 0;
+        }
+        #weibo{
+            background-position: -53px 0;
+        }
+        .nav{
+            height: 99px;
+            background-color: #29b078;
+            text-align: right;
+            padding: 0 16.97916666666667% 0 18.90625%;
+        }
+        .nav li{
+            /*width: 5.3125%;/!*102px;*!/*/
+            height: 95px;
+            line-height: 95px;
+            padding: 0 32px;
+            font-size: 1.00125em;
+            display: inline-block;
+            text-align: center;
+        }
+        #frontPage{
+            border-bottom: 4px solid #fefefe;
+        }
+        .banner{
+            height: 600px;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            height: 2078px;
+            width: 100%;
+            background-color: #fafafa;
+            padding-top: 165px;
+        }
+        .footer{
+            height: 202px;
+            width: 100%;
+            background-color: #29b078;
+            color: #ffffff;
+        }
+        .others{
+            height: 170px;
+            border-top: 1px solid #32c086;
+            border-bottom: 1px solid #32c086;
+        }
+        .copyright{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
-            <div class="top"></div>
-            <div class="nav"></div>
-            <div class="banner"></div>
+            <div class="top">
+                <span>客服热线：010-594-78634</span>
+                <span class="login">
+                    <a href="#" id="wechat"></a>
+                    <a href="#" id="qq"></a>
+                    <a href="#" id="weibo"></a>
+                </span>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li id="frontPage"><a href="#">首页</a></li>
+                    <li><a href="#">职业</a></li>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="images/banner.jpg" alt=""/>
+            </div>
         </div>
         <div class="main">
-            <div class=""></div>
+            <div class="detail">
+                <ul>
+                    <li>
+                        <p></p>
+                        <h5>高效</h5>
+                        <p>将五到七年的成长时间，缩短 到一年到三年。</p>
+                    </li>
+                </ul>
+            </div>
             <div class="study"></div>
             <div class="students"></div>
             <div class="companies"></div>
@@ -20,7 +146,7 @@
         </div>
         <div class="footer">
             <div class="others"></div>
-            <div class="copyright"></div>
+            <div class="copyright">Copyright&nbsp;&copy;&nbsp;2015技能树&nbsp;<a href="#">www.jnshu.com</a>&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;|&nbsp;京ICP</div>
         </div>
     </div>
 </body>
