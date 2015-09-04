@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0" />
     <title>首页</title>
     <style>
         *{
@@ -126,7 +127,7 @@
             width: 54px;
         }
         #blank{
-            background-position: -258px -266px;
+            background-position: -180px -270px;
         }
         .detailBox h3{
             text-align: center;
@@ -176,10 +177,9 @@
 
 
         .learn{
-            height: 451px;
+            height: 492px;
             width: 1202px;
             margin: 0 auto;
-            padding-top: 77px;
         }
         .learn h3,.students h3{
             font-size: 18px;
@@ -187,21 +187,143 @@
             text-align: center;
         }
         .learn h3{
-            padding-bottom: 49px;
+            height: 18px;
+            line-height: 18px;
+            padding-top: 81px;
+            padding-bottom: 53px;
         }
+        .learn li{
+            width: 245px;
+            height: 168px;
+            float: left;
+        }
+        .learn .arrow{
+            width: 74px;
+
+        }
+        .learn .num{
+            width: 74px;
+        }
+        .learn li span {
+            display: inline-block;
+            width: 74px;
+            height: 74px;
+            float: left; /*此处父元素高度大于子元素时，只用inline-block会把首个子元素挤下去，造成不齐，可用浮动解决*/
+            background: url("images/spirit.png") no-repeat -53px -88px;
+            text-align: center;
+            line-height: 74px;
+            color: #29b078;
+            font-size: 18px;
+        }
+        .learn li p{
+            display: inline-block;
+            height: 57px;
+            width: 154px;
+            line-height: 26px;
+            /*float: left;*//*此处无上述问题*/
+            padding-left: 17px;
+            padding-top: 17px;
+            color: #999999;
+            font-size: 14px;
+        }
+        .learn li .a{
+            height: 28px;
+            width: 28px;
+            margin: 23px;
+            background-position: -80px 2px;
+        }
+        
+
+
+
+
+
+
+
         .students{
-            height: 612px;
-            width: 1202px;
+            height: 552px;
+            width: 1204px;
             margin: 0 auto;
-            padding-top: 58px;
+            padding-top: 19px;
         }
         .students h3{
-            padding-bottom: 64px;
+            padding-bottom: 71px;
+            height: 22px;
         }
-
-
-
-
+        .students p{
+            font-size: 16px;
+            color:#999999;
+        }
+        .students ul{
+            /*margin: 0 auto;*/
+            height: 374px;
+            width: 1204px;
+        }
+        .studentsShow{
+            height: 350px;
+            width: 270px;
+            margin-right:36px;
+            padding-top: 19px;
+            border: 2px solid #e2e2e2;
+            border-bottom:3px solid #e2e2e2;
+            border-radius: 8px;
+            float: left;
+        }
+        #laststudent{
+            margin-right: 0;
+        }/*最后一个的margin不会影响父元素宽度，只会占父元素空间*/
+        .studentsShow h3{
+            height: 91px;
+            line-height: 91px;
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        .studentsShow p{
+            width: 196px;
+            margin: 0 auto;
+        }
+        .studentsShow .photo{
+            height: 108px;
+            width: 108px;
+            margin: 0 auto;
+            background: url("images/spirit.png") no-repeat;
+        }
+       #luo1{
+           background-position: -149px -155px;
+       }
+        #luo2{
+            background-position: -280px 0;
+        }
+        #luo3{
+            background-position: -280px -112px;
+        }
+        #luo4{
+            background-position: -280px -221px;
+        }
+        .dot1{
+            height: 19px;
+            width: 67px;
+            padding: 14px 567px 53px 568px;
+        }
+        .dot1 span{
+            float: left;
+            width: 15px;
+            height: 15px;
+            margin-right:1px;
+            background: url("images/spirit.png") no-repeat;/*有个想法：欲出现点的滑动效果可以尝试js改变雪碧图位置*/
+        }
+        #first{
+            background-position: -239px -278px;
+        }
+        #second{
+            background-position: -260px -279px;
+        }
+        #third{
+            background-position: -260px -279px;
+        }
+        #forth{
+            background-position: -260px -279px;
+        }
         .companies{
             height: 293px;
             width: 1200px;
@@ -394,16 +516,53 @@
             </div>
             <div class="learn">
                 <h3>如何学习</h3>
+                <ul>
+                    <li><span class="num">1</span><p>匹配你现在的个人情况寻找适合自己的岗位</p></li><!--li:paddingbottom:93px-->
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">2</span><p>了解职业前景薪金待遇、竞争压力等</p></li>
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">3</span><p>掌握行业内顶级技能</p></li>
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">4</span><p>查看职业目标任务</p></li>
+                    <li><span class="num">5</span><p>参考学习资源，掌握技能点，逐个完成任务</p></li>
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">6</span><p>加入班级，和小伙伴们互帮互助，一块学习</p></li>
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">7</span><p>选择导师，一路引导，加速自己成长</p></li>
+                    <li class="arrow"><span class="a"></span></li>
+                    <li><span class="num">8</span><p>完成职业技能，升级业界大牛</p></li>
+                </ul>
             </div>
             <div class="students">
                 <h3>优秀学员展示</h3>
                 <ul>
-                    <li>
-                        <p id="luo"></p>
-                        <h4></h4>
-                        <p class="describe"></p>
+                    <li class="studentsShow">
+                        <p class="photo" id="luo1"></p>
+                        <h3>技术顾问：罗大佑</h3>
+                        <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                    </li>
+                    <li class="studentsShow">
+                        <p class="photo" id="luo2"></p>
+                        <h3>技术顾问：罗大佑</h3>
+                        <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                    </li>
+                    <li class="studentsShow">
+                        <p class="photo" id="luo3"></p>
+                        <h3>技术顾问：罗大佑</h3>
+                        <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                    </li>
+                    <li class="studentsShow" id="laststudent">
+                        <p class="photo" id="luo4"></p>
+                        <h3>技术顾问：罗大佑</h3>
+                        <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
                     </li>
                 </ul>
+                <div class="dot1">
+                    <span id="first"></span>
+                    <span id="second"></span>
+                    <span id="third"></span>
+                    <span id="forth"></span>
+                </div>
             </div>
             <div class="companies">
                 <h3>战略合作企业</h3>
