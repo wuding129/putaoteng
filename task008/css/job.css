@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Î¢ÈíÑÅºÚ', ËÎÌå, sans-serif;
+    font-weight: normal;
+}
+img{vertical-align: middle;}
+a{text-decoration: none;
+    color: #ffffff;
+}
+li{
+    list-style: none;
+}
+.t{
+    height: 10px;width: 100px;
+}
+.container{
+    width: 1920px;
+    height: 3013px;
+    background-color: #fafafa;
+}
+.header{
+
+}

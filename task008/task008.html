@@ -2,9 +2,235 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>职位表</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: '微软雅黑', 宋体, sans-serif;
+            font-weight: normal;
+        }
+        img{vertical-align: middle;}
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            text-align: center;/*兼容旧ie的居中*/
+        }
+        #container{
+            width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #header{
+            width: 100%;
+            background: #69d1e9;/*tem*/
+        }
+        .top{
+            float: left;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .call{
+            float: left;
+            font-size: 14px;
+            color: #29b078;
+            height: 40px;
+            line-height: 40px;
+        }
+        .top ul{
+            float: right;
+        }
+        .top li{
+            float: left;
+            margin: 7px 0 8px 16px;
+        }
+        .top a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("images/spirit_job.png") no-repeat;
+        }
+        #weChat{
+            background-position: 0 0;
+        }
+        #qq{
+            background-position: -26px 0;
+        }
+        #weiBo{
+            background-position: -53px 0;
+        }
+        .nav{
+            float: left;
+            width: 100%;
+            background-color: #29b078;
+        }
+        a.logo{
+            display: block;
+            float: left;
+            width: 108px;
+            height: 50px;
+            background: url("images/spirit_job.png") no-repeat 0 -133px;
+            margin-top: 27px;
+        }
+        .nav ul{
+            float: right;
+        }
+        .nav li{
+            float: left;
+            color: #ffffff;
+            font-size: 16px;
+
+        }
+        .nav li a{
+            color: #ffffff;
+            display: block;
+            width: 101px;
+            height: 16px;
+            line-height: 16px;
+            padding:42px 0 38px 0;
+            text-align: center;
+            border-bottom: 4px solid #29b078;
+        }
+        .nav .active{
+            border-bottom-color:#fefefe;
+        }
+        .nav .last{
+            width: 69px;
+            text-align: right;
+        }
+        /*-header end-*/
+        /*-main start-*/
+        #main{
+            width: 100%;
+            background-color: #fafafa;
+        }
+        .bread{
+            float: left;
+            width: 100%;
+            font-size: 16px;
+            border-bottom: 1px solid #d0d6d9;
+
+        }
+        .bread li{
+            padding: 31px 0 33px 0;
+            float: left;
+            line-height: 16px;
+        }
+        .bread a{
+            color: #333333;
+        }
+        .bread .now{
+            color: #29b078;
+        }
+        .classes{
+            width: 100%;
+            float: left;
+            border-bottom: 1px solid #edf1f2;
+        }
+        .classes li{
+            float: left;
+            line-height: 14px;
+            margin: 20px 0;
+        }
+        li.direction{
+            color: #999999;
+            margin-right: 25px;
+            padding: 3px 0;
+            /*margin: 20px 25px 20px 0;*/
+
+        }
+        .classes a{
+            display: block;
+            padding: 3px 4px;
+            margin-right: 32px;
+            font-size: 14px;
+            color:#333333;
+            /*margin: 20px 32px 20px 0;*/
+        }
+        a.selected{
+            background-color: #29b078;
+            color: #ffffff;
+        }
+
+        /*-main end-*/
+        /*-footer start-*/
+        #footer{
+            width: 100%;
+            background: yellow;/*tem*/
+        }
+    </style>
 </head>
 <body>
+    <div id="container">
+        <div id="header">
+            <div class="top">
+                <div class="call">客服热线：010-594-78634</div>
+                <ul>
+                    <li><a href="#" id="weChat"></a></li>
+                    <li><a href="#" id="qq"></a></li>
+                    <li><a href="#" id="weiBo"></a></li>
+                </ul>
+            </div>
+            <div class="nav">
+                <a href="#" class="logo"></a>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#" class="active">职业</a></li>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#" class="last">关于</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <ul class="bread">
+                <li><a href="#">首页</a></li>
+                <li>></li>
+                <li><a href="#" class="now">职业</a></li>
+            </ul>
+            <ul class="classes">
+                <li class="direction">方向：</li>
+                <li><a href="#" class="selected">全部</a></li>
+                <li><a href="#">前端开发</a></li>
+                <li><a href="#">后端开发</a></li>
+                <li><a href="#">移动开发</a></li>
+                <li><a href="#">整站开发</a></li>
+                <li><a href="#">运营维护</a></li>
+            </ul>
+            <div class="classDetails">
+                <h2></h2>
+                <ul>
+                    <li class="box">
+                        <ul>
+                            <li class="img"></li>
+                            <li>
+                                <h3>Web前端工程师</h3>
+                                <p>Web前端开发工程师，主要职责是利用（X）HTML/CSS/JavaScript/flash等各种Web技术进行产品的开</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
 
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
 </body>
 </html>
