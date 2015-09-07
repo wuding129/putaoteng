@@ -23,6 +23,12 @@
         body{
             text-align: center;/*兼容旧ie的居中*/
         }
+        .division{
+            width: 24px;
+            height:1px;
+            float: left;
+        }
+        /*用来分割如box这样的块，省的用margin什么的*/
         #container{
             width: 1200px;
             margin: 0 auto;
@@ -30,7 +36,6 @@
         }
         #header{
             width: 100%;
-            background: #69d1e9;/*tem*/
         }
         .top{
             float: left;
@@ -101,6 +106,7 @@
         .nav .active{
             border-bottom-color:#fefefe;
         }
+        /*可随当前*/
         .nav .last{
             width: 69px;
             text-align: right;
@@ -129,6 +135,7 @@
         .bread .now{
             color: #29b078;
         }
+        /*可随当前页面*/
         .classes{
             width: 100%;
             float: left;
@@ -158,10 +165,19 @@
             background-color: #29b078;
             color: #ffffff;
         }
-        /*不加a优先级低*/
+        /*不加a优先级低,后面有同类的同理，为提高优先级*/
         .classDetails{
-            /*width: 100%;*/
+            width: 100%;/*开始忘记加这个,导致h2的宽度显示随box的增减改变,导致border变短*/
             float: left;
+        }
+        .classDetails h2{
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            padding: 32px 0;
+            line-height: 16px;
+            border-bottom: 1px solid #d0d6d9;
+            /*width: 100%;*/
         }
         .box{
             width: 381px;
@@ -170,6 +186,7 @@
             border-top-color: #f6f6f6;
             /*可单独设置颜色*/
             border-radius: 8px;
+            margin-top: 46px;/*使box排列换行后看起来有分隔,省下给h2加margin-bottom了*/
         }
         .box .img{
             width: 139px;
@@ -242,6 +259,7 @@
             height: 15px;
             background: url("images/spirit_job.png") no-repeat -90px -6px;
         }
+        /*star可以复制增加*/
         .tableTop .numRed{
             margin-right: 0;
         }
@@ -265,6 +283,7 @@
             padding: 10px 10px 11px 24px;
             line-height: 13px;
         }
+        /*同样不加line-height会出现高度比psd图上的高*/
         .years{
             float: left;
         }
@@ -330,9 +349,86 @@
                 <li><a href="#">整站开发</a></li>
                 <li><a href="#">运营维护</a></li>
             </ul>
+            <!--整个classDetails重复使用，里面的box也是-->
             <div class="classDetails">
-                <h2></h2>
+                <h2>前端开发方向</h2>
                 <ul>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
                     <li class="box">
                         <ul class="first">
                             <li class="img"></li>
@@ -372,6 +468,360 @@
                     </li>
                 </ul>
 
+            </div>
+            <div class="classDetails">
+                <h2>后端开发方向</h2>
+                <ul>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <div class="classDetails">
+                <h2>运维方向</h2>
+                <ul>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <div class="classDetails">
+                <h2>运维方向</h2>
+                <ul>
+                    <li class="box">
+                        <ul class="first">
+                            <li class="img"></li>
+                            <li class="introduction">
+                                <h3>Web前端工程师</h3>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
+                            </li>
+                        </ul>
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li class="division"></li>
+                </ul>
             </div>
         </div>
         <div id="footer"></div>
