@@ -17,6 +17,9 @@
         li{
             list-style: none;
         }
+        table{
+            border-collapse: collapse;
+        }
         body{
             text-align: center;/*兼容旧ie的居中*/
         }
@@ -141,8 +144,8 @@
             margin-right: 25px;
             padding: 3px 0;
             /*margin: 20px 25px 20px 0;*/
-
         }
+        /*不加li不起作用，优先级低*/
         .classes a{
             display: block;
             padding: 3px 4px;
@@ -155,13 +158,140 @@
             background-color: #29b078;
             color: #ffffff;
         }
-
+        /*不加a优先级低*/
+        .classDetails{
+            /*width: 100%;*/
+            float: left;
+        }
+        .box{
+            width: 381px;
+            float: left;
+            border: 1px solid #eeeded;
+            border-top-color: #f6f6f6;
+            /*可单独设置颜色*/
+            border-radius: 8px;
+        }
+        .box .img{
+            width: 139px;
+            height: 139px;
+            background: url("images/spirit_job.png") no-repeat -115px 0;
+            float: left;
+            margin: 20px 8px 16px 10px;
+            /*margin-left: 10px;*/
+        }
+        .introduction{
+            /*padding-left: 147px;*/
+            padding-right: 9px;
+            /*padding-left: 8px;*/
+            width: 215px;
+            float: left;
+        }
+        .introduction h3{
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 35px;
+            margin-bottom: 16px;
+        }
+        /*.introduction p{
+            color: #333333;
+            font-size: 14px;
+            /!*-ms-word-break: break-all;*!/
+            word-break: break-all;
+            line-height: 20px;
+            /!*padding-right: 9px;*!/
+        }*/
+        /*此处原来用的p元素，发现总对不齐，断词后也是，后放弃改用span正常了*/
+        .introduction span{
+            color: #333333;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .tableTop,.tableUnder{
+            width: 100%;
+            font-size: 12px;
+            color: #999999;
+        }
+        /*.tableTop{
+            /!*border: solid #edf1f2;
+            border-width: 1px 0 0 0;*!/
+        }*/
+        .tableTop td {
+            /*padding-left: 10px;*/
+            padding: 12px 0 13px 10px;
+            /*line-height: 15px;*/
+            width: 50%;
+            border: 1px solid #edf1f2;
+            /*刚才width忘加分号了，结果border不能设置，颜色变为了橙色，也算教训*/
+        }
+        tr td:first-child{
+            border-left: 0;
+        }
+        tr td:last-child{
+            border-right: 0;
+        }
+        /*此处用了first-child，last-child解决了边框重合变粗问题*/
+        .tableTop span{
+            display: inline-block;
+            margin-right: 13px;
+        }
+        .tableTop .star{
+            margin-right: 9px;
+            vertical-align: text-bottom;/*刚会，可以使文字相对图标垂直居中，不加图片会高于文字*/
+            width: 16px;
+            height: 15px;
+            background: url("images/spirit_job.png") no-repeat -90px -6px;
+        }
+        .tableTop .numRed{
+            margin-right: 0;
+        }
+        .numRed{
+            color: #f01400;
+        }
+        /*为了下面可以用这个red属性故修改*/
+        .blackWords{
+            color: #333;
+        }
+        .tableUnder td{
+            border:solid #edf1f2;
+            border-width: 0 1px 1px 1px;
+        }
+        /*今天刚学会的这种border写法，可以单独设置每条边的宽度*/
+        .pay{
+            text-align: center;
+            width: 151px;
+        }
+        .payDetail{
+            padding: 10px 10px 11px 24px;
+            line-height: 13px;
+        }
+        .years{
+            float: left;
+        }
+        .payMonth{
+            float:right;
+        }
+        .learning{
+            padding: 11px 0 12px 10px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        /*加line-height可以控制高度与psd一致，不加最后高度增加*/
+        .foundation{
+            padding: 13px 0 14px 10px;
+            line-height: 12px;
+        }
+        .tableUnder tr:last-child td{
+            border-bottom: 0;
+        }
+        /*去掉table最底下的border*/
         /*-main end-*/
         /*-footer start-*/
         #footer{
             width: 100%;
             background: yellow;/*tem*/
         }
+
     </style>
 </head>
 <body>
@@ -204,27 +334,41 @@
                 <h2></h2>
                 <ul>
                     <li class="box">
-                        <ul>
+                        <ul class="first">
                             <li class="img"></li>
-                            <li>
+                            <li class="introduction">
                                 <h3>Web前端工程师</h3>
-                                <p>Web前端开发工程师，主要职责是利用（X）HTML/CSS/JavaScript/flash等各种Web技术进行产品的开</p>
+                                <span>Web前端开发工程师，主要职责是 利用（X）HTML/CSS/JavaScript/ flash等各种Web技术进行产品的开发。</span>
                             </li>
                         </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-
+                        <table class="tableTop">
+                            <tr>
+                                <td><span>门槛</span><span class="star"></span></td>
+                                <td><span>难易程度</span><span class="star"></span><span class="star"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span>成长周期</span><span class="numRed">1-3</span><span class="blackWords">年</span></td>
+                                <td><span>稀缺程度</span><span class="numRed">345</span><span class="blackWords">家公司需要</span></td>
+                            </tr>
+                        </table>
+                        <table class="tableUnder">
+                            <tr>
+                                <td rowspan="3" class="pay">薪资待遇</td>
+                                <td class="payDetail"><span class="blackWords years">0-1年</span><span class="blackWords payMonth">5k-10k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td class="payDetail"><span class="blackWords years">1-3年</span><span class="blackWords payMonth">10k-20k/月</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="learning blackWords">有<span class="numRed">286</span>人正在学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="foundation">提示:在你学习之前你应该已经掌握XXXXX、XXXXX、XX等语言基础</td>
+                            </tr>
+                        </table>
                     </li>
                 </ul>
 
