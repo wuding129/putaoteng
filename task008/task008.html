@@ -22,6 +22,7 @@
         }
         body{
             text-align: center;/*兼容旧ie的居中*/
+            min-width: 1200px;
         }
         .division{
             width: 24px;
@@ -43,13 +44,16 @@
             float: left;*/
         }
         .top{
-            float: left;
+            /*float: left;*/
             width: 100%;
             background-color: #ffffff;
+            /*overflow: hidden;*/
+            /*margin: 0 auto;*/
         }
         .topMain{
             width: 1200px;
             margin: 0 auto;
+            overflow: hidden;
         }
         .call{
             float: left;
@@ -81,23 +85,26 @@
             background-position: -53px 0;
         }
         .nav{
-            float: left;
+            /*float: left;*/
             width: 100%;
             background-color: #29b078;
+            /*overflow: visible;*/
         }
         .navMain{
             width: 1200px;
             margin: 0 auto;
+            overflow: hidden;/*解决浮动子元素不能撑开父元素高度问题*/
         }
         a.logo{
-            display: block;
+            display: inline-block;
             float: left;
             width: 108px;
             height: 50px;
             background: url("images/spirit_job.png") no-repeat 0 -133px;
             margin-top: 27px;
+            padding: 0;border-bottom: 0;/*消除下面写的a的通用样式*/
         }
-        .nav ul{
+        /*.nav ul{
             float: right;
         }
         .nav li{
@@ -105,10 +112,23 @@
             color: #ffffff;
             font-size: 16px;
 
-        }
-        .nav li a{
+        }*/
+        /*.nav li a{
             color: #ffffff;
-            display: inline-block;/*开始写成block了，Safari等浏览器显示出错，电脑上chrome和ie正常，更改后仍然不正常*/
+            display: inline-block;
+            width: 101px;
+            height: 16px;
+            line-height: 16px;
+            padding:42px 0 38px 0;
+            text-align: center;
+            border-bottom: 4px solid #29b078;
+        }*/
+        .link{
+            float: right;
+        }
+        .link a{
+            color: #ffffff;
+            display: inline-block;
             width: 101px;
             height: 16px;
             line-height: 16px;
@@ -116,11 +136,11 @@
             text-align: center;
             border-bottom: 4px solid #29b078;
         }
-        .nav .active{
+        .link .active{
             border-bottom-color:#fefefe;
         }
         /*可随当前*/
-        .nav .last{
+        .link .last{
             width: 69px;
             text-align: right;
         }
@@ -237,6 +257,7 @@
             color: #333333;
             font-size: 14px;
             line-height: 21px;
+            word-break: break-all;
         }
         .tableTop,.tableUnder{
             width: 100%;
@@ -343,12 +364,18 @@
                 <div class="nav">
                     <div class="navMain">
                     <a href="#" class="logo"></a>
-                    <ul>
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#" class="active">职业</a></li>
-                        <li><a href="#">推荐</a></li>
-                        <li><a href="#" class="last">关于</a></li>
-                    </ul>
+                        <!--<ul>
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#" class="active">职业</a></li>
+                            <li><a href="#">推荐</a></li>
+                            <li><a href="#" class="last">关于</a></li>
+                        </ul>-->
+                        <span class="link">
+                            <a href="#">首页</a>
+                            <a href="#" class="active">职业</a>
+                            <a href="#">推荐</a>
+                            <a href="#" class="last">关于</a>
+                        </span>
                     </div>
                 </div>
             </div>
