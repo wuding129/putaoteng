@@ -13,6 +13,7 @@
         img{vertical-align: middle;}
         a{
             text-decoration: none;
+            color: #ffffff;;
         }
         li{
             list-style: none;
@@ -22,7 +23,7 @@
         }
         body{
             text-align: center;/*兼容旧ie的居中*/
-            min-width: 1200px;
+            min-width: 1250px;
         }
         .division{
             width: 24px;
@@ -340,12 +341,114 @@
         }
         /*去掉table最底下的border*/
         /*-main end-*/
+
         /*-footer start-*/
         #footer{
+            float: left;
             width: 100%;
-            background: yellow;/*tem*/
+            background-color: #29b078;
+            color: #ffffff;
+            border-top: 1px solid #d0d6d9;
+        }
+        .others{
+            /*height: 170px;*/
+            /*border:solid #32c086;
+            border-width: 1px 0;*/
+            width: 1200px;
+            margin: 0 auto;
+            color: #ffffff;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        /*下面注释是task7里的*/
+/*        .others h4{
+            font-size: 16px;
+            padding-bottom: 25px;
+        }
+        .others p{
+            height: 41px;
+            /!*padding-top: ;*!/
+        }
+        .about,.websites,.gongzhonghao{
+            padding:35px 0 8px;
+        }
+        .others .about{
+            width: 361px;
+            float: left;
+        }
+        .others .websites{
+            width: 673px;
+            float: left;
+        }
+        .others .gongzhonghao{
+            width: 166px;
+            float: right;
+            text-align: center;
+        }
+        .gongzhonghao h4{
+            padding-bottom: 8px;
+        }
+        #erweima{
+            width: 92px;
+            height: 92px;
+            margin: 0 auto;
+            background: url("images/spirit_job.png") no-repeat -165px 0;
+        }
+        .copyright{
+            /!*text-align: center;*!/
+            /!*width: 1200px;*!/
+            height: 30px;
+            /!*line-height: 30px;*!/
+            /!*margin:0 auto;*!/
+            font-size: 0.75rem;
+            /!*padding:0*!/
+        }
+        .copyright p{
+            height: 30px;line-height: 30px;
+            width: 580px;
+            margin :0 auto;
+        }*/
+        .others h4{
+            font-size: 16px;
+            padding-bottom: 25px;
+        }
+        .others p{
+            height: 41px;
+        }
+        .about,.websites,.gongzhonghao{
+            padding:35px 0 8px;
+        }
+        .others .about{
+            width: 361px;
+            float: left;
+        }
+        .others .websites{
+            width: 673px;
+            float: left;
         }
 
+        .others .gongzhonghao{
+            width: 166px;
+            float: right;
+            text-align: center;
+        }
+        .gongzhonghao h4{
+            padding-bottom: 8px;
+        }
+        .gongzhonghao .erweima{
+            /*float: right;*/
+            width: 92px;
+            height: 92px;
+            margin: 0 auto;
+            background: url("images/spirit_job.png") no-repeat 0 -32px;
+        }
+        .copyright{
+            padding: 8px 0;
+            /*margin :0 auto;*/
+            text-align: center;
+            border-top:1px solid #32c086;
+            line-height: 13px;
+        }
     </style>
 </head>
 <body>
@@ -869,7 +972,39 @@
                 </ul>
             </div>
         </div>
-        <div id="footer"></div>
+        <div id="footer">
+            <div class="others">
+                <div class="about">
+                    <h4>技能树 — 改变你我</h4>
+                    <p></p>
+                    <p>
+                        <a href="#">关于我们</a>
+                        <span>|</span>
+                        <a href="#">联系我们</a>
+                        <span>|</span>
+                        <a href="#">合作企业</a>
+                    </p>
+                </div>
+                <div class="websites">
+                    <h4>旗下网站</h4>
+                    <p>
+                        <a href="#">草船云孵化器</a>
+                        <a href="#">最强it特训营</a>
+                    </p>
+                    <p>
+                        <a href="#">葡萄藤轻游戏</a>
+                        <a href="#">桌游精灵</a>
+                    </p>
+                </div>
+                <div class="gongzhonghao">
+                    <h4>微信公众平台</h4>
+                    <p class="erweima"></p>
+                </div>
+            </div>
+            <p class="copyright">
+                Copyright&nbsp;&copy;&nbsp;2015技能树&nbsp;<a href="#">www.jnshu.com</a>&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;|&nbsp;京ICP
+            </p>
+        </div>
     </div>
 </body>
 </html>
