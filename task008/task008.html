@@ -29,18 +29,27 @@
             float: left;
         }
         /*用来分割如box这样的块，省的用margin什么的*/
+        /*#wrapper{
+            width: 100%;
+        }*/
         #container{
-            width: 1200px;
+            width: 100%;
             margin: 0 auto;
             text-align: left;
         }
         #header{
             width: 100%;
+            /*padding: 0 18.75%;
+            float: left;*/
         }
         .top{
             float: left;
             width: 100%;
             background-color: #ffffff;
+        }
+        .topMain{
+            width: 1200px;
+            margin: 0 auto;
         }
         .call{
             float: left;
@@ -76,6 +85,10 @@
             width: 100%;
             background-color: #29b078;
         }
+        .navMain{
+            width: 1200px;
+            margin: 0 auto;
+        }
         a.logo{
             display: block;
             float: left;
@@ -95,7 +108,7 @@
         }
         .nav li a{
             color: #ffffff;
-            display: block;
+            display: inline-block;/*开始写成block了，Safari等浏览器显示出错，电脑上chrome和ie正常，更改后仍然不正常*/
             width: 101px;
             height: 16px;
             line-height: 16px;
@@ -114,7 +127,8 @@
         /*-header end-*/
         /*-main start-*/
         #main{
-            width: 100%;
+            width: 1200px;
+            margin: 0 auto;
             background-color: #fafafa;
         }
         .bread{
@@ -316,24 +330,28 @@
 <body>
     <div id="container">
         <div id="header">
-            <div class="top">
-                <div class="call">客服热线：010-594-78634</div>
-                <ul>
-                    <li><a href="#" id="weChat"></a></li>
-                    <li><a href="#" id="qq"></a></li>
-                    <li><a href="#" id="weiBo"></a></li>
-                </ul>
+                <div class="top">
+                    <div class="topMain">
+                    <div class="call">客服热线：010-594-78634</div>
+                    <ul>
+                        <li><a href="#" id="weChat"></a></li>
+                        <li><a href="#" id="qq"></a></li>
+                        <li><a href="#" id="weiBo"></a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="navMain">
+                    <a href="#" class="logo"></a>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#" class="active">职业</a></li>
+                        <li><a href="#">推荐</a></li>
+                        <li><a href="#" class="last">关于</a></li>
+                    </ul>
+                    </div>
+                </div>
             </div>
-            <div class="nav">
-                <a href="#" class="logo"></a>
-                <ul>
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#" class="active">职业</a></li>
-                    <li><a href="#">推荐</a></li>
-                    <li><a href="#" class="last">关于</a></li>
-                </ul>
-            </div>
-        </div>
         <div id="main">
             <ul class="bread">
                 <li><a href="#">首页</a></li>
