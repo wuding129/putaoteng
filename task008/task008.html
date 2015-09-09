@@ -222,6 +222,7 @@
             /*可单独设置颜色*/
             border-radius: 8px;
             margin-top: 46px;/*使box排列换行后看起来有分隔,省下给h2加margin-bottom了*/
+            position: relative;
         }
         .box .img{
             width: 139px;
@@ -451,7 +452,53 @@
             line-height: 13px;
             font-size: 13px;
         }
+        .glass{
+            width:382px ;height: 358px;
+            display: none;
+            background-color: rgba(0,0,0,0.8);
+            position: absolute;
+            z-index: 100;
+            padding-top: 86px;
+        }
+        .glass h4{
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 37px;
+        }
+        .glass p{
+            margin: 0 auto;
+            width:292px;
+            color: #ffffff;
+        }
     </style>
+    <script>
+        window.onload=function(){
+            var oGlass1=document.getElementById('glass1');
+            var oBox1=document.getElementById('box1');
+            var oGlass2=document.getElementById('glass2');
+            var oBox2=document.getElementById('box2');
+            var oGlass3=document.getElementById('glass3');
+            var oBox3=document.getElementById('box3');
+            oBox1.onmouseover=function showGlass(){
+                oGlass1.style.display='block';
+            };
+            oBox1.onmouseout=function hideGlass(){
+                oGlass1.style.display='none';
+            };
+            oBox2.onmouseover=function showGlass(){
+                oGlass2.style.display='block';
+            };
+            oBox2.onmouseout=function hideGlass(){
+                oGlass2.style.display='none';
+            };
+            oBox3.onmouseover=function showGlass(){
+                oGlass3.style.display='block';
+            };
+            oBox3.onmouseout=function hideGlass(){
+                oGlass3.style.display='none';
+            };
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -503,7 +550,13 @@
             <div class="classDetails">
                 <h2>前端开发方向</h2>
                 <ul>
-                    <li class="box">
+                    <li class="box" id="box1">
+                        <a href="#" class="glass" id="glass1">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -541,7 +594,11 @@
                         </table>
                     </li>
                     <li class="division"></li>
-                    <li class="box">
+                    <li class="box" id="box2">
+                        <a href="#" class="glass" id="glass2">
+                            <h4 >ios工程师</h4>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -579,7 +636,11 @@
                         </table>
                     </li>
                     <li class="division"></li>
-                    <li class="box">
+                    <li class="box" id="box3">
+                        <a href="#" class="glass" id="glass3">
+                            <h4 >ios工程师</h4>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -623,6 +684,12 @@
                 <h2>后端开发方向</h2>
                 <ul>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -661,6 +728,12 @@
                     </li>
                     <li class="division"></li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -699,6 +772,12 @@
                     </li>
                     <li class="division"></li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -736,6 +815,12 @@
                         </table>
                     </li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -774,6 +859,12 @@
                     </li>
                     <li class="division"></li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -816,6 +907,12 @@
                 <h2>运维方向</h2>
                 <ul>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -854,6 +951,12 @@
                     </li>
                     <li class="division"></li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -892,6 +995,12 @@
                     </li>
                     <li class="division"></li>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -934,6 +1043,12 @@
                 <h2>运维方向</h2>
                 <ul>
                     <li class="box">
+                        <a href="#" class="glass">
+                            <h4 >ios工程师</h4>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。
+                            </p>
+                        </a>
                         <ul class="first">
                             <li class="img"></li>
                             <li class="introduction">
@@ -1008,5 +1123,8 @@
             </p>
         </div>
     </div>
+    <script>
+        
+    </script>
 </body>
 </html>
