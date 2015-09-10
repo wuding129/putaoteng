@@ -90,7 +90,7 @@
         .main .middle{
             margin: 0 68px;
         }
-        /*二级ul的border怎么会变成了以及ul的了？*/
+        /*二级ul的border怎么会变成了一级的了？*/
         .main ul .name{
             border: 6px solid #ffffff;
             width: 126px;
@@ -105,14 +105,14 @@
             font-size: 30px;
             color: #565656;
         }
-        .main ul ul .number{
+        .number{
             height: 30px;
             font-size: 23px;
             color: #e0ebe6;
             text-align: center;
             background-color: #83b09a;
         }
-        .main ul .icons{
+        .icons{
             /*text-align: center;*/
             height: 48px;
             visibility: hidden;
@@ -136,7 +136,7 @@
         .icons .d{
             background-position: 0 -101px;
         }
-       #show1{
+        .icons.show1{
             visibility: visible;
         }
         .footer{
@@ -209,7 +209,7 @@
                     <li class="number">1号</li>
                 </ul>
             </li>
-            <li class="icons" id="show1">
+            <li class="icons show1">
                 <a href="#" class="a"></a>
                 <a href="#" class="b"></a>
                 <a href="#" class="c"></a>

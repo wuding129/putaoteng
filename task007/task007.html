@@ -51,13 +51,13 @@
             background: url("images/spirit.png");
             margin-left: 16px;
         }
-        #wechat{
+        .wechat{
             background-position: 0 0;
         }
-        #qq{
+        .qq{
             background-position: -26px 0;
         }
-        #weibo{
+        .weibo{
             background-position: -53px 0;
         }
         .nav{
@@ -78,7 +78,7 @@
         .nav li a{
             display: inline-block;
         }
-        #frontPage{
+        .frontPage{
             border-bottom: 4px solid #fefefe;
         }
         .banner{
@@ -116,18 +116,18 @@
             margin: 0 auto;
             background: url("images/spirit.png") no-repeat;
         }
-        #rocket{
+        .icon.rocket{
             width: 44px;
             background-position: 0 -26px;
         }
-        #book{
+        .icon.book{
             background-position: -102px -22px;
         }
-        #podCast{
+        .icon.podCast{
             background-position: -45px -24px;
             width: 54px;
         }
-        #blank{
+        .icon.blank{
             background-position: -180px -270px;
         }
         .detailBox h3{
@@ -143,25 +143,25 @@
             font-size: 16px;
             color: #999999;
         }
-        .detailBox .people{
+        .detailBox .peopleIcon{
             width: 13px;
             height: 13px;
             display: inline-block;
             background: url("images/spirit.png") no-repeat -107px 0;
         }
-        #people{
+        .detailBox.people{
             width: 180px;
             padding: 0 22px;
         }
-        #people span{
+        .people span{
             color: #26a26f;
             font-size: 18px;
         }
-        #people p{
+        .people p{
             height: 68px;
             font-size: 18px;
         }
-        #people .words{
+        .people .words{
             height: 51px;
             padding-top: 17px;
         }
@@ -172,11 +172,6 @@
             position: absolute;
             right:320px;
         }
-
-
-
-
-
         .learn{
             height: 492px;
             width: 1202px;
@@ -233,14 +228,6 @@
             margin: 23px;
             background-position: -80px 2px;
         }
-        
-
-
-
-
-
-
-
         .students{
             height: 552px;
             width: 1204px;
@@ -270,7 +257,7 @@
             border-radius: 8px;
             float: left;
         }
-        #laststudent{
+        .laststudent{
             margin-right: 0;
         }/*最后一个的margin不会影响父元素宽度，只会占父元素空间*/
         .studentsShow h3{
@@ -289,16 +276,16 @@
             margin: 0 auto;
             background: url("images/spirit.png") no-repeat;
         }
-       #luo1{
-           background-position: -149px -155px;
-       }
-        #luo2{
+        .photo.luo1{
+            background-position: -149px -155px;
+        }
+        .photo.luo2{
             background-position: -280px 0;
         }
-        #luo3{
+        .photo.luo3{
             background-position: -280px -112px;
         }
-        #luo4{
+        .photo.luo4{
             background-position: -280px -221px;
         }
         .dot1{
@@ -313,16 +300,16 @@
             margin-right:1px;
             background: url("images/spirit.png") no-repeat;/*有个想法：欲出现点的滑动效果可以尝试js改变雪碧图位置*/
         }
-        #first{
+        span.first{
             background-position: -239px -278px;
         }
-        #second{
+        span.second{
             background-position: -260px -279px;
         }
-        #third{
+        span.third{
             background-position: -260px -279px;
         }
-        #forth{
+        span.forth{
             background-position: -260px -279px;
         }
         .companies{
@@ -347,10 +334,10 @@
             width: 253px;
             float: left;
         }
-        .companies .zhai{
+        .companies .company{
             width: 200px;
         }
-        .companies .huanxin{
+        .company.huanxin{
             margin: 0 13px;
         }
         .companies a{
@@ -359,24 +346,24 @@
             margin: 80px auto;
             background: url("images/spirit.png") no-repeat;
         }
-        #alibaba{
+        a.alibaba{
             width: 141px;
             background-position: -128px -97px;
         }
-        #huanxin{
+        a.huanxin{
             width: 135px;
             background-position:0 -161px ;
         }
-        #jinshanyun{
+        a.jinshanyun{
             width: 55px;
             height: 58px;
             background-position: 0 -97px;
         }
-        #ronglian{
+        a.ronglian{
             width: 171px;
             background-position: 1px -271px;
         }
-        #qiniu{
+        a.qiniu{
             width: 127px;
             background-position: 0 -218px;
         }
@@ -450,7 +437,7 @@
         .gongzhonghao h4{
             padding-bottom: 8px;
         }
-        #erweima{
+        p.erweima{
             width: 92px;
             height: 92px;
             margin: 0 auto;
@@ -573,14 +560,14 @@
             <div class="top">
                 <span>客服热线：010-594-78634</span>
                 <span class="login">
-                    <a href="#" id="wechat"></a>
-                    <a href="#" id="qq"></a>
-                    <a href="#" id="weibo"></a>
+                    <a href="#" class="wechat"></a>
+                    <a href="#" class="qq"></a>
+                    <a href="#" class="weibo"></a>
                 </span>
             </div>
             <div class="nav">
                 <ul>
-                    <li id="frontPage"><a href="#">首页</a></li>
+                    <li class="frontPage"><a href="#">首页</a></li>
                     <li><a href="#">职业</a></li>
                     <li><a href="#">推荐</a></li>
                     <li><a href="#">关于</a></li>
@@ -594,26 +581,26 @@
             <div class="detail">
                 <ul>
                     <li class="detailBox">
-                        <p class="icon" id="rocket"></p>
+                        <p class="icon rocket"></p>
                         <h3>高效</h3>
                         <p>将五到七年的成长时间，缩短 到一年到三年。</p>
                     </li>
                     <li class="detailBox">
-                        <p class="icon" id="book"></p>
+                        <p class="icon book"></p>
                         <h3>规范</h3>
                         <p>标准的实战教程，不会走弯路</p>
                     </li>
                     <li class="detailBox">
-                        <p class="icon" id="podCast"></p>
+                        <p class="icon podCast"></p>
                         <h3> 人脉</h3>
                         <p>同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</p>
                     </li>
                     <li class="line"></li>
-                    <li class="detailBox" id="people">
-                        <p class="icon" id="blank"></p>
-                        <span class="people"></span><span>12400</span>
+                    <li class="detailBox people">
+                        <p class="icon blank"></p>
+                        <span class="peopleIcon"></span><span>12400</span>
                         <p class="words">累计在线学习人数</p>
-                        <span class="people"></span><span>12400</span>
+                        <span class="peopleIcon"></span><span>12400</span>
                         <p class="words">学员已经找到满意工作</p>
                     </li>
                 </ul>
@@ -641,41 +628,41 @@
                 <h3>优秀学员展示</h3>
                 <ul>
                     <li class="studentsShow">
-                        <p class="photo" id="luo1"></p>
+                        <p class="photo luo1"></p>
                         <h3>技术顾问：罗大佑</h3>
                         <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
                     </li>
                     <li class="studentsShow">
-                        <p class="photo" id="luo2"></p>
+                        <p class="photo luo2"></p>
                         <h3>技术顾问：罗大佑</h3>
                         <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
                     </li>
                     <li class="studentsShow">
-                        <p class="photo" id="luo3"></p>
+                        <p class="photo luo3"></p>
                         <h3>技术顾问：罗大佑</h3>
                         <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
                     </li>
-                    <li class="studentsShow" id="laststudent">
-                        <p class="photo" id="luo4"></p>
+                    <li class="studentsShow laststudent">
+                        <p class="photo luo4"></p>
                         <h3>技术顾问：罗大佑</h3>
                         <p class="describe">百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
                     </li>
                 </ul>
                 <div class="dot1">
-                    <span id="first"></span>
-                    <span id="second"></span>
-                    <span id="third"></span>
-                    <span id="forth"></span>
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                    <span class="forth"></span>
                 </div>
             </div>
             <div class="companies">
                 <h3>战略合作企业</h3>
                 <ul>
-                    <li><a href="#" id="alibaba"></a></li>
-                    <li class="zhai"><a href="#" id="jinshanyun"></a></li>
-                    <li class="huanxin"><a href="#" id="huanxin"></a></li>
-                    <li class="zhai"><a href="#" id="ronglian"></a></li>
-                    <li><a href="#" id="qiniu"></a></li>
+                    <li><a href="#" class="alibaba"></a></li>
+                    <li class="company"><a href="#" class="jinshanyun"></a></li>
+                    <li class="huanxin"><a href="#" class="huanxin"></a></li>
+                    <li class="company"><a href="#" class="ronglian"></a></li>
+                    <li><a href="#" class="qiniu"></a></li>
                 </ul>
             </div>
             <div class="links">
@@ -730,7 +717,7 @@
                 </div>
                 <div class="gongzhonghao">
                     <h4>微信公众平台</h4>
-                    <p id="erweima"></p>
+                    <p class="erweima"></p>
                 </div>
             </div>
             <div class="copyright">
