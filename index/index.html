@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        *{
+            padding:0;margin:0;
+            font-family: "微软雅黑", 宋体, sans-serif;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        img{
+            border:none;
+        }
+        body{
+            text-align: center;
+        }
+
+        .container{
+            margin: 0 auto;
+            text-align: left;
+            width: 100%;
+            background-color:#68cdd5;
+            overflow: hidden;
+        }
+        .header{
+            width: 100%;
+            height: 435px;
+            background-color: #426a8b;
+        }
+        .nav{
+            width: 100%;
+            background-color: #355c7d;
+        }
+        .navMain{
+            /*width: 1200px;*/
+            margin:0 auto;
+            height: 50px;
+            padding: 0 50px;
+        }
+        .home{
+            display: inline-block;
+            width: 190px;
+            height: 50px;
+            color: #00ccfe;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 50px;
+            float: left;
+        }
+        .homeIcon{
+            width: 30px;
+            height: 30px;
+        }
+        .linkList{
+            float: right;
+        }
+        .linkList li{
+            float: left;
+        }
+        .link{
+            display: block;
+            width: 150px;
+            height: 47px;
+            background-color: rgba(192,108,132,0.8);
+            /*#c06c84;*/
+            text-align: center;
+            line-height: 50px;
+            /*margin-left: 20px;*/
+            border-bottom-right-radius:5px;
+            border-bottom-left-radius:5px;
+            border-bottom: 3px solid #c06c84;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .link:hover{
+            border-bottom-color: #ffd410;
+            font-size: 25px;
+        }
+        .picture{
+            width: 800px;
+            height: 520px;
+            position: relative;
+            margin: 0 auto;
+            /*overflow: hidden;*/
+        }
+        .light{
+            width: 256px;
+            height: 256px;
+            background: url("images/light.png") no-repeat;
+            margin: 0 auto;
+        }
+        .photo{
+            width: 60px;
+            height: 60px;
+            background:url("images/photo.png") no-repeat;
+            border-radius: 100px;
+            position: absolute;
+            left: 368px;
+            bottom: 60px;
+            border: 8px solid #c06c84;
+            z-index: 20;
+        }
+        .line{
+            width: 272px;
+            height: 194px;
+            background: url("images/line3.png") no-repeat;
+            position: absolute;
+            left: 393px;
+            top: 237px;
+            z-index: 10;
+        }
+        .littleIcon{
+            overflow: hidden;
+            width: 160px;
+            position: absolute;
+            bottom: 0;
+            left: 323px;
+        }
+        .littleIcon li{
+            float: left;
+        }
+        .littleIcon a{
+            display: block;
+            width: 33px;
+            height: 33px;
+            margin: 0 10px;
+        }
+        a.weChat{
+            background: url("images/weChat.png") no-repeat;
+        }
+        a.weibo{
+            background: url("images/weibo.png") no-repeat;
+
+        }
+        a.github{
+            background:url("images/github.png") no-repeat;
+        }
+        .slogan{
+            margin: 160px auto 0;
+            width: 600px;
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;font-weight: 600;
+        }
+        .shaw{
+            float: right;
+        }
+        .chinese{
+            clear: both;
+        }
+        .tasks{
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+        .tasks h3,.skills h3,.logs h3,.me h3{
+            background-color: rgba(192,108,132,0.8);
+            /*#355c7d;*/
+            color: #68cdd5;
+            margin: 40px;
+            padding-left: 20px;
+            clear: both;
+        }
+        .box{
+            width: 800px;margin:0 auto;
+        }
+        .box .demo{
+            float: left;
+            border: 3px solid #355c7d;
+            border-radius: 8px;
+            margin:5px;
+        }
+        /*.box .division{
+            width: 10px;
+            height: 1px;
+            float: left;
+            border: none;
+        }*/
+        .demo a{
+            display: block;
+            width: 250px;
+            height: 250px;
+        }
+        .task1{
+            background: url("taskpics/task1.jpg") no-repeat center;
+        }
+        .demo h3{
+            padding: 0;text-align: center;
+            margin:0;
+            color: #ffffff;
+
+
+        }
+        .task2{
+            position: relative;
+        }
+        .task2 .wrapper{
+            position: absolute;top: 0;
+        }
+        .task2 ol{
+            padding-top: 50px;
+        }
+        .task2 li{
+            margin-left: 60px;
+            list-style: decimal;
+            line-height: 30px;
+        }
+        .task3{
+            background: url("taskpics/task3.jpg") no-repeat center;
+        }
+        .task4{
+            background: url("taskpics/task4.jpg") no-repeat center;
+        }
+        .task5{
+            background: url("taskpics/task5.jpg") no-repeat center;
+        }
+        .task6{
+            background: url("taskpics/task6.jpg") no-repeat center;
+        }
+        .task7{
+            background: url("taskpics/task7.jpg") no-repeat center;
+        }
+        .task8{
+            background: url("taskpics/task8.jpg") no-repeat center;
+        }
+        .task9{
+            background: url("taskpics/task9.jpg") no-repeat center;
+        }
+
+        .wrapper{
+            width: 250px;
+            height: 150px;background: rgba(53,92,125,0.8);
+            display: block;
+            padding-top: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="navMain">
+                    <a href="http://thinkin.tk" class="home myFont"><img  class="homeIcon" src="images/home.png" alt=""/>THINKIN</a>
+                    <ul class="linkList">
+                        <li><a href="#demos" class="link">DEMO</a></li>
+                        <li><a href="#skill" class="link">任务</a></li>
+                        <li><a href="#log" class="link">日志</a></li>
+                        <li><a href="#me" class="link">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="picture">
+                <div class="light"></div>
+                <div class="photo"></div>
+                <div class="line"></div>
+                <ul class="littleIcon">
+                    <li><a href="#" class="weChat"></a></li>
+                    <li><a href="#" class="weibo"></a></li>
+                    <li><a href="#" class="github"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="slogan">
+                <p class="english myFont">"Your future depends on your dreams." So go to sleep.</p>
+                <p class="shaw"> --Bernard Shaw</p>
+                <p class="chinese">“未来取决于梦想。”所以赶紧睡觉去。 —萧伯纳</p>
+            </div>
+            <div class="tasks">
+                <h3 id="demos">DEMOS</h3>
+                <ul class="box">
+                    <li class="demo">
+                        <a href="#" class="task1" onmouseover=hide1(); onmouseout=show1();>
+                            <div class="wrapper" id="task1Wrapper"><h3>TASK1</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task2" onmouseover=hide2(); onmouseout=show2();>
+                            <ol>
+                                <li>svn,git的基本概念 </li>
+                                <li>linux服务器的简单脚本</li>
+                                <li>域名的配置</li>
+                                <li>Dnspod的使用</li>
+                            </ol>
+                            <div class="wrapper" id="task2Wrapper"><h3>TASK2</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task3" id="task3" onmouseover=hide3(); onmouseout=show3();>
+                            <div class="wrapper" id="task3Wrapper"><h3>TASK3</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task4" id="task4" onmouseover=hide4(); onmouseout=show4();>
+                            <div class="wrapper" id="task4Wrapper"><h3>TASK4</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task5" id="task5" onmouseover=hide5(); onmouseout=show5();>
+                            <div class="wrapper" id="task5Wrapper"><h3>TASK5</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task6" id="task6" onmouseover=hide6(); onmouseout=show6();>
+                            <div class="wrapper" id="task6Wrapper"><h3>TASK6</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task7" id="task7" onmouseover=hide7(); onmouseout=show7();>
+                            <div class="wrapper" id="task7Wrapper"><h3>TASK7</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task8" id="task8" onmouseover=hide8(); onmouseout=show8();>
+                            <div class="wrapper" id="task8Wrapper"><h3>TASK8</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="#" class="task9" id="task9" onmouseover=hide9(); onmouseout=show9();>
+                            <div class="wrapper" id="task9Wrapper"><h3>TASK9</h3></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3 id="skill">SKILLS</h3>
+            </div>
+            <div class="logs">
+                <h3 id="log">LOGS</h3>
+            </div>
+            <div class="me">
+                <h3 id="me">ME</h3>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <script>
+            var oWrapper1=document.getElementById('task1Wrapper');
+            var oWrapper2=document.getElementById('task2Wrapper');
+            var oWrapper3=document.getElementById('task3Wrapper');
+            var oWrapper4=document.getElementById('task4Wrapper');
+            var oWrapper5=document.getElementById('task5Wrapper');
+            var oWrapper6=document.getElementById('task6Wrapper');
+            var oWrapper7=document.getElementById('task7Wrapper');
+            var oWrapper8=document.getElementById('task8Wrapper');
+            var oWrapper9=document.getElementById('task9Wrapper');
+            function hide1(){
+                oWrapper1.style.display='none';
+            }
+            function show1(){
+                oWrapper1.style.display='block';
+            }
+            function hide2(){
+                oWrapper2.style.display='none';
+            }
+            function show2(){
+                oWrapper2.style.display='block';
+            }
+            function hide3(){
+                oWrapper3.style.display='none';
+            }
+            function show3(){
+                oWrapper3.style.display='block';
+            }
+            function hide4(){
+                oWrapper4.style.display='none';
+            }
+            function show4(){
+                oWrapper4.style.display='block';
+            }
+            function hide5(){
+                oWrapper5.style.display='none';
+            }
+            function show5(){
+                oWrapper5.style.display='block';
+            }
+            function hide6(){
+                oWrapper6.style.display='none';
+            }
+            function show6(){
+                oWrapper6.style.display='block';
+            }
+            function hide7(){
+                oWrapper7.style.display='none';
+            }
+            function show7(){
+                oWrapper7.style.display='block';
+            }
+            function hide8(){
+                oWrapper8.style.display='none';
+            }
+            function show8(){
+                oWrapper8.style.display='block';
+            }
+            function hide9(){
+                oWrapper9.style.display='none';
+            }
+            function show9(){
+                oWrapper9.style.display='block';
+            }
+    </script>
+</body>
+</html>
