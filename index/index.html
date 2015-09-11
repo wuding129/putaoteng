@@ -232,7 +232,6 @@
         .task9{
             background: url("taskpics/task9.jpg") no-repeat center;
         }
-
         .wrapper{
             width: 250px;
             height: 150px;background: rgba(53,92,125,0.8);
@@ -240,7 +239,103 @@
             padding-top: 100px;
             float: left;
         }
+
+
+        .frame{
+            width: 800px;
+            margin: 0 auto;
+        }
+        .ptteng{
+            width: 100%;
+            height: 500px;
+        }
+        .skills{
+            overflow: hidden;
+        }
+        .skillList{
+            width: 400px;
+            height: 300px;
+            border:solid #cc6b82;
+            border-width: 0 0 3px 3px;
+            margin-left: 100px;
+            padding-top:40px ;
+            float: left;
+        }
+        .skillList li{
+            height: 20px;
+
+            margin-top: 15px;
+
+        }
+        .docker{
+            width: 250px;
+            float: left;
+        }
+        .skillList span{
+            float: left;
+            color: #050094;
+        }
+        .photoshop,.html,.css,.javascript,.html5,.css3,.mobileWeb{
+            height: 20px;
+            border-top-right-radius:8px;
+            border-bottom-right-radius:8px;
+
+        }
+        .photoshop{
+            width: 70px;
+            background-color: #83b09a;
+
+        }
+        .html{
+            width: 180px;
+            background-color: #de6a5e;
+        }
+        .css{
+            width: 150px;
+            background-color:#c06c84;
+        }
+        .javascript{
+            width: 20px;
+            background-color: #d8e6e1;
+        }
+        .html5{
+            width: 50px;
+            background-color: #f1e4aa;
+        }
+        .css3{
+            width: 30px;
+            background-color: #e0dcff;
+        }
+        .mobileWeb{
+            width: 80px;
+            background-color: #99cfba;
+        }
+        .skillTree{
+            display: block;
+            width: 400px;
+            height: 340px;
+            border: 1px solid red;
+            float: right;
+            margin-right: 100px;
+            background: url("skills/skilltree.jpg") no-repeat;
+        }
+        .skillTree h3{
+            text-align: center;
+            padding:0
+        }
+        .skillTreeBig{
+            display: block;
+            width: 100%;
+            height: 3000px;
+            background: rgba(0, 0, 0, 0.5) url("skills/skilltreeBig.png") no-repeat center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     </style>
+    <script>
+        var oBigImg=document.getElementById('bigImg')
+    </script>
 </head>
 <body>
     <div class="container">
@@ -262,8 +357,8 @@
                 <div class="line"></div>
                 <ul class="littleIcon">
                     <li><a href="#" class="weChat"></a></li>
-                    <li><a href="#" class="weibo"></a></li>
-                    <li><a href="#" class="github"></a></li>
+                    <li><a href="http://weibo.com/u/2256272737/home?topnav=1&wvr=6" class="weibo"></a></li>
+                    <li><a href="https://github.com/wuding129" class="github"></a></li>
                 </ul>
             </div>
         </div>
@@ -277,12 +372,12 @@
                 <h3 id="demos">DEMOS</h3>
                 <ul class="box">
                     <li class="demo">
-                        <a href="#" class="task1" onmouseover=hide1(); onmouseout=show1();>
+                        <a href="http://thinkin.tk/task001/task001.html" class="task1" onmouseover=hide1(); onmouseout=show1();>
                             <div class="wrapper" id="task1Wrapper"><h3>TASK1</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task2" onmouseover=hide2(); onmouseout=show2();>
+                        <a href="javascript:" class="task2" onmouseover=hide2(); onmouseout=show2();>
                             <ol>
                                 <li>svn,git的基本概念 </li>
                                 <li>linux服务器的简单脚本</li>
@@ -293,37 +388,37 @@
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task3" id="task3" onmouseover=hide3(); onmouseout=show3();>
+                        <a href="http://thinkin.tk/task003/task003.html" class="task3" id="task3" onmouseover=hide3(); onmouseout=show3();>
                             <div class="wrapper" id="task3Wrapper"><h3>TASK3</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task4" id="task4" onmouseover=hide4(); onmouseout=show4();>
+                        <a href="http://thinkin.tk/task004/task004em.html" class="task4" id="task4" onmouseover=hide4(); onmouseout=show4();>
                             <div class="wrapper" id="task4Wrapper"><h3>TASK4</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task5" id="task5" onmouseover=hide5(); onmouseout=show5();>
+                        <a href="http://thinkin.tk/task005/task005.html" class="task5" id="task5" onmouseover=hide5(); onmouseout=show5();>
                             <div class="wrapper" id="task5Wrapper"><h3>TASK5</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task6" id="task6" onmouseover=hide6(); onmouseout=show6();>
+                        <a href="http://thinkin.tk/task006/task006spirit.html" class="task6" id="task6" onmouseover=hide6(); onmouseout=show6();>
                             <div class="wrapper" id="task6Wrapper"><h3>TASK6</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task7" id="task7" onmouseover=hide7(); onmouseout=show7();>
+                        <a href="http://thinkin.tk/task007/task007.html" class="task7" id="task7" onmouseover=hide7(); onmouseout=show7();>
                             <div class="wrapper" id="task7Wrapper"><h3>TASK7</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task8" id="task8" onmouseover=hide8(); onmouseout=show8();>
+                        <a href="http://thinkin.tk/task008/task008.html" class="task8" id="task8" onmouseover=hide8(); onmouseout=show8();>
                             <div class="wrapper" id="task8Wrapper"><h3>TASK8</h3></div>
                         </a>
                     </li>
                     <li class="demo">
-                        <a href="#" class="task9" id="task9" onmouseover=hide9(); onmouseout=show9();>
+                        <a href="http://thinkin.tk/task009/task009.html" class="task9" id="task9" onmouseover=hide9(); onmouseout=show9();>
                             <div class="wrapper" id="task9Wrapper"><h3>TASK9</h3></div>
                         </a>
                     </li>
@@ -331,9 +426,24 @@
             </div>
             <div class="skills">
                 <h3 id="skill">SKILLS</h3>
+                <ul class="skillList">
+                    <li><div class="docker"><div class="photoshop"></div></div><span class="skillName">Ps</span></li>
+                    <li><div class="docker"><div class="html"></div></div><span class="skillName">Html</span></li>
+                    <li><div class="docker"><div class="css"></div></div><span class="skillName">Css</span></li>
+                    <li><div class="docker"><div class="javascript"></div></div><span class="skillName">Js</span></li>
+                    <li><div class="docker"><div class="html5"></div></div><span class="skillName">H5</span></li>
+                    <li><div class="docker"><div class="css3"></div></div><span class="skillName">Css3</span></li>
+                    <li><div class="docker"><div class="mobileWeb"></div></div><span class="skillName">Mobile Web</span></li>
+                </ul>
+                <a href="javascript:" class="skillTree"><h3>点击放大</h3></a>
+                <div class="skillTreeBig" id="bigImg"></div>
             </div>
             <div class="logs">
                 <h3 id="log">LOGS</h3>
+                <div class="frame">
+                    <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0" seamless>
+                    </iframe>
+                </div>
             </div>
             <div class="me">
                 <h3 id="me">ME</h3>
