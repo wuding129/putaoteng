@@ -14,6 +14,25 @@
             oBigImg.onclick=function(){
                 oBigImg.style.display='none';
             };
+            /*--------------------*/
+            var oFrameWrapper=document.getElementById('frameWrapper');
+            var oClickLog=document.getElementById('clickLog');
+            oClickLog.onclick=function(){
+                oFrameWrapper.style.display='block';
+            };
+            oFrameWrapper.onclick=function(){
+                oFrameWrapper.style.display='none';
+            };
+            /*---------------------*/
+
+        };
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+                document.getElementById("letUp").style.display = "block";
+            }
+            else {
+                document.getElementById("letUp").style.display = "none";
+            }
         }
     </script>
     <style>
@@ -39,7 +58,7 @@
             width: 30px;
             position: fixed;
             right: 30px;
-            bottom: 20px;
+            bottom: 30px;
             background: url("images/pencile.png") no-repeat center;
         }
         .container{
@@ -68,7 +87,8 @@
             display: inline-block;
             width: 220px;
             height: 50px;
-            color: #00ccfe;
+            color: #00eefe;
+            /*#00ccfe;*/
             font-weight: bold;
             font-size: 40px;
             line-height: 50px;
@@ -361,10 +381,17 @@
             background: url("skills/skilltree.jpg") no-repeat center;
             border-radius: 10px;
         }
+        .skillTree div{
+            width: 100%;
+            height: 340px;
+            background: rgba(53,92,125,0.8);
+            overflow: hidden;
+        }
         .skillTree h3{
             text-align: center;
             padding:0;
             margin: 130px 0 0;
+            color: #ffffff;
         }
         .skillTreeBig{
             display: none;
@@ -379,7 +406,7 @@
 
         .frame{
             width: 800px;
-            margin: 40px auto 0;
+            margin: 2170px auto 0;
             /*visibility: hidden;*/
             /*display: none;*/
         }
@@ -464,7 +491,7 @@
 </head>
 <body>
     <div class="container">
-        <a class="letUp" href="#"></a>
+        <a class="letUp" id="letUp" href="#"></a>
         <div class="header">
             <div class="nav">
                 <div class="navMain">
@@ -487,7 +514,7 @@
                     <div class="line2"></div>
                 </div>
                 <ul class="littleIcon">
-                    <li><a href="#" class="weChat"></a></li>
+                    <li><a href="#erWeiMa" class="weChat"></a></li>
                     <li><a href="http://weibo.com/u/2256272737/home?topnav=1&wvr=6" class="weibo"></a></li>
                     <li><a href="https://github.com/wuding129" class="github"></a></li>
                 </ul>
@@ -566,15 +593,15 @@
                     <li><div class="docker"><div class="css3"></div></div><span class="skillName">Css3</span></li>
                     <li><div class="docker"><div class="mobileWeb"></div></div><span class="skillName">Mobile Web</span></li>
                 </ul>
-                <a href="javascript:" class="skillTree" id="clickImg"><h3>点击放大</h3></a>
+                <a href="javascript:" class="skillTree" id="clickImg"><div><h3>点击放大</h3></div></a>
                 <div class="skillTreeBig" id="bigImg"></div>
             </div>
             <div class="logs">
                 <h3 id="log">LOGS</h3>
-                <a href="javascript:" class="frameImage">
+                <a href="javascript:" class="frameImage" id="clickLog">
                     <div class="frameImageWrapperLittle"><h3 class="clickFrameImage">点击可查看</h3></div>
                 </a>
-                <a href="#" class="frameWrapper">
+                <a href="#" class="frameWrapper" id="frameWrapper">
                     <div class="frame">
                         <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0">
                         </iframe>
@@ -590,13 +617,13 @@
                     <div class="introduction">
                         <h3>关于</h3>
                         <p>大家好！</p>
-                        <p>我叫武丁，是个前端开发学习者、科技产品和互联网产品爱好者，同时也是个对世界充满好奇的人，感谢大家能来这个网站见证我的每一步成长，这个页面是我学习css时的demo索引页，是个人利用现有基础知识设计完成的，代码全部托管在<a href="http://github.com/wuding129">github</a>上，设计制作水平有限，代码写得比较简陋，大家多提建议，这里有我的联系方式，欢迎大家一起交流，在以便在前端之路上共同进步。</p>
+                        <p>我是武丁，是个前端开发学习者、科技产品和互联网产品爱好者，同时也是个对世界充满好奇的人，感谢大家能来这个网站见证我的每一步成长，这个页面是个人学习css的demo及日志索引页，是个人利用现有基础知识设计并制作完成的，页面及所有Demo代码已全部托管在<a href="http://github.com/wuding129">github</a>上，设计制作水平有限，代码写得比较简陋，大家多提建议，这里有我的联系方式，欢迎大家一起交流，在以便在前端之路上共同进步。（若能提供工作机会我会不胜荣幸）</p>
                         <p>QQ:369350623</p>
                         <P>E-mail：wuding129@163.com</P>
                     </div>
                     <div class="weChatErWeiMa">
                         <p>微信</p>
-                        <div class="erWeiMa"></div>
+                        <div class="erWeiMa" id="erWeiMa"></div>
                     </div>
             </div>
         </div>
