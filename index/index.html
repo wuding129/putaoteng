@@ -3,6 +3,19 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>首页</title>
+    <script>
+
+        window.onload=function(){
+            var oBigImg=document.getElementById('bigImg');
+            var oClickImg=document.getElementById('clickImg');
+            oClickImg.onclick=function(){
+                oBigImg.style.display='block';
+            };
+            oBigImg.onclick=function(){
+                oBigImg.style.display='none';
+            };
+        }
+    </script>
     <style>
         *{
             padding:0;margin:0;
@@ -21,7 +34,14 @@
         body{
             text-align: center;
         }
-
+        .letUp{
+            height: 60px;
+            width: 30px;
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+            background: url("images/pencile.png") no-repeat center;
+        }
         .container{
             margin: 0 auto;
             text-align: left;
@@ -46,7 +66,7 @@
         }
         .home{
             display: inline-block;
-            width: 190px;
+            width: 220px;
             height: 50px;
             color: #00ccfe;
             font-weight: bold;
@@ -96,13 +116,22 @@
             background: url("images/light.png") no-repeat;
             margin: 0 auto;
         }
+        .turnOn{
+            width: 200px;
+            height: 165px;
+            margin: 0 auto;
+            border-radius: 80px;
+            background: rgba(225,213,58,0.5);
+            display: none;
+        }
         .photo{
+            display: block;
             width: 60px;
             height: 60px;
-            background:url("images/photo.png") no-repeat;
+            background:url("images/photo.png") no-repeat center;
             border-radius: 100px;
             position: absolute;
-            left: 368px;
+            left: 360px;
             bottom: 60px;
             border: 8px solid #c06c84;
             z-index: 20;
@@ -110,11 +139,26 @@
         .line{
             width: 272px;
             height: 194px;
-            background: url("images/line3.png") no-repeat;
+            /*background: url("images/line3.png") no-repeat;*/
             position: absolute;
             left: 393px;
             top: 237px;
             z-index: 10;
+        }
+        .line1{
+            height: 94px;
+            border: solid #c06c84;border-bottom-left-radius: 15px;
+            border-width: 0 0 10px 10px;
+        }
+        .line2{
+            width: 100%;
+            height: 90px;
+            border: solid #c06c84;
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+            border-width: 0 10px 10px 0;
+            position: absolute;
+            top: 94px;
         }
         .littleIcon{
             overflow: hidden;
@@ -244,6 +288,7 @@
         .frame{
             width: 800px;
             margin: 0 auto;
+            visibility: hidden;
         }
         .ptteng{
             width: 100%;
@@ -286,6 +331,10 @@
             background-color: #83b09a;
 
         }
+        .photoshop:hover,.html:hover,.css:hover,.javascript:hover,.html5:hover,.css3:hover,.mobileWeb:hover{
+            border:solid #ffdf00;
+            border-width: 2px 2px 2px 0;
+        }
         .html{
             width: 180px;
             background-color: #de6a5e;
@@ -308,23 +357,24 @@
         }
         .mobileWeb{
             width: 80px;
-            background-color: #99cfba;
+            background-color: #aea6cf;
         }
         .skillTree{
             display: block;
-            width: 400px;
+            width: 600px;
             height: 340px;
             border: 1px solid red;
             float: right;
             margin-right: 100px;
-            background: url("skills/skilltree.jpg") no-repeat;
+            background: url("skills/skilltree.jpg") no-repeat center;
+            border-radius: 10px;
         }
         .skillTree h3{
             text-align: center;
             padding:0
         }
         .skillTreeBig{
-            display: block;
+            display: none;
             width: 100%;
             height: 3000px;
             background: rgba(0, 0, 0, 0.5) url("skills/skilltreeBig.png") no-repeat center;
@@ -332,29 +382,70 @@
             top: 0;
             left: 0;
         }
+        .weChatErWeiMa{
+            width: 369px;
+            float: right;margin-right: 80px;
+        }
+        .erWeiMa{
+            width: 369px;
+            height: 369px;
+            background: url("images/myErWeiMa.jpg") no-repeat center;
+        }
+        .weChatErWeiMa p{
+            font-size: 35px;
+            color: #000;
+            text-align: center;
+        }
+        .introduction{
+            width: 600px;
+            height: 400px;
+            float: left;
+            padding-left: 80px;
+        }
+        .introduction h3{
+            padding: 0;
+            margin: 0;color: #0a3262;
+            background: none;
+            text-align: center;
+            font-size: 50px;
+        }
+        .introduction p{
+            color: #0a3262;
+            font-size: 25px;
+            text-indent: 2em;
+            padding-bottom: 10px ;
+        }
+        .footer{
+        }
+        .copyright{
+            text-align:center;
+        }
     </style>
-    <script>
-        var oBigImg=document.getElementById('bigImg')
-    </script>
 </head>
 <body>
     <div class="container">
+        <a class="letUp" href="#"></a>
         <div class="header">
             <div class="nav">
                 <div class="navMain">
                     <a href="http://thinkin.tk" class="home myFont"><img  class="homeIcon" src="images/home.png" alt=""/>THINKIN</a>
                     <ul class="linkList">
                         <li><a href="#demos" class="link">DEMO</a></li>
-                        <li><a href="#skill" class="link">任务</a></li>
+                        <li><a href="#skill" class="link">技能</a></li>
                         <li><a href="#log" class="link">日志</a></li>
                         <li><a href="#me" class="link">关于我</a></li>
                     </ul>
                 </div>
             </div>
             <div class="picture">
-                <div class="light"></div>
-                <div class="photo"></div>
-                <div class="line"></div>
+                <div class="light" id="light"   onmouseover=on(); onmouseout=off();>
+                    <div class="turnOn" id="turnOn"></div>
+                </div>
+                <a class="photo" href="#" onmouseover=on(); onmouseout=off(); onclick=off();></a>
+                <div class="line">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
                 <ul class="littleIcon">
                     <li><a href="#" class="weChat"></a></li>
                     <li><a href="http://weibo.com/u/2256272737/home?topnav=1&wvr=6" class="weibo"></a></li>
@@ -435,7 +526,7 @@
                     <li><div class="docker"><div class="css3"></div></div><span class="skillName">Css3</span></li>
                     <li><div class="docker"><div class="mobileWeb"></div></div><span class="skillName">Mobile Web</span></li>
                 </ul>
-                <a href="javascript:" class="skillTree"><h3>点击放大</h3></a>
+                <a href="javascript:" class="skillTree" id="clickImg"><h3>点击放大</h3></a>
                 <div class="skillTreeBig" id="bigImg"></div>
             </div>
             <div class="logs">
@@ -447,74 +538,96 @@
             </div>
             <div class="me">
                 <h3 id="me">ME</h3>
+                    <div class="introduction">
+                        <h3>关于</h3>
+                        <p>大家好！</p>
+                        <p>我叫武丁，感谢大家能来这个网站见证我的每一步成长，这个页面是我学习css时的demo索引页，是个人自主设计并完成的，设计制作水平有限，代码还是比较简陋，大家多多包涵，这里有我的联系方式，欢迎大家一起交流在前端之路上共同进步。</p>
+                        <p>QQ:369350623</p>
+                        <P>E-mail：wuding129@163.com</P>
+                    </div>
+                    <div class="weChatErWeiMa">
+                        <p>可微信扫描二维码</p>
+                        <div class="erWeiMa"></div>
+                    </div>
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <div class="copyright">Designed By WuDing</div>
+        </div>
     </div>
     <script>
-            var oWrapper1=document.getElementById('task1Wrapper');
-            var oWrapper2=document.getElementById('task2Wrapper');
-            var oWrapper3=document.getElementById('task3Wrapper');
-            var oWrapper4=document.getElementById('task4Wrapper');
-            var oWrapper5=document.getElementById('task5Wrapper');
-            var oWrapper6=document.getElementById('task6Wrapper');
-            var oWrapper7=document.getElementById('task7Wrapper');
-            var oWrapper8=document.getElementById('task8Wrapper');
-            var oWrapper9=document.getElementById('task9Wrapper');
-            function hide1(){
-                oWrapper1.style.display='none';
-            }
-            function show1(){
-                oWrapper1.style.display='block';
-            }
-            function hide2(){
-                oWrapper2.style.display='none';
-            }
-            function show2(){
-                oWrapper2.style.display='block';
-            }
-            function hide3(){
-                oWrapper3.style.display='none';
-            }
-            function show3(){
-                oWrapper3.style.display='block';
-            }
-            function hide4(){
-                oWrapper4.style.display='none';
-            }
-            function show4(){
-                oWrapper4.style.display='block';
-            }
-            function hide5(){
-                oWrapper5.style.display='none';
-            }
-            function show5(){
-                oWrapper5.style.display='block';
-            }
-            function hide6(){
-                oWrapper6.style.display='none';
-            }
-            function show6(){
-                oWrapper6.style.display='block';
-            }
-            function hide7(){
-                oWrapper7.style.display='none';
-            }
-            function show7(){
-                oWrapper7.style.display='block';
-            }
-            function hide8(){
-                oWrapper8.style.display='none';
-            }
-            function show8(){
-                oWrapper8.style.display='block';
-            }
-            function hide9(){
-                oWrapper9.style.display='none';
-            }
-            function show9(){
-                oWrapper9.style.display='block';
-            }
+        var oWrapper1=document.getElementById('task1Wrapper');
+        var oWrapper2=document.getElementById('task2Wrapper');
+        var oWrapper3=document.getElementById('task3Wrapper');
+        var oWrapper4=document.getElementById('task4Wrapper');
+        var oWrapper5=document.getElementById('task5Wrapper');
+        var oWrapper6=document.getElementById('task6Wrapper');
+        var oWrapper7=document.getElementById('task7Wrapper');
+        var oWrapper8=document.getElementById('task8Wrapper');
+        var oWrapper9=document.getElementById('task9Wrapper');
+        function hide1(){
+            oWrapper1.style.display='none';
+        }
+        function show1(){
+            oWrapper1.style.display='block';
+        }
+        function hide2(){
+            oWrapper2.style.display='none';
+        }
+        function show2(){
+            oWrapper2.style.display='block';
+        }
+        function hide3(){
+            oWrapper3.style.display='none';
+        }
+        function show3(){
+            oWrapper3.style.display='block';
+        }
+        function hide4(){
+            oWrapper4.style.display='none';
+        }
+        function show4(){
+            oWrapper4.style.display='block';
+        }
+        function hide5(){
+            oWrapper5.style.display='none';
+        }
+        function show5(){
+            oWrapper5.style.display='block';
+        }
+        function hide6(){
+            oWrapper6.style.display='none';
+        }
+        function show6(){
+            oWrapper6.style.display='block';
+        }
+        function hide7(){
+            oWrapper7.style.display='none';
+        }
+        function show7(){
+            oWrapper7.style.display='block';
+        }
+        function hide8(){
+            oWrapper8.style.display='none';
+        }
+        function show8(){
+            oWrapper8.style.display='block';
+        }
+        function hide9(){
+            oWrapper9.style.display='none';
+        }
+        function show9(){
+            oWrapper9.style.display='block';
+        }
+        /*---------*/
+        var oLight=document.getElementById('light');
+        var oTurnOn=document.getElementById('turnOn');
+        function on(){
+            oTurnOn.style.display='block';
+        }
+        function off(){
+            oTurnOn.style.display='none';
+        }
     </script>
 </body>
 </html>
