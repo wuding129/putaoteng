@@ -46,7 +46,7 @@
             margin: 0 auto;
             text-align: left;
             width: 100%;
-            background-color:#68cdd5;
+            background-color: #86c1d5;
             overflow: hidden;
         }
         .header{
@@ -278,22 +278,14 @@
         }
         .wrapper{
             width: 250px;
-            height: 150px;background: rgba(53,92,125,0.8);
+            height: 150px;
+            background: rgba(53,92,125,0.8);
             display: block;
             padding-top: 100px;
             float: left;
         }
 
-
-        .frame{
-            width: 800px;
-            margin: 0 auto;
-            visibility: hidden;
-        }
-        .ptteng{
-            width: 100%;
-            height: 500px;
-        }
+        /*--------------------------------------------------*/
         .skills{
             overflow: hidden;
         }
@@ -371,17 +363,60 @@
         }
         .skillTree h3{
             text-align: center;
-            padding:0
+            padding:0;
+            margin: 130px 0 0;
         }
         .skillTreeBig{
             display: none;
             width: 100%;
             height: 3000px;
-            background: rgba(0, 0, 0, 0.5) url("skills/skilltreeBig.png") no-repeat center;
+            background: rgba(53,92,125,0.8) url("skills/skilltreeBig.png") no-repeat center;
             position: absolute;
             top: 0;
             left: 0;
         }
+        /*--------------------------------------------------------*/
+
+        .frame{
+            width: 800px;
+            margin: 40px auto 0;
+            /*visibility: hidden;*/
+            /*display: none;*/
+        }
+        .frameImage{
+            display:block;
+            width: 800px;
+            height: 500px;
+            background: url("logImage/log.PNG") no-repeat center;
+            margin: 0 auto;
+        }
+        .frameImage .frameImageWrapperLittle{
+            width: 100%;
+            height: 500px;
+            background: rgba(53,92,125,0.8);
+            overflow: hidden;
+        }
+        .frameImage .clickFrameImage{
+            text-align: center;
+            color: #ffffff;
+            padding: 0;
+            margin: 200px auto 0;
+        }
+        .frameWrapper{
+            display: none;
+            width: 100%;
+            height: 3223px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(53,92,125,0.8);
+            z-index: 30;
+        }
+        .ptteng{
+            width: 100%;
+            height: 500px;
+        }
+        /*------------------------------*/
         .weChatErWeiMa{
             width: 369px;
             float: right;margin-right: 80px;
@@ -398,7 +433,6 @@
         }
         .introduction{
             width: 600px;
-            height: 400px;
             float: left;
             padding-left: 80px;
         }
@@ -411,14 +445,20 @@
         }
         .introduction p{
             color: #0a3262;
-            font-size: 25px;
+            font-size: 21px;
             text-indent: 2em;
             padding-bottom: 10px ;
         }
         .footer{
+            clear: both;
+            background-color: #355c7d;
         }
         .copyright{
+            height: 30px;
             text-align:center;
+            color: #ffffff;
+            font-size: 13px;
+            line-height: 30px;
         }
     </style>
 </head>
@@ -531,28 +571,37 @@
             </div>
             <div class="logs">
                 <h3 id="log">LOGS</h3>
-                <div class="frame">
+                <a href="javascript:" class="frameImage">
+                    <div class="frameImageWrapperLittle"><h3 class="clickFrameImage">点击可查看</h3></div>
+                </a>
+                <a href="#" class="frameWrapper">
+                    <div class="frame">
+                        <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0">
+                        </iframe>
+                    </div>
+                </a>
+                <!--<div class="frame">
                     <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0" seamless>
                     </iframe>
-                </div>
+                </div>-->
             </div>
             <div class="me">
                 <h3 id="me">ME</h3>
                     <div class="introduction">
                         <h3>关于</h3>
                         <p>大家好！</p>
-                        <p>我叫武丁，感谢大家能来这个网站见证我的每一步成长，这个页面是我学习css时的demo索引页，是个人自主设计并完成的，设计制作水平有限，代码还是比较简陋，大家多多包涵，这里有我的联系方式，欢迎大家一起交流在前端之路上共同进步。</p>
+                        <p>我叫武丁，是个前端开发学习者、科技产品和互联网产品爱好者，同时也是个对世界充满好奇的人，感谢大家能来这个网站见证我的每一步成长，这个页面是我学习css时的demo索引页，是个人利用现有基础知识设计完成的，代码全部托管在<a href="http://github.com/wuding129">github</a>上，设计制作水平有限，代码写得比较简陋，大家多提建议，这里有我的联系方式，欢迎大家一起交流，在以便在前端之路上共同进步。</p>
                         <p>QQ:369350623</p>
                         <P>E-mail：wuding129@163.com</P>
                     </div>
                     <div class="weChatErWeiMa">
-                        <p>可微信扫描二维码</p>
+                        <p>微信</p>
                         <div class="erWeiMa"></div>
                     </div>
             </div>
         </div>
         <div class="footer">
-            <div class="copyright">Designed By WuDing</div>
+            <div class="copyright">Copyright&copy;2015&nbsp;<a href="http://www.thinkin.tk">www.thinkin.tk</a>&nbsp;All Rights Reserved&nbsp;|&nbsp;<span>The Theme Designed By WuDing</span></div>
         </div>
     </div>
     <script>
