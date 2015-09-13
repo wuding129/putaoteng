@@ -414,6 +414,7 @@ a.github{
 .erWeiMa{
     width: 200px;
     height: 200px;
+    margin: 10px 0;
     background: url("http://7xlqun.com1.z0.glb.clouddn.com/pttengImages_indexmyErWeiMa.jpg") no-repeat center;
 }
 .weChatErWeiMa p{
@@ -440,6 +441,7 @@ a.github{
     text-indent: 2em;
     padding-bottom: 10px ;
     font-weight: 600;
+    word-break: break-all;
 }
 .footer{
     clear: both;
@@ -461,7 +463,7 @@ a.github{
 
 }
 .pttengBrief h4{
-    text-align: center;padding: 10px 0;
+    text-align: center;padding: 10px 0;font-size: 25px;
 }
 .pttengBrief .brief{
     text-indent: 2em;
