@@ -408,18 +408,19 @@ a.github{
 }
 /*------------------------------*/
 .weChatErWeiMa{
-    width: 369px;
-    float: right;margin-right: 80px;
+    width: 200px;
+    float: right;margin-right: 200px;
 }
 .erWeiMa{
-    width: 369px;
-    height: 369px;
+    width: 200px;
+    height: 200px;
     background: url("http://7xlqun.com1.z0.glb.clouddn.com/pttengImages_indexmyErWeiMa.jpg") no-repeat center;
 }
 .weChatErWeiMa p{
     font-size: 35px;
-    color: #000;
+    color: #0a3262;
     text-align: center;
+    font-weight: 600;
 }
 .introduction{
     width: 600px;
@@ -431,17 +432,52 @@ a.github{
     margin: 0;color: #0a3262;
     background: none;
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
 }
 .introduction p{
     color: #0a3262;
     font-size: 21px;
     text-indent: 2em;
     padding-bottom: 10px ;
+    font-weight: 600;
 }
 .footer{
     clear: both;
     background-color: #355c7d;
+}
+.pttengLinkWrapper{
+    width: 100%;
+    background-color: #426a8b;
+    border-bottom: 2px solid #cc6b82;
+}
+.pttengLink{
+    width: 1200px;
+    color: #ffffff;overflow: hidden;padding: 20px 0;
+    margin:0 auto;
+    font-weight: 600;
+}
+.pttengBrief{
+    width: 600px;float: left;margin:0 10px;
+
+}
+.pttengBrief h4{
+    text-align: center;padding: 10px 0;
+}
+.pttengBrief .brief{
+    text-indent: 2em;
+    color: #add5d1;
+    font-size: 20px;
+}
+.pttengContact{
+    float:right;width: 400px;margin:10px;
+}
+.pttengContact .pttengLogo{
+    display: block;width: 350px;height: 130px;
+    margin: 5px;
+    background: url("http://7xlqun.com1.z0.glb.clouddn.com/pttengImages_indexpttengLogo.png") no-repeat center;
+}
+.pttengContact p{
+    line-height: 25px;
 }
 .copyright{
     height: 30px;
