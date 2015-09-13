@@ -447,19 +447,24 @@ a.github{
     clear: both;
     background-color: #355c7d;
 }
-.pttengLinkWrapper{
+/*.pttengLinkWrapper{
     width: 100%;
     background-color: #426a8b;
     border-bottom: 2px solid #cc6b82;
-}
+}*/
 .pttengLink{
-    width: 1200px;
+    /*width: 1200px;*/
     color: #ffffff;overflow: hidden;padding: 20px 0;
-    margin:0 auto;
+    /*margin:0 auto;*/
     font-weight: 600;
+    /*----start去掉wrapper后改的----*/
+    width: 100%;
+    background-color: #426a8b;
+    border-bottom: 2px solid #cc6b82;
+    /*----end-----*/
 }
 .pttengBrief{
-    width: 600px;float: left;margin:0 10px;
+    width: 600px;float: left;margin:0 10px 0 100px;
 
 }
 .pttengBrief h4{
@@ -471,7 +476,7 @@ a.github{
     font-size: 20px;
 }
 .pttengContact{
-    float:right;width: 400px;margin:10px;
+    float:right;width: 350px;margin:10px 100px 10px 10px;
 }
 .pttengContact .pttengLogo{
     display: block;width: 350px;height: 130px;
