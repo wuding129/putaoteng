@@ -273,7 +273,8 @@ a.github{
     overflow: hidden;
 }
 .skillList{
-    width: 400px;
+    width: 35%;min-width: 340px;
+    /*400px;*/
     height: 300px;
     border:solid #cc6b82;
     border-width: 0 0 3px 3px;
@@ -336,7 +337,8 @@ a.github{
 }
 .skillTree{
     display: block;
-    width: 600px;
+    width: 40%;
+    min-width: 400px;
     height: 340px;
     border: 1px solid red;
     float: right;
@@ -348,7 +350,7 @@ a.github{
     width: 100%;
     height: 340px;
     background: rgba(53,92,125,0.8);
-    overflow: hidden;
+    overflow: hidden;border-radius: 10px;
 }
 .skillTree h3{
     text-align: center;
@@ -424,7 +426,7 @@ a.github{
     font-weight: 600;
 }
 .introduction{
-    width: 600px;
+    width: 50%;
     float: left;
     padding-left: 80px;
 }
@@ -441,7 +443,7 @@ a.github{
     text-indent: 2em;
     padding-bottom: 10px ;
     font-weight: 600;
-    word-break: break-all;
+    /*word-break: break-all;*/
 }
 .footer{
     clear: both;
@@ -464,7 +466,7 @@ a.github{
     /*----end-----*/
 }
 .pttengBrief{
-    width: 600px;float: left;margin:0 10px 0 100px;
+    width: 40%;float: left;margin:0 10px 0 80px;
 
 }
 .pttengBrief h4{
@@ -476,12 +478,14 @@ a.github{
     font-size: 20px;
 }
 .pttengContact{
-    float:right;width: 350px;margin:10px 100px 10px 10px;
+    float:right;width: 30%;margin:10px 100px 10px 10px;
 }
-.pttengContact .pttengLogo{
-    display: block;width: 350px;height: 130px;
-    margin: 5px;
+.pttengContact .pttengLogo {
+    display: block;
+    width: 100%;/*350px*/
+    height: 130px;
     background: url("http://7xlqun.com1.z0.glb.clouddn.com/pttengImages_indexpttengLogo.png") no-repeat center;
+    background-size: contain;
 }
 .pttengContact p{
     line-height: 25px;
