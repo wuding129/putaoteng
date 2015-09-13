@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>首页</title>
+    <link rel="stylesheet" href="index/index_css/index_css.css"/>
+    <script src="index/index_js/index_js.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -12,20 +14,222 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-
 </head>
 <body>
-    <ul>
-        <li><a href="task001/task001.html">task001：9宫格</a></li>
-        <li><a href="#">task002：布局</a></li>
-        <li><a href="task003/task003.html">task003:移动web列表页布局</a></li>
-        <li><a href="task004/task004em.html">task004em化:结果页布局</a></li>
-        <li><a href="task005/task005.html">task005:首页布局及菜单</a></li>
-        <li><a href="task006/task006spirit.html">task006spirit:投票页布局雪碧图版</a></li>
-        <li><a href="task007/task007.html">task007:网站首页</a></li>
-        <li><a href="task008/task008.html">task008:职位页</a></li>
-        <li><a href="task009/task009.html">task009:合作企业</a></li>
-
-    </ul>
+    <div class="container">
+        <a class="letUp" id="letUp" href="#"></a>
+        <div class="header">
+            <div class="nav">
+                <div class="navMain">
+                    <a href="http://thinkin.tk" class="home myFont"><span  class="homeIcon"></span>THINKIN</a>
+                    <ul class="linkList">
+                        <li><a href="#demos" class="link">DEMO</a></li>
+                        <li><a href="#skill" class="link">技能</a></li>
+                        <li><a href="#log" class="link">日志</a></li>
+                        <li><a href="#me" class="link">关于我</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="picture">
+                <div class="light" id="light"   onmouseover=on(); onmouseout=off();>
+                    <div class="turnOn" id="turnOn"></div>
+                </div>
+                <a class="photo" href="#" onmouseover=on(); onmouseout=off(); onclick=off();></a>
+                <div class="line">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                </div>
+                <ul class="littleIcon">
+                    <li><a href="#erWeiMa" class="weChat"></a></li>
+                    <li><a href="http://weibo.com/u/2256272737/home?topnav=1&wvr=6" class="weibo"></a></li>
+                    <li><a href="https://github.com/wuding129" class="github"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="slogan">
+                <p class="english myFont">"Your future depends on your dreams." So go to sleep.</p>
+                <p class="shaw"> --Bernard Shaw</p>
+                <p class="chinese">“未来取决于梦想。”所以赶紧睡觉去。 —萧伯纳</p>
+            </div>
+            <div class="tasks">
+                <h3 id="demos">DEMOS</h3>
+                <ul class="box">
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task001/task001.html" class="task1" onmouseover=hide1(); onmouseout=show1();>
+                            <div class="wrapper" id="task1Wrapper"><h3>TASK1</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="javascript:" class="task2" onmouseover=hide2(); onmouseout=show2();>
+                            <ol>
+                                <li>svn,git的基本概念 </li>
+                                <li>linux服务器的简单脚本</li>
+                                <li>域名的配置</li>
+                                <li>Dnspod的使用</li>
+                            </ol>
+                            <div class="wrapper" id="task2Wrapper"><h3>TASK2</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task003/task003.html" class="task3" id="task3" onmouseover=hide3(); onmouseout=show3();>
+                            <div class="wrapper" id="task3Wrapper"><h3>TASK3</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task004/task004em.html" class="task4" id="task4" onmouseover=hide4(); onmouseout=show4();>
+                            <div class="wrapper" id="task4Wrapper"><h3>TASK4</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task005/task005.html" class="task5" id="task5" onmouseover=hide5(); onmouseout=show5();>
+                            <div class="wrapper" id="task5Wrapper"><h3>TASK5</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task006/task006spirit.html" class="task6" id="task6" onmouseover=hide6(); onmouseout=show6();>
+                            <div class="wrapper" id="task6Wrapper"><h3>TASK6</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task007/task007.html" class="task7" id="task7" onmouseover=hide7(); onmouseout=show7();>
+                            <div class="wrapper" id="task7Wrapper"><h3>TASK7</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task008/task008.html" class="task8" id="task8" onmouseover=hide8(); onmouseout=show8();>
+                            <div class="wrapper" id="task8Wrapper"><h3>TASK8</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
+                        <a href="http://thinkin.tk/task009/task009.html" class="task9" id="task9" onmouseover=hide9(); onmouseout=show9();>
+                            <div class="wrapper" id="task9Wrapper"><h3>TASK9</h3></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h3 id="skill">SKILLS</h3>
+                <ul class="skillList">
+                    <li><div class="docker"><div class="photoshop"></div></div><span class="skillName">Ps</span></li>
+                    <li><div class="docker"><div class="html"></div></div><span class="skillName">Html</span></li>
+                    <li><div class="docker"><div class="css"></div></div><span class="skillName">Css</span></li>
+                    <li><div class="docker"><div class="javascript"></div></div><span class="skillName">Js</span></li>
+                    <li><div class="docker"><div class="html5"></div></div><span class="skillName">H5</span></li>
+                    <li><div class="docker"><div class="css3"></div></div><span class="skillName">Css3</span></li>
+                    <li><div class="docker"><div class="mobileWeb"></div></div><span class="skillName">Mobile Web</span></li>
+                </ul>
+                <a href="javascript:" class="skillTree" id="clickImg"><div><h3>点击放大</h3></div></a>
+                <div class="skillTreeBig" id="bigImg"></div>
+            </div>
+            <div class="logs">
+                <h3 id="log">LOGS</h3>
+                <a href="javascript:" class="frameImage" id="clickLog">
+                    <div class="frameImageWrapperLittle"><h3 class="clickFrameImage">点击可查看</h3></div>
+                </a>
+                <a href="#" class="frameWrapper" id="frameWrapper">
+                    <div class="frame">
+                        <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0">
+                        </iframe>
+                    </div>
+                </a>
+                <!--<div class="frame">
+                    <iframe class="ptteng" src="http://bbs.ptteng.com/forum.php?mod=viewthread&tid=7319&extra=page%3D1" frameborder="0" seamless>
+                    </iframe>
+                </div>-->
+            </div>
+            <div class="me">
+                <h3 id="me">ME</h3>
+                    <div class="introduction">
+                        <h3>关于</h3>
+                        <p>大家好！</p>
+                        <p>我是武丁，是个前端开发学习者、科技产品和互联网产品爱好者，同时也是个对世界充满好奇的人，感谢大家能来这个网站见证我的每一步成长，这个页面是之前学习css的demo及日志索引页，是个人利用现有基础知识设计并制作完成的，页面及所有Demo代码已全部托管在<a href="http://github.com/wuding129">github</a>上，设计制作水平有限，代码写得比较简陋，大家多提建议，这里有我的联系方式，欢迎大家一起交流，在以便在前端之路上共同进步。（若能提供工作机会将会不胜荣幸）</p>
+                        <p>QQ:369350623</p>
+                        <P>E-mail：wuding129@163.com</P>
+                    </div>
+                    <div class="weChatErWeiMa">
+                        <p>微信</p>
+                        <div class="erWeiMa" id="erWeiMa"></div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyright">Copyright&copy;2015&nbsp;<a href="http://www.thinkin.tk">www.thinkin.tk</a>&nbsp;All Rights Reserved&nbsp;|&nbsp;<span>The Theme Designed By WuDing</span></div>
+        </div>
+    </div>
+    <script>
+        var oWrapper1=document.getElementById('task1Wrapper');
+        var oWrapper2=document.getElementById('task2Wrapper');
+        var oWrapper3=document.getElementById('task3Wrapper');
+        var oWrapper4=document.getElementById('task4Wrapper');
+        var oWrapper5=document.getElementById('task5Wrapper');
+        var oWrapper6=document.getElementById('task6Wrapper');
+        var oWrapper7=document.getElementById('task7Wrapper');
+        var oWrapper8=document.getElementById('task8Wrapper');
+        var oWrapper9=document.getElementById('task9Wrapper');
+        function hide1(){
+            oWrapper1.style.display='none';
+        }
+        function show1(){
+            oWrapper1.style.display='block';
+        }
+        function hide2(){
+            oWrapper2.style.display='none';
+        }
+        function show2(){
+            oWrapper2.style.display='block';
+        }
+        function hide3(){
+            oWrapper3.style.display='none';
+        }
+        function show3(){
+            oWrapper3.style.display='block';
+        }
+        function hide4(){
+            oWrapper4.style.display='none';
+        }
+        function show4(){
+            oWrapper4.style.display='block';
+        }
+        function hide5(){
+            oWrapper5.style.display='none';
+        }
+        function show5(){
+            oWrapper5.style.display='block';
+        }
+        function hide6(){
+            oWrapper6.style.display='none';
+        }
+        function show6(){
+            oWrapper6.style.display='block';
+        }
+        function hide7(){
+            oWrapper7.style.display='none';
+        }
+        function show7(){
+            oWrapper7.style.display='block';
+        }
+        function hide8(){
+            oWrapper8.style.display='none';
+        }
+        function show8(){
+            oWrapper8.style.display='block';
+        }
+        function hide9(){
+            oWrapper9.style.display='none';
+        }
+        function show9(){
+            oWrapper9.style.display='block';
+        }
+        /*---------*/
+        var oLight=document.getElementById('light');
+        var oTurnOn=document.getElementById('turnOn');
+        function on(){
+            oTurnOn.style.display='block';
+        }
+        function off(){
+            oTurnOn.style.display='none';
+        }
+    </script>
 </body>
 </html>
