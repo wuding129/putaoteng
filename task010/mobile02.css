@@ -70,8 +70,6 @@ body{
     -moz-animation:menumove 2s; /* Firefox */
     -webkit-animation:menumove 2s ; /* Safari and Chrome */
     -o-animation:menumove 2s ; /* Opera */
-
-
 }
 @keyframes menumove
 {
@@ -238,8 +236,6 @@ a.weibo{
     margin-right: 4.16666666666667%;
     /*50px;*/
 }
-    
-
 /*.detail .divideDiv{
     width: 105px;
     height: 1px;
@@ -577,7 +573,7 @@ a.qiniu{
     /*padding-top: ;*/
 }
 .about,.websites,.gongzhonghao{
-    padding:0 0 8px;
+    padding:0 10px 8px;
 }
 .others .gongzhonghao{
     /*width: 166px;*/
@@ -807,8 +803,9 @@ p.erweima{
         width: 23%;
     }
 }*/
-@media screen and (max-width: 970px) and (min-width: 701px) {
+@media screen and (max-width: 1030px) and (min-width: 701px) {
     .studentsShow{
         width: 45%;
+        margin: 0 2%;
     }
 }

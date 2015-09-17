@@ -197,8 +197,8 @@
             </div>
         </div>
     </div>
-    <script>
-        window.onscroll = function () {
+    <script src="task10js.js">
+       /* window.onscroll = function () {
             if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
                 document.getElementById("goTop").style.display = "block";
             }
@@ -210,10 +210,10 @@
         var oMenuList=document.getElementById('menuList');
         var oNavMenu=document.getElementById('navMenu');
         var a=1;
-        /*function noneBlock(){
+        /!*function noneBlock(){
             oMenuList.style.display="none";
             a=1;
-        }*/
+        }*!/
         function show(){
             oMenuList.style.display='block';
         }
@@ -224,44 +224,13 @@
             if(a==1){
                 show();
                 a=0;
-                /*setTimeout("noneBlock()",4300);//5秒*/
+                /!*setTimeout("noneBlock()",4300);//5秒*!/
             }else{
                 a=1;
                 hide();
             }
         }
-
-        /*function hide(){
-            oMenuList.className='hide';
-        }*/
-        /*function show(){
-            oMenuList.className='show';}
         */
-        /*-------------*/
-        /*function clickDisplay(){
-            var oDiv=document.getElementById('div1');
-
-            if(oDiv.style.display=='block')
-            {
-                oDiv.style.display='none';
-            }
-            else
-            {
-                oDiv.style.display='block';
-            }
-        }*/
-      /*window.onload= function () {
-
-
-            var oMenuList=document.getElementById('menuList');
-            var oNavMenu=document.getElementById('navMenu');
-            /!*oNavMenu.onclick=function open(){
-                oMenuList.style.display='block';
-            };*!/
-            oNavMenu.onclick=function close(){
-                oMenuList.style.display='none';
-            }
-      }*/
     </script>
 </body>
 </html>
