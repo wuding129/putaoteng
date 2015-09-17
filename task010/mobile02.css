@@ -1,4 +1,4 @@
-*{
+body,p,ul,h1,h2,h3,h4,h5{
     padding: 0;
     margin: 0;
     font-family: 微软雅黑, 宋体, sans-serif;
@@ -31,9 +31,10 @@ body{
     height: 32px;
     background: url("images/navMenu.png") no-repeat center;
     position: fixed;
-    top: 28px;
+    top: 10px;
     left: 10px;
     z-index: 500;
+    overflow: hidden;
 }
 .goTop{
     width: 32px;
@@ -44,7 +45,59 @@ body{
     bottom: 20px;
     right: 10px;
     z-index: 500;
+
 }
+.menuList a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+}
+.menuList a:hover{
+    background-color: #29b078;
+}
+.menuList{
+    padding-top: 10px;
+    display: none;
+    background: rgba(0,0,0,0.5);
+    width: 55px;
+    height: 195px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    animation:menumove 2s ;
+    -moz-animation:menumove 2s; /* Firefox */
+    -webkit-animation:menumove 2s ; /* Safari and Chrome */
+    -o-animation:menumove 2s ; /* Opera */
+
+
+}
+@keyframes menumove
+{
+    0% {left: -50px}
+    30% {left:0}
+
+}
+
+@-moz-keyframes menumove /* Firefox */
+{
+    0% {left: -50px}
+    30% {left:0}
+}
+
+@-webkit-keyframes menumove /* Safari and Chrome */
+{
+    0% {left: -50px}
+    30% {left:0}
+}
+
+@-o-keyframes menumove /* Opera */
+{
+    0% {left: -50px}
+    30% {left:0}
+}
+/*---------------------------*/
 .header{
     width: 100%;
     /*height: 738px;*/
@@ -267,7 +320,8 @@ a.weibo{
 }
 .learn h3,.students h3{
     width: 100%;
-    font-size: 18px;
+    font-size: 1.125em;
+    /*18px;*/
     color: #333333;
     text-align: center;
 }
@@ -278,7 +332,8 @@ a.weibo{
     padding-bottom: 53px;
 }
 .learn li{
-    width:20.41666666666667%;
+    width: 245px;
+    /*20.41666666666667%;*/
     /*245px;*/
     height: 168px;
     float: left;
@@ -297,7 +352,7 @@ a.weibo{
     display: inline-block;
     width: 74px;
     height: 74px;
-    float: left; /*此处父元素高度大于子元素时，只用inline-block会把首个子元素挤下去，造成不齐，可用浮动解决*/
+    float: left;
     background: url("../task007/images/spirit.png") no-repeat -53px -88px;
     text-align: center;
     line-height: 74px;
@@ -309,7 +364,6 @@ a.weibo{
     height: 57px;
     width: 154px;
     line-height: 26px;
-    /*float: left;*//*此处无上述问题*/
     padding-left: 17px;
     padding-top: 17px;
     color: #999999;
@@ -318,13 +372,12 @@ a.weibo{
 .learn li .a{
     height: 28px;
     width: 28px;
-    margin: 23px;
-    background-position: -80px 2px;
+    margin: 23px;line-height: 28px;
+    background-position: -80px 2px;float:none;
 }
 .students{
     /*height: 552px;*/
     width: 100%;
-
     padding-top: 19px;
 }
 .students h3{
@@ -341,14 +394,17 @@ a.weibo{
     width: 100%;
 }
 .studentsShow{
-    height: 350px;
-    width: 270px;
-    margin-right:33px;
+    /*height: 350px;*/
+    width: 22.5%;
+    /*270px;*/
+    margin-right:2.75%;
+    /*33px;*/
     padding-top: 19px;
     border: 2px solid #e2e2e2;
     border-bottom:3px solid #e2e2e2;
     border-radius: 8px;
     float: left;
+    background-color: #ffffff;
 }
 .studentsShow:last-child{
     margin-right: 0;
@@ -362,6 +418,10 @@ a.weibo{
 .studentsShow p{
     width: 196px;
     margin: 0 auto;
+
+}
+.studentsShow .describe{
+   padding-bottom: 20px;
 }
 .studentsShow .photo{
     height: 108px;
@@ -384,7 +444,7 @@ a.weibo{
 .dot1{
     height: 19px;
     width: 67px;
-    padding:1.16666666666667% 47.25% 4.41666666666667% 47.33333333333333%;
+    padding:1.16666666666667% 0 4.41666666666667% 47.33333333333333%;
     /*14px 567px 53px 568px;*/
 }
 .dot1 span{
@@ -409,32 +469,29 @@ span.forth{
 .companies{
     /*height: 293px;*/
     width: 100%;
-
-    padding-top: 76px;
 }
 .companies h3{
     color: #333333;
     font-size: 1.125em;
     text-align: center;
-    padding-bottom: 58px;
+    padding-bottom: 58px;padding-top: 76px;
 }
 .companies ul{
     /*height: 253px;*/overflow: hidden;
-    width: 100%
-    border: 1px solid #f6f6f6;
+    width: 100%;
 }
 .companies li{
-    height: 214px;
-    width: 253px;
+    /*height: 214px;*/
+    width:19%;min-width: 157px;
+    /*253px;*/
     float: left;
-}
-.companies .company{
-    width: 200px;
+    border: 1px solid #eeeded;
+    background-color: #ffffff;
 }
 .company.huanxin{
     margin: 0 13px;
 }
-.companies a{
+.companies a {
     display: block;
     height: 53px;
     margin: 80px auto;
@@ -450,7 +507,8 @@ a.huanxin{
 }
 a.jinshanyun{
     width: 55px;
-    height: 58px;
+    height: 57px;
+    margin:78px auto;
     background-position: 0 -97px;
 }
 a.ronglian{
@@ -458,15 +516,16 @@ a.ronglian{
     background-position: 1px -271px;
 }
 a.qiniu{
-    width: 127px;
+    width: 126px;
     background-position: 0 -218px;
 }
 .links{
     width: 100%;
-
-    overflow: hidden;
-    padding-top: 85px;
+    /*overflow: hidden;*/
     padding-bottom: 19px;
+}
+.links ul{
+    overflow: hidden;
 }
 .links li{
     float: left;
@@ -485,6 +544,7 @@ a.qiniu{
     font-size: 18px;
     text-align: center;
     padding-bottom: 26px;
+    padding-top: 85px;
 }
 .links li a{
     color: #999999;
@@ -496,10 +556,12 @@ a.qiniu{
     background-color: #29b078;
     color: #ffffff;
 }
-.others{
-    /*height: 170px;*/overflow: hidden;
+.othersContainer{
     border-top: 1px solid #32c086;
     border-bottom: 1px solid #32c086;
+}
+.others{
+    /*height: 170px;*/overflow: hidden;
     width: 90%;max-width: 1200px;/*----------------------------------*/
     margin: 0 auto;
     color: #ffffff;
@@ -508,13 +570,19 @@ a.qiniu{
 .others h4{
     font-size: 1em;
     padding-bottom: 25px;
+    padding-top: 35px;
 }
 .others p{
     height: 41px;
     /*padding-top: ;*/
 }
 .about,.websites,.gongzhonghao{
-    padding:35px 0 8px;
+    padding:0 0 8px;
+}
+.others .gongzhonghao{
+    /*width: 166px;*/
+    float: right;
+    text-align: center;
 }
 .others .about{
     /*width: 361px;*/
@@ -524,11 +592,7 @@ a.qiniu{
     /*width: 673px;*/
     float: left;
 }
-.others .gongzhonghao{
-    width: 166px;
-    float: right;
-    text-align: center;
-}
+
 .gongzhonghao h4{
     padding-bottom: 8px;
 }
@@ -551,20 +615,104 @@ p.erweima{
         display: none;
     }
 }
-@media screen and (max-width: 701px){
+@media screen and (max-width: 1200px){
+    .companies a{
+        margin: 30px auto;
+    }
+    a.jinshanyun{
+        margin: 28px auto;
+    }
+}
+@media screen and (min-width: 977px) and (max-width: 1056px){
+    .arrow3{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1036px){
+    .companies li{
+        width: 33%;
+    }
+    li.company4,li.company5 {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 767px){
     .top{
         display: none;
     }
     .jnshuLogo{
         float: none;
         margin: 0 auto;
+        height: 60px;
     }
     .navContainer ul{
         display: none;
     }
     .navMenu{
         display: block;
+        animation:mymove 2s;
+        -moz-animation:mymove 2s; /* Firefox */
+        -webkit-animation:mymove 2s; /* Safari and Chrome */
+        -o-animation:mymove 2s; /* Opera */
+        /*-----------------------*/
+       /* background:yellow;
+        transition:width 2s,height 2s;
+        -moz-transition:width 2s,height 2s; /!* Firefox 4 *!/
+        -webkit-transition:width 2s,height 2s;/!* Safari and Chrome *!/
+        -o-transition:width 2s,height 2s; /!* Opera *!/*/
     }
+    /*.navMenu:hover{
+        width: 200px;
+        height: 400px;
+    }*/
+    /*----------------------------*/
+    @keyframes mymove
+    {
+        /*from {
+            top: -20px;}
+        to {top:10px;}*/
+        0%   {top:-20px;}
+        50%  {top:20px;}
+        100% {top:10px;}
+    }
+
+    @-moz-keyframes mymove /* Firefox */
+    {
+        0%   {top:-20px;}
+        50%  {top:20px;}
+        100% {top:10px;}
+    }
+
+    @-webkit-keyframes mymove /* Safari and Chrome */
+    {
+        0%   {top:-20px;}
+        50%  {top:20px;}
+        100% {top:10px;}
+    }
+
+    @-o-keyframes mymove /* Opera */
+    {
+        0%   {top:-20px;}
+        50%  {top:20px;}
+        100% {top:10px;}
+    }
+    /*---------------------------*/
+    /*.sideMenu{
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        margin-left: -100px;
+        background:yellow;
+        transition:margin-left 2s;
+        -moz-transition:margin-left 2s; /!* Firefox 4 *!/
+        -webkit-transition:margin-left 2s;/!* Safari and Chrome *!/
+        -o-transition:margin-left 2s; /!* Opera *!/
+    }
+    .sideMenu:hover{
+        margin: 0;
+    }*/
     .goTop{
         display: block;
     }
@@ -578,122 +726,89 @@ p.erweima{
     .detailBox{
         min-width: 44%;
     }
-    .students h3{
-        padding-bottom: 30px;
+    .detailBox.people{
+        padding-left: 15%;
+    }
+    .students h3,.learn h3,.companies h3,.links h3{
+        padding: 30px 0;
     }
     .studentsShow{
         width: 98%;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
     }
-    .learn h3{
-        padding: 30px 0;
+    .studentsShow p{
+        width: 80%;
+    }
+    .dot1{
+        padding-left: 40%;
     }
     .learn .arrow{
         width: 100%;
+        text-align: center;
+        height: 35px;
     }
     .learn li{
         height: 75px;float: none;
-        margin: 0 auto;
+        margin: 0 auto;overflow: hidden;
     }
-    .arrow span{
+    .learn li .a{
         margin: 0 auto;
+        /*margin-left: 50%;*/
+        clear: both;
         -moz-transform:rotate(90deg);
         -webkit-transform:rotate(90deg);
         transform:rotate(90deg);
         filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
     }
-}
-/*@media screen and (max-width: 480px)and (min-width: 320px){
-    body{
-        zoom:25%;
-        overflow-x: hidden;
+    .companies a{
+        /*margin: 30px auto;*/margin: 20px auto;
+
+    }
+    .companies li{
+        /*width: 0;*/ width: 100%;
+    }
+    .others p{
+        /*height: 25px;*/
+    }
+    .others .gongzhonghao,.others .about,.others .websites{
+        width: 45%;text-align: center;
+        padding: 0;
+    }
+    .gongzhonghao h4,.about h4,.websites h4{
+        padding: 20px 0;
+    }
+    .websites a{
+        /*width:100%;*/
+        display: block;
+    }
+    .others .gongzhonghao{
+        width: 100%;
+    }
+    .blankP{
+        display: none;
+    }
+    p.erweima{
+        height: 92px;
+    }
+    .copyright p{
+        height: 45px;line-height: 23px;
     }
 }
-@media screen and (max-width: 640px)and (min-width: 481px){
-    body{
-        zoom:33.33333333333333%;
-        overflow-x: hidden;
+@media screen and (max-width: 520px){
+    .about a{
+        display: block;
+    }
+    .about span{
+        display: none;
     }
 }
-@media screen and (max-width: 720px)and (min-width: 641px){
-    body{
-        zoom:37.5%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 750px)and (min-width: 721px){
-    body{
-        zoom:39.0625%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 800px)and (min-width: 751px){
-    body{
-        zoom:41.66666666666667%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 960px) and (min-width: 801px) {
-    body{
-        zoom:50%;
-    }
-}
-@media screen and (max-width: 1024px)and (min-width: 961px){
-    body{
-        zoom:53.3%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1080px)and (min-width: 1025px){
-    body{
-        zoom:56.25%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1136px)and (min-width: 1081px){
-    body{
-        zoom:59.16666666666667%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1280px)and (min-width: 1137px){
-    body{
-        zoom:66%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1334px)and (min-width: 1281px){
-    body{
-        zoom:69.47916666666667%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1366px)and (min-width: 1335px){
-    body{
-        zoom:71.14583333333333%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1440px)and (min-width: 1367px){
-    body{
-        zoom:75%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1536px)and (min-width: 1441px){
-    body{
-        zoom:80%;
-        overflow-x: hidden;
-    }
-}
-@media screen and (max-width: 1536px)and (min-width: 1441px){
-    body{
-        zoom:80%;
-        overflow-x: hidden;
+/*@media screen and (max-width: 1347px) and (min-width: 1233px) {
+    .studentsShow{
+        width: 23%;
     }
 }*/
-/*@media screen and (max-width: 1920px){
-    body{
-        zoom:100%;
+@media screen and (max-width: 1232px) and (min-width: 701px) {
+    .studentsShow{
+        width: 45%;
     }
-}*/
+}
