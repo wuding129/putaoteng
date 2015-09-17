@@ -807,7 +807,7 @@ p.erweima{
         width: 23%;
     }
 }*/
-@media screen and (max-width: 1232px) and (min-width: 701px) {
+@media screen and (max-width: 970px) and (min-width: 701px) {
     .studentsShow{
         width: 45%;
     }
