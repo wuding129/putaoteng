@@ -43,6 +43,7 @@ a{
         display: none;
         background: rgba(0,0,0,0.5);
         width: 70%;
+        min-width: 230px;
         //height: 195px;
         position: fixed;
         top: 60px;
@@ -66,8 +67,10 @@ a{
           display: flex;
           display: -ms-flexbox;
           flex-direction: row;
+          -ms-flex-direction: row;
           li {
             flex: 1;
+            -ms-flex: 1;
             a{
               background: url("images/spirit_company.png") no-repeat;
               width: 25px;
@@ -361,6 +364,7 @@ a{
         display: flex;
         display: -ms-flexbox;
         flex-direction: row;
+        -ms-flex-direction: row;
         /*flex-wrap: wrap;
         -ms-flex-wrap: wrap;*/
         max-width: 1200px;
@@ -378,6 +382,7 @@ a{
         .about, .websites, .gongzhonghao {
           padding: 35px 15px 8px;
           flex: 1;
+          -ms-flex: 1;
         }
         /*.about{
           //width: 361px;
@@ -387,6 +392,11 @@ a{
           //width: 503px;
           //float: left;
         }*/
+        .about{
+          .aboutBr{
+            display: none;
+          }
+        }
         .gongzhonghao {
           //width: 166px;
           //float: right;
@@ -525,6 +535,14 @@ a{
             .arrow{
               display: block;
             }
+            &.companyNow{
+              .arrow{
+                -moz-transform:rotate(90deg);
+                -webkit-transform:rotate(90deg);
+                transform:rotate(90deg);
+                filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+              }
+            }
           }
           .companyBrief{
             display: block;
@@ -551,8 +569,57 @@ a{
         }
       }
     }
+    .footer{
+      .others{
+        padding: 20px 5px 5px;
+        .about,.websites,.gongzhonghao{
+          padding: 0;
+        }
+        .about{
+          .blankP{
+            display: none;
+          }
+          a{
+            display: block;
+            width: 100%;
+          }
+          span{
+            display: none;
+          }
+        }
+        .websites{
+          a{
+            display: block;
+
+          }
+        }
+        .gongzhonghao{
+          h4{
+            text-align: center;
+          }
+          .erweima{
+            float: none;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
 
   }
 
+}
+@media screen and (max-width: 450px) {
+  .container{
+    .footer{
+      .others{
+        .about{
+          .aboutBr{
+            display: block;
+          }
+        }
+      }
+
+    }
+  }
 }
 
