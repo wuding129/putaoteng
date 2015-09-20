@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>合作企业</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?bd0571c810dc4665e57401e3d50a60ac";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: '微软雅黑', 宋体, sans-serif;
+            font-weight: normal;
+        }
+        img{vertical-align: middle;}
+        a{
+            text-decoration: none;
+            color: #ffffff;;
+        }
+        li{
+            list-style: none;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        body{
+            text-align: center;/*兼容旧ie的居中*/
+            min-width: 1250px;
+        }
+        .container{
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .header{
+            width: 100%;
+            /*padding: 0 18.75%;
+            float: left;*/
+        }
+        .top{
+            /*float: left;*/
+            width: 100%;
+            background-color: #ffffff;
+            /*overflow: hidden;*/
+            /*margin: 0 auto;*/
+        }
+        .topMain{
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .call{
+            float: left;
+            font-size: 14px;
+            color: #29b078;
+            height: 40px;
+            line-height: 40px;
+        }
+        .top ul{
+            float: right;
+        }
+        .top li{
+            float: left;
+            margin: 7px 0 8px 16px;
+        }
+        .top a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: url("images/spirit_company.png") no-repeat;
+        }
+        a.weChat{
+            background-position: 0 0;
+        }
+        a.qq{
+            background-position: -26px 0;
+        }
+        a.weiBo{
+            background-position: -53px 0;
+        }
+        .nav{
+            /*float: left;*/
+            width: 100%;
+            background-color: #29b078;
+            /*overflow: visible;*/
+        }
+        .navMain{
+            width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;/*解决浮动子元素不能撑开父元素高度问题*/
+        }
+        a.logo{
+            display: inline-block;
+            float: left;
+            width: 108px;
+            height: 50px;
+            background: url("images/spirit_company.png") no-repeat 0 -133px;
+            margin-top: 27px;
+            padding: 0;border-bottom: 0;/*消除下面写的a的通用样式*/
+        }
+        /*.nav ul{
+            float: right;
+        }
+        .nav li{
+            float: left;
+            color: #ffffff;
+            font-size: 16px;
+
+        }*/
+        /*.nav li a{
+            color: #ffffff;
+            display: inline-block;
+            width: 101px;
+            height: 16px;
+            line-height: 16px;
+            padding:42px 0 38px 0;
+            text-align: center;
+            border-bottom: 4px solid #29b078;
+        }*/
+        .link{
+            float: right;
+        }
+        .link a{
+            color: #ffffff;
+            display: inline-block;
+            width: 101px;
+            height: 16px;
+            line-height: 16px;
+            padding:42px 0 38px 0;
+            text-align: center;
+            border-bottom: 4px solid #29b078;
+        }
+        .link .active{
+            border-bottom-color:#fefefe;
+        }
+        /*可随当前*/
+        .link .last{
+            width: 69px;
+            text-align: right;
+        }
+        .banner{
+            width: 100%;
+            background: #f1a750;
+        }
+        .bannerMain{
+            width: 1200px;
+            height: 248px;
+            margin: 0 auto;
+            background: url("images/banner.jpg") no-repeat;
+        }
+        /*-header end-*/
+
+        /*-main start-*/
+        .main{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #fafafa;
+        }
+        .bread{
+            float: left;
+            width: 100%;
+            font-size: 16px;
+            /*border-bottom: 1px solid #d0d6d9;*/
+
+        }
+        .bread li{
+            padding: 31px 0 33px 0;
+            float: left;
+            line-height: 16px;
+        }
+        .bread a{
+            color: #333333;
+        }
+        .bread .now{
+            color: #29b078;
+        }
+        .companyNav{
+            width: 304px;
+            float: left;
+            border: solid #ededed;
+            border-width: 1px 1px 2px 1px;
+            border-top-color:#f6f6f6;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+        .companyHeader{
+            height: 62px;
+            text-align: center;
+            line-height: 62px;
+            border-bottom: 1px solid #e6e6e6;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        .companyNav a{
+            display: block;
+            width: 304px;
+            color: #29b078;
+            padding-bottom: 35px;
+        }
+        .circle{
+            width: 10px;
+            height: 10px;
+            background:url("images/spirit_company.png")no-repeat -59px -194px;
+            display: inline-block;
+            margin-right: 6px;
+            margin-left: 117px;
+        }
+        .circleNow{
+            background-position: -18px -194px;
+        }
+        a.companyNow{
+            color: #ff650e;
+        }
+        .companyBrief{
+            width: 870px;
+            float: right;
+            border: solid #ededed;
+            border-width:1px 1px 2px 1px;
+            border-radius: 8px;
+            border-top-color:#f6f6f6;
+            background-color: #ffffff;
+            padding-bottom:125px;
+        }
+        .brief{
+            height: 105px;
+            border-bottom: 1px solid #e6e6e6;
+            padding:22px 0 30px 83px ;
+        }
+        .companyLogo{
+            display: inline-block;
+            width: 123px;
+            height: 32px;
+            background: url("images/spirit_company.png")no-repeat -127px -151px;
+            float: left;
+            margin-right: 35px;
+            margin-top: 37px;
+
+        }
+        .brief p{
+            width: 565px;
+            float: left;
+            line-height: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+        .introduction p{
+            width: 729px;
+            text-indent: 2em;
+            margin: 40px auto 0;
+            color: #999999;
+            font-size: 14px;
+            line-height: 30px;
+        }
+        /*-main end-*/
+
+        /*-footer start-*/
+        .footer{
+            float: left;
+            width: 100%;
+            background-color: #29b078;
+            color: #ffffff;
+            border-top: 1px solid #d0d6d9;
+            margin-top: 235px;
+        }
+        .others{
+            width: 1200px;
+            margin: 0 auto;
+            color: #ffffff;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        .others h4{
+            font-size: 16px;
+            padding-bottom: 25px;
+        }
+        .others p{
+            height: 41px;
+        }
+        .about,.websites,.gongzhonghao{
+            padding:35px 0 8px;
+        }
+        .others .about{
+            width: 361px;
+            float: left;
+        }
+        .others .websites{
+            width: 673px;
+            float: left;
+        }
+
+        .others .gongzhonghao{
+            width: 166px;
+            float: right;
+            text-align: center;
+        }
+        .gongzhonghao h4{
+            padding-bottom: 8px;
+        }
+        .gongzhonghao .erweima{
+            width: 92px;
+            height: 92px;
+            margin: 0 auto;
+            background: url("images/spirit_company.png") no-repeat 0 -32px;
+        }
+        .copyright{
+            padding: 8px 0;
+            text-align: center;
+            border-top:1px solid #32c086;
+            line-height: 13px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="top">
+            <div class="topMain">
+                <div class="call">客服热线：010-594-78634</div>
+                <ul>
+                    <li><a href="#" class="weChat"></a></li>
+                    <li><a href="#" class="qq"></a></li>
+                    <li><a href="#" class="weiBo"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="navMain">
+                <a href="#" class="logo"></a>
+                <!--<ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#" class="active">职业</a></li>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#" class="last">关于</a></li>
+                </ul>-->
+                        <span class="link">
+                            <a href="#" class="active">首页</a>
+                            <a href="#">职业</a>
+                            <a href="#">推荐</a>
+                            <a href="#" class="last">关于</a>
+                        </span>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="bannerMain">
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <ul class="bread">
+            <li><a href="#">首页</a></li>
+            <li>></li>
+            <li><a href="#" class="now">合作企业</a></li>
+        </ul>
+        <ul class="companyNav">
+            <li class="companyHeader">合作企业</li>
+            <li><a href="#"><span class="circle" ></span><span>阿里巴巴</span></a></li>
+            <li><a href="#"><span class="circle" ></span>腾讯视频</a></li>
+            <li><a href="#" class="companyNow"><span class="circle circleNow" ></span>土豆网</a></li>
+            <li><a href="#"><span class="circle" ></span>北京葡萄藤</a></li>
+            <li><a href="#"><span class="circle" ></span>阿里巴巴</a></li>
+            <li><a href="#"><span class="circle" ></span>腾讯视频</a></li>
+            <li><a href="#"><span class="circle" ></span>北京葡萄藤</a></li>
+            <li><a href="#"><span class="circle" ></span>阿里巴巴</a></li>
+            <li><a href="#"><span class="circle" ></span>腾讯视频</a></li>
+            <li><a href="#"><span class="circle" ></span>北京葡萄藤</a></li>
+            <li><a href="#"><span class="circle" ></span>阿里巴巴</a></li>
+            <li><a href="#"><span class="circle" ></span>腾讯视频</a></li>
+
+        </ul>
+        <div class="companyBrief">
+            <div class="brief">
+                <span class="companyLogo"></span>
+                <p>
+                    土豆网公司成立于1998年11月，是目前中国最大的互联网综合服务提供商之一，也是中国服务用户最多的互联网企业之一。成立10多年以来，腾讯一直秉承一切以用户价值为依归的经营理念，始终处于稳健、高速发展的状态。2004年6月16日，腾讯公司在香港联交所主板公开上市（股票代号700）。
+                </p>
+            </div>
+            <div class="introduction">
+                <p>
+                    土豆是中国最早和最具影响力的网络视频平台，是中国网络视频行业的领军品牌。其前身土豆网于2005年4月15日正式上线，是全球最早上线的视频网站之一。2014年1月，“土豆网”正式更名为“土豆”，标志着土豆进入品牌发展的新阶段。
+                </p>
+                <p>
+                    “每个人都是生活的导演”是土豆从创立第一天始的价值观。土豆相信年轻人的想象力、创造力，相信土豆的平台能帮助年轻人创造出更多，更好的影像作品，来表达对自己、生活和这个时代的看法。同时，土豆提倡尊重“每个人”的个性，尊重每个人自主地选择自己的生活，成为自己成长的导演。
+                </p>
+                <p>
+                    2012年3月12日，优酷股份有限公司(NYSE: YOKU) (“优酷”) 和土豆股份有限公司 (NASDAQ: TUDO) (“土豆”)共同宣布，优酷和土豆将以100%换股的方式合并。2012年8月20日，优酷土豆合并方案获双方股东大会高票批准通过，优酷土豆集团公司正式诞生。2013年4月，优酷土豆集团宣布进入“集团BU化”运营阶段，提出“优酷更优酷，土豆更土豆”的发展战略。
+                </p>
+                <p>
+                    2013年2月，杨伟东成为土豆总裁，宣布打造土豆“成为中国年轻人最喜爱的视频网站”，并明确土豆“成为中国最具影响力的青年文化品牌”的愿景，确立了土豆“青春、个性、自主、有趣”的品牌定位，土豆全面进入2.0阶段。通过年轻化的内容、年轻化的产品技术和年轻化的UGC/PGC生态三个方面来全面推动土豆2.0战略。
+                </p>
+                <p>
+                    2014年3月土豆推出“4+1”战略。其中“4”代表的是土豆在内容方面更专注动漫、音乐、韩国娱乐、时尚四个垂直文化领域。而“1”则代表土豆推出的“一个频道”战略，基于“频道主”和“订阅者”两个视角全方位架构跨屏和线上线下体验系统，并结合用户体验、商业模式、运营机制等环节，提出了5个“一”规划。
+                </p>
+                <p>
+                    根据第三方调研公司艾瑞的数据，优酷土豆集团在PC端和移动端全平台各项数据持续占据视频行业绝对领先优势，截止2014年3月，土豆每月独立访问用户数量增长到2.43亿。 2013年土豆在移动端的增长也非常迅猛，2013年三季度，土豆移动端获得了高速增长，月均覆盖用户较当年3月增长11倍，平均增长率超过40%；月均视频播放量增长23倍，月平均增幅达60%。
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="others">
+            <div class="about">
+                <h4>技能树 — 改变你我</h4>
+                <p></p>
+                <p>
+                    <a href="#">关于我们</a>
+                    <span>|</span>
+                    <a href="#">联系我们</a>
+                    <span>|</span>
+                    <a href="#">合作企业</a>
+                </p>
+            </div>
+            <div class="websites">
+                <h4>旗下网站</h4>
+                <p>
+                    <a href="#">草船云孵化器</a>
+                    <a href="#">最强it特训营</a>
+                </p>
+                <p>
+                    <a href="#">葡萄藤轻游戏</a>
+                    <a href="#">桌游精灵</a>
+                </p>
+            </div>
+            <div class="gongzhonghao">
+                <h4>微信公众平台</h4>
+                <p class="erweima"></p>
+            </div>
+        </div>
+        <p class="copyright">
+            Copyright&nbsp;&copy;&nbsp;2015技能树&nbsp;<a href="#">www.jnshu.com</a>&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;|&nbsp;京ICP
+        </p>
+    </div>
+</div>
+</body>
+</html>

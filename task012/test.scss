@@ -1,0 +1,121 @@
+body,h1,h2,h3,h4,h5,p,ul,,input{
+                            margin: 0;
+                            padding: 0;
+                          }
+body{
+  font-family: "微软雅黑",宋体,sans-serif;
+}
+img{
+  vertical-align: middle;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+/*--end reset--*/
+/*@media screen and (max-width: 750px) {*/
+
+    .container{
+      .header{
+        .top {
+          /*display: none;*/
+          background-color: #ffffff;
+          .topMain{
+            margin: 0 auto;
+            max-width: 1200px;
+            height: 40px;
+            display: flex;
+            display: -ms-flexbox;
+            justify-content: space-between;
+            align-items: center;
+            -ms-flex-align: center;
+            .call{
+              font-size: 14px;
+              color: #29b078;
+            }
+            ul{
+              display: flex;
+              display: -ms-flexbox;
+              flex-direction: row;
+              -ms-flex-direction: row;
+              a{
+                display: block;
+                width: 25px;
+                height: 25px;
+                margin-left: 16px;
+                background: url("images/spirit_company.png") no-repeat;
+                &.weChat{
+                  background-position: 0 0;
+                  flex: 1;
+                }
+                &.qq{
+                  background-position: -26px 0;
+                  flex: 1;
+                }
+                &.weibo{
+                  background-position: -53px 0;
+                  flex: 1;
+                }
+              }
+            }
+          }
+        }
+        .nav{
+          background-color: #29b078;
+          width: 100%;
+          .navMain{
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            -ms-flex-align: center;
+            display:flex;
+            display: -ms-flexbox;
+            a.logo{
+              display: inline-block;
+              /*float: left;*/
+              width: 108px;
+              height: 50px;
+              background: url("images/spirit_company.png") no-repeat 0 -133px;
+              /*margin-top: 27px;*/
+            }
+            .link{
+              a{
+                color: #ffffff;
+                display: inline-block;
+                width: 101px;
+                height: 16px;
+                line-height: 16px;
+                padding:42px 0 38px 0;
+                text-align: center;
+                border-bottom: 4px solid #29b078;
+              }
+            }
+          }
+        }
+        .banner{
+          background-color: #f1a750;
+          width: 100%;text-align: center;
+          .bannerMain {
+            width: 100%;max-width: 1200px;/*把原来的背景改为img元素，加meta后图片自适应缩放*/
+          }
+
+        }
+      }
+      .main{
+
+      }
+      .footer{
+        width: 100%;
+        display: -webkit-flex;
+        background-color: #26a26f;
+        .copyright{
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+
+    }
+/*}*/
