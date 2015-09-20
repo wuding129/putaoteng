@@ -432,6 +432,7 @@ a{
   }
 }
 @media screen and (max-width: 700px) {
+  $briefHeight:280px;
   .container{
     .header {
       .navMenu {
@@ -525,9 +526,33 @@ a{
         li{
           border-bottom: 1px solid #e0dcff;
           overflow: hidden;
-          .companyBrief{
-            display: block;
+          &:hover{
+            /*.brief{
+              //display: block;
+              /!*transform: scale(1);
+              -ms-transform: scale(1);	/!* IE 9 *!/
+              -webkit-transform: scale(1);	/!* Safari 和 Chrome *!/
+              -o-transform: scale(1);	/!* Opera *!/
+              -moz-transform: scale(1);	/!* Firefox *!/!*!/
+              /!*------------*!/
+              height: 280px;
+            }*/
+            .companyBrief{
+              height: $briefHeight;/*注意优先级*/
+            }
+            .arrow{
+              -moz-transform:rotate(90deg);
+              -webkit-transform:rotate(90deg);
+              transform:rotate(90deg);
+              filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+            }
+
+
           }
+
+          /*.companyBrief{
+            display: block;
+          }*/
           a{
             .circle{
               margin-left: 35%;
@@ -535,36 +560,82 @@ a{
             .arrow{
               display: block;
             }
-            &.companyNow{
-              .arrow{
-                -moz-transform:rotate(90deg);
-                -webkit-transform:rotate(90deg);
-                transform:rotate(90deg);
-                filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-              }
-            }
           }
-          .companyBrief{
+          .companyBrief {
             display: block;
-            width:100%;
+            height: 0;
+
+            /**/
+            /*transform: scale(0.01);
+            -ms-transform: scale(0.01);	/!* IE 9 *!/
+            -webkit-transform: scale(0.01);	/!* Safari 和 Chrome *!/
+            -o-transform: scale(0.01);	/!* Opera *!/
+            -moz-transform: scale(0.01);	/!* Firefox *!/*/
+            /*------------*/
+            overflow: hidden;
+            //height: 0;
+            transition: height 2s;
+            -moz-transition: height 2s;	/* Firefox 4 */
+            -webkit-transition: height 2s;	/* Safari 和 Chrome */
+            -o-transition: height 2s;	/* Opera */
+
+            /**/
+            width: 100%;
             padding-bottom: 0;
             border: 0;
-            margin: 5px 0;/*------------*/
-            .brief{
+            margin: 5px 0; /*------------*/
+            .brief {
+              /*transition: height 2s;
+              -moz-transition: height 2s;	/!* Firefox 4 *!/
+              -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+              -o-transition: height 2s;	/!* Opera *!/*/
+              /*height: 0;
+              overflow: hidden;*/
+              /*-----------------*/
               padding: 0;
-              .companyLogo{
+              .companyLogo {
                 display: block;
                 margin: 20px auto;
                 float: none;
               }
-              p{
+              p {
                 float: none;
                 text-indent: 2em;
               }
 
 
             }
+            .moreIntro{
+              display: block;
+              color: #29b078;
+              overflow: hidden;
+              span{
+                float: right;
+                margin-right: 15px;
+              }
+              &:hover{
+                color: #ff650e;
+                .introduction{
+                  display: block;
+                }
+              }
+            }
+            /*----more-start----*/
 
+            .introduction{
+              clear: both;
+              display: none;
+              /*height: 0;*/
+              /*transition: height 2s;
+              -moz-transition: height 2s;	/!* Firefox 4 *!/
+              -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+              -o-transition: height 2s;	/!* Opera *!/*/
+              p{
+                width: 100%;
+                margin: 0;
+              }
+            }
+            /*------more-end------*/
           }
         }
       }
