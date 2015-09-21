@@ -65,11 +65,13 @@ a{
         ul{
           padding: 0 30px;
           display: flex;
+          display: -webkit-flex;
           display: -ms-flexbox;
           flex-direction: row;
           -ms-flex-direction: row;
           li {
             flex: 1;
+            -webkit-flex: 1;
             -ms-flex: 1;
             a{
               background: url("images/spirit_company.png") no-repeat;
@@ -132,6 +134,7 @@ a{
           max-width: 1200px;
           //height: 40px;
           display: flex;
+          display: -webkit-flex;
           display: -ms-flexbox;
           justify-content: space-between;
           -ms-flex-pack: justify;
@@ -143,6 +146,7 @@ a{
           }
           ul {
             display: flex;
+            display: -webkit-flex;
             display: -ms-flexbox;
             flex-direction: row;
             -ms-flex-direction: row;
@@ -432,7 +436,7 @@ a{
   }
 }
 @media screen and (max-width: 700px) {
-  $briefHeight:280px;
+  $briefHeight:500px;
   .container{
     .header {
       .navMenu {
@@ -537,9 +541,103 @@ a{
               /!*------------*!/
               height: 280px;
             }*/
-            .companyBrief{
-              height: $briefHeight;/*注意优先级*/
+            .brief{
+              //height: $briefHeight;
+              /*transition: height 2s;
+              -moz-transition: height 2s;	/!* Firefox 4 *!/
+              -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+              -o-transition: height 2s;	/!* Opera *!/*/
+              display: block;
+              animation:openList 1s,threeD 1s;
+              -moz-animation:openList 1s,threeD 1s; /* Firefox */
+              -webkit-animation:threeD 1s; /* Safari and Chrome */
+              -o-animation:openList 1s,threeD 1s; /* Opera */
+
+              transform-origin:top;
+
             }
+            @keyframes openList
+            {
+              from {
+                transform: scaleY(0.1)}
+
+              to {
+                transform:scaleY(1)}
+            }
+            @-moz-keyframes openList
+            {
+              from {
+                transform: scaleY(0.1)}
+
+              to {
+                transform:scaleY(1)}
+            }
+            @-webkit-keyframes openList
+            {
+              from {
+                transform: scaleY(0.1)}
+
+              to {
+                transform:scaleY(1)}
+            }
+            @-o-keyframes openList
+            {
+              from {
+                transform: scaleY(0.1)}
+
+              to {
+                transform:scaleY(1)}
+            }
+            @-ms-keyframes openDetail {
+              from {
+                transform: scaleY(0.1)}
+
+              to {
+                transform:scaleY(1)}
+            }
+            @keyframes threeD {
+              from{
+                transform:rotateX(-90deg);
+              }
+              to{
+                transform:rotateX(0deg);
+              }
+            }
+            @-moz-keyframes threeD {
+              from{
+                transform:rotateX(-90deg);
+              }
+              to{
+                transform:rotateX(0deg);
+              }
+            }
+            @-webkit-keyframes threeD {
+              from{
+                transform:rotateX(-90deg);
+              }
+              to{
+                transform:rotateX(0deg);
+              }
+            }
+            @-o-keyframes threeD {
+              from{
+                transform:rotateX(-90deg);
+              }
+              to{
+                transform:rotateX(0deg);
+              }
+            }
+            @-ms-keyframes threeD {
+              from{
+                transform:rotateX(-90deg);
+              }
+              to{
+                transform:rotateX(0deg);
+              }
+            }
+            /*.companyBrief{
+              height: $briefHeight;/!*注意优先级*!/
+            }*/
             .arrow{
               -moz-transform:rotate(90deg);
               -webkit-transform:rotate(90deg);
@@ -563,7 +661,7 @@ a{
           }
           .companyBrief {
             display: block;
-            height: 0;
+            //height: 0;
 
             /**/
             /*transform: scale(0.01);
@@ -572,39 +670,42 @@ a{
             -o-transform: scale(0.01);	/!* Opera *!/
             -moz-transform: scale(0.01);	/!* Firefox *!/*/
             /*------------*/
-            overflow: hidden;
+            /*overflow: hidden;
             //height: 0;
             transition: height 2s;
-            -moz-transition: height 2s;	/* Firefox 4 */
-            -webkit-transition: height 2s;	/* Safari 和 Chrome */
-            -o-transition: height 2s;	/* Opera */
+            -moz-transition: height 2s;	/!* Firefox 4 *!/
+            -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+            -o-transition: height 2s;	/!* Opera *!/*/
 
             /**/
             width: 100%;
             padding-bottom: 0;
-            border: 0;
+            border-width: 0;
+
             margin: 5px 0; /*------------*/
-            .brief {
-              /*transition: height 2s;
-              -moz-transition: height 2s;	/!* Firefox 4 *!/
-              -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
-              -o-transition: height 2s;	/!* Opera *!/*/
-              /*height: 0;
-              overflow: hidden;*/
-              /*-----------------*/
-              padding: 0;
-              .companyLogo {
-                display: block;
-                margin: 20px auto;
-                float: none;
-              }
-              p {
-                float: none;
-                text-indent: 2em;
-              }
 
-
+          }
+          .brief {
+            /*transition: height 2s;
+            -moz-transition: height 2s;	/!* Firefox 4 *!/
+            -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+            -o-transition: height 2s;	/!* Opera *!/*/
+            //height: 0;
+            display: none;
+            overflow: hidden;
+            /*-----------------*/
+            padding: 0;
+            .companyLogo {
+              display: block;
+              margin: 20px auto;
+              float: none;
             }
+            p {
+              float: none;
+              text-indent: 2em;
+            }
+
+
             .moreIntro{
               display: block;
               color: #29b078;
@@ -613,29 +714,42 @@ a{
                 float: right;
                 margin-right: 15px;
               }
+              .introduction{
+                clear: both;
+                display: none;
+                //height: 200px;
+                /*height: 0;*/
+                /*transition: height 2s;
+                -moz-transition: height 2s;	/!* Firefox 4 *!/
+                -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
+                -o-transition: height 2s;	/!* Opera *!/*/
+                p{
+                  width: 100%;
+                  margin: 0;
+                }
+              }
               &:hover{
                 color: #ff650e;
                 .introduction{
                   display: block;
+                  overflow: hidden;
+                  animation:openList 1s,threeD 1s;
+                  -moz-animation:openList 1s,threeD 1s; /* Firefox */
+                  -webkit-animation:threeD 1s; /* Safari and Chrome */
+                  -o-animation:openList 1s,threeD 1s; /* Opera */
+                  transform-origin:top;
                 }
+
               }
+
             }
+
             /*----more-start----*/
 
-            .introduction{
-              clear: both;
-              display: none;
-              /*height: 0;*/
-              /*transition: height 2s;
-              -moz-transition: height 2s;	/!* Firefox 4 *!/
-              -webkit-transition: height 2s;	/!* Safari 和 Chrome *!/
-              -o-transition: height 2s;	/!* Opera *!/*/
-              p{
-                width: 100%;
-                margin: 0;
-              }
-            }
+
             /*------more-end------*/
+
+
           }
         }
       }
