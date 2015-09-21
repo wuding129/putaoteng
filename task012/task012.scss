@@ -1,3 +1,4 @@
+@charset "utf-8";
 body,h1,h2,h3,h4,h5,p,ul,,input{
                             margin: 0;
                             padding: 0;
@@ -191,7 +192,7 @@ a{
         .navMain {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 30px;/*ÈôÎª15pxºáÏò¹ö¶¯Ìõ*/
+          padding: 0 30px;/*if 15px,will have a X-scroll*/
           justify-content: space-between;
           -webkit-justify-content: space-between;
           align-items: center;
@@ -235,7 +236,7 @@ a{
         text-align: center;
         .bannerMain {
           width: 100%;
-          max-width: 1200px; /*°ÑÔ­À´µÄ±³¾°¸ÄÎªimgÔªËØ£¬¼ÓmetaºóÍ¼Æ¬×ÔÊÊÓ¦Ëõ·Å*/
+          max-width: 1200px; /*æŠŠåŸæ¥çš„èƒŒæ™¯æ”¹ä¸ºimgå…ƒç´ ï¼ŒåŠ metaåå›¾ç‰‡è‡ªé€‚åº”ç¼©æ”¾*/
         }
 
       }
@@ -245,7 +246,7 @@ a{
       margin: 0 auto;
       background-color: #fafafa;
       overflow: hidden;
-      padding: 0 15px; /*¿´ÆğÀ´Êæ·şµã¶ù*/
+      padding: 0 15px; /*çœ‹èµ·æ¥èˆ’æœç‚¹å„¿*/
       .bread {
         float: left;
         width: 100%;
@@ -565,7 +566,7 @@ a{
               //display: block;
               /!*transform: scale(1);
               -ms-transform: scale(1);	/!* IE 9 *!/
-              -webkit-transform: scale(1);	/!* Safari ºÍ Chrome *!/
+              -webkit-transform: scale(1);	/!* Safari å’Œ Chrome *!/
               -o-transform: scale(1);	/!* Opera *!/
               -moz-transform: scale(1);	/!* Firefox *!/!*!/
               /!*------------*!/
@@ -575,7 +576,7 @@ a{
               //height: $briefHeight;
               /*transition: height 2s;
               -moz-transition: height 2s;	/!* Firefox 4 *!/
-              -webkit-transition: height 2s;	/!* Safari ºÍ Chrome *!/
+              -webkit-transition: height 2s;	/!* Safari å’Œ Chrome *!/
               -o-transition: height 2s;	/!* Opera *!/*/
               display: block;
               animation:openList 1s,threeD 1s;
@@ -675,7 +676,7 @@ a{
               }
             }
             /*.companyBrief{
-              height: $briefHeight;/!*×¢ÒâÓÅÏÈ¼¶*!/
+              height: $briefHeight;/!*æ³¨æ„ä¼˜å…ˆçº§*!/
             }*/
             .arrow{
               -moz-transform:rotate(90deg);
@@ -705,7 +706,7 @@ a{
             /**/
             /*transform: scale(0.01);
             -ms-transform: scale(0.01);	/!* IE 9 *!/
-            -webkit-transform: scale(0.01);	/!* Safari ºÍ Chrome *!/
+            -webkit-transform: scale(0.01);	/!* Safari å’Œ Chrome *!/
             -o-transform: scale(0.01);	/!* Opera *!/
             -moz-transform: scale(0.01);	/!* Firefox *!/*/
             /*------------*/
@@ -713,7 +714,7 @@ a{
             //height: 0;
             transition: height 2s;
             -moz-transition: height 2s;	/!* Firefox 4 *!/
-            -webkit-transition: height 2s;	/!* Safari ºÍ Chrome *!/
+            -webkit-transition: height 2s;	/!* Safari å’Œ Chrome *!/
             -o-transition: height 2s;	/!* Opera *!/*/
 
             /**/
@@ -727,7 +728,7 @@ a{
           .brief {
             /*transition: height 2s;
             -moz-transition: height 2s;	/!* Firefox 4 *!/
-            -webkit-transition: height 2s;	/!* Safari ºÍ Chrome *!/
+            -webkit-transition: height 2s;	/!* Safari å’Œ Chrome *!/
             -o-transition: height 2s;	/!* Opera *!/*/
             //height: 0;
             display: none;
@@ -760,7 +761,7 @@ a{
                 /*height: 0;*/
                 /*transition: height 2s;
                 -moz-transition: height 2s;	/!* Firefox 4 *!/
-                -webkit-transition: height 2s;	/!* Safari ºÍ Chrome *!/
+                -webkit-transition: height 2s;	/!* Safari å’Œ Chrome *!/
                 -o-transition: height 2s;	/!* Opera *!/*/
                 p{
                   width: 100%;
