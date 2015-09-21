@@ -52,6 +52,7 @@ a{
         -moz-animation:menumove 2s; /* Firefox */
         -webkit-animation:menumove 2s ; /* Safari and Chrome */
         -o-animation:menumove 2s ; /* Opera */
+        //-ms-animation: menumove 2s ;
         a{
           display: block;
           height: 30px;
@@ -81,6 +82,7 @@ a{
               margin: 0 auto;
               &.weChat{
                 background-position: 0 0;
+                flex: 1;
               }
               &.qq {
                 background-position: -26px 0;
@@ -121,6 +123,12 @@ a{
       }
 
       @-o-keyframes menumove /* Opera */
+      {
+        0% {left: -55px}
+        30% {left:0}
+        38%{left:-5px}
+      }
+      @-ms-keyframes menumove /* Opera */
       {
         0% {left: -55px}
         30% {left:0}
@@ -433,7 +441,7 @@ a{
         border-top: 1px solid #32c086;
         color: #ffffff;
         font-size: 13px;
-        font-family: arial, 'Î¢ÈíÑÅºÚ',ËÎÌå,sans-serif;
+        font-family: arial, 'Microsoft YaHei',SimSun,sans-serif;
         a {
           text-decoration: underline;
         }
@@ -454,6 +462,7 @@ a{
         -moz-animation: mymove 2.2s; /* Firefox */
         -webkit-animation: mymove 2.2s; /* Safari and Chrome */
         -o-animation: mymove 2.2s; /* Opera */
+        //-ms-animation: mymove 2.2s;
       }
       .goTop{
         display: block;
@@ -497,6 +506,18 @@ a{
       }
 
       @-o-keyframes mymove /* Opera */
+      {
+        0% {
+          top: -20px;
+        }
+        50% {
+          top: 40px;
+        }
+        100% {
+          top: 20px;
+        }
+      }
+      @-ms-keyframes mymove /* Opera */
       {
         0% {
           top: -20px;
@@ -561,9 +582,12 @@ a{
               -moz-animation:openList 1s,threeD 1s; /* Firefox */
               -webkit-animation:threeD 1s; /* Safari and Chrome */
               -o-animation:openList 1s,threeD 1s; /* Opera */
-
+              //-ms-animation:openList 1s,threeD 1s;
               transform-origin:top;
-
+              -webkit-transform-origin:top;
+              -moz-transform-origin: top;
+              -o-transform-origin: top;
+              -ms-transform-origin: top;
             }
             @keyframes openList
             {
@@ -599,10 +623,14 @@ a{
             }
             @-ms-keyframes openDetail {
               from {
-                transform: scaleY(0.1)}
+                transform: scaleY(0.1);
+                -ms-transform: scaleY(0.1);
+              }
 
               to {
-                transform:scaleY(1)}
+                transform:scaleY(1);
+                -ms-transform: scaleY(1);
+              }
             }
             @keyframes threeD {
               from{
@@ -639,9 +667,11 @@ a{
             @-ms-keyframes threeD {
               from{
                 transform:rotateX(-90deg);
+                -ms-transform: rotateX(-90deg);
               }
               to{
                 transform:rotateX(0deg);
+                -ms-transform: rotateX(0deg);
               }
             }
             /*.companyBrief{
@@ -746,7 +776,9 @@ a{
                   -moz-animation:openList 1s,threeD 1s; /* Firefox */
                   -webkit-animation:threeD 1s; /* Safari and Chrome */
                   -o-animation:openList 1s,threeD 1s; /* Opera */
+                  //-ms-animation:openList 1s,threeD 1s;
                   transform-origin:top;
+                  -ms-transform-origin: top;
                 }
 
               }
