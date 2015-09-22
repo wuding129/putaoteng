@@ -44,6 +44,7 @@ a{
         display: none;
         background: rgba(0,0,0,0.5);
         width: 70%;
+        z-index: 500;
         min-width: 230px;
         //height: 195px;
         position: fixed;
@@ -609,10 +610,10 @@ a{
             @-webkit-keyframes openList
             {
               from {
-                transform: scaleY(0.1)}
+                -webkit-transform: scaleY(0.1)}
 
               to {
-                transform:scaleY(1)}
+                -webkit-transform:scaleY(1)}
             }
             @-o-keyframes openList
             {
@@ -651,10 +652,10 @@ a{
             }
             @-webkit-keyframes threeD {
               from{
-                transform:rotateX(-90deg);
+                -webkit-transform:rotateX(-90deg);
               }
               to{
-                transform:rotateX(0deg);
+                -webkit-transform:rotateX(0deg);
               }
             }
             @-o-keyframes threeD {
@@ -732,7 +733,7 @@ a{
             -o-transition: height 2s;	/!* Opera *!/*/
             //height: 0;
             display: none;
-            overflow: hidden;
+            //overflow: hidden;
             /*-----------------*/
             padding: 0;
             .companyLogo {
@@ -836,17 +837,8 @@ a{
 
 }
 @media screen and (max-width: 450px) {
-  .container{
-    .footer{
-      .others{
-        .about{
-          .aboutBr{
+  .container .footer .others .about .aboutBr{
             display: block;
           }
-        }
-      }
-
-    }
-  }
 }
 
