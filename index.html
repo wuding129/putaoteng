@@ -112,6 +112,11 @@
                         </a>
                     </li>
                     <li class="demo">
+                        <a href="http://thinkin.tk/task011/task011.html" class="task11" id="task11" onmouseover=hide11(); onmouseout=show11();>
+                            <div class="wrapper" id="task11Wrapper"><h3>TASK11</h3></div>
+                        </a>
+                    </li>
+                    <li class="demo">
                         <a href="http://thinkin.tk/task012/task012.html" class="task12" id="task12" onmouseover=hide12(); onmouseout=show12();>
                             <div class="wrapper" id="task12Wrapper"><h3>TASK12</h3></div>
                         </a>
@@ -192,6 +197,7 @@
         var oWrapper8=document.getElementById('task8Wrapper');
         var oWrapper9=document.getElementById('task9Wrapper');
         var oWrapper10=document.getElementById('task10Wrapper');
+        var oWrapper11=document.getElementById('task11Wrapper');
         var oWrapper12=document.getElementById('task12Wrapper');
         function hide1(){
             oWrapper1.style.display='none';
@@ -251,6 +257,12 @@
             oWrapper10.style.display='none';
         }
         function show10(){
+            oWrapper10.style.display='block';
+        }
+        function hide11(){
+            oWrapper11.style.display='none';
+        }
+        function show11(){
             oWrapper10.style.display='block';
         }
         function hide12(){
