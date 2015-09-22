@@ -34,7 +34,7 @@ body{
   text-align: left;
 }
 .navMenu {
-  //display: none;
+  display: none;
   width: 32px;
   height: 32px;
   background: url("images/navMenu.png") no-repeat center;
@@ -569,6 +569,9 @@ tr td:last-child{
   color: #ffffff;
 }
 @media screen and (max-width: 700px) {
+  .navMenu{
+    display: block;
+  }
   .top{
     display: none;
   }
