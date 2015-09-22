@@ -1,0 +1,655 @@
+@charset "utf-8";
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft YaHei',SimSun,sans-serif;
+  font-weight: normal;
+}
+img{vertical-align: middle;}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+table{
+  border-collapse: collapse;
+}
+body{
+  text-align: center;/*兼容旧ie的居中*/
+  //min-width: 1250px;
+}
+.division{
+  width: 24px;
+  height:1px;
+  float: left;
+}
+/*用来分割如box这样的块，省的用margin什么的*/
+/*#wrapper{
+    width: 100%;
+}*/
+.container{
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.navMenu {
+  //display: none;
+  width: 32px;
+  height: 32px;
+  background: url("images/navMenu.png") no-repeat center;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  z-index: 500;
+}
+.goTop {
+  width: 32px;
+  height: 32px;
+  display: none;
+  background: url("images/goTop.png") no-repeat center;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 500;
+}
+.menuList{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: none;
+  background: rgba(0,0,0,0.5);
+  width: 70%;
+  z-index: 500;
+  min-width: 230px;
+  //height: 195px;
+  position: fixed;
+  top: 60px;
+  left: -5px;
+  animation:menumove 2s ;
+  -moz-animation:menumove 2s; /* Firefox */
+  -webkit-animation:menumove 2s ; /* Safari and Chrome */
+  -o-animation:menumove 2s ; /* Opera */
+  //-ms-animation: menumove 2s ;
+  a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+    &:hover{
+      background-color: #29b078;
+    }
+  }
+  ul{
+    padding: 0 30px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    li {
+      flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      a{
+        background: url("images/spirit_job.png") no-repeat;
+        width: 25px;
+        height: 25px;
+        margin: 0 auto;
+        &.weChat{
+          background-position: 0 0;
+          flex: 1;
+        }
+        &.qq {
+          background-position: -26px 0;
+          flex: 1;
+        }
+        &.weibo {
+          background-position: -53px 0;
+          flex: 1;
+        }
+      }
+
+    }
+
+
+  }
+}
+@keyframes menumove
+{
+  0% {left: -70%}
+  30% {left:0}
+  38%{left:-5px}
+
+
+}
+
+@-webkit-keyframes menumove /* Safari and Chrome */
+{
+  0% {left: -70%}
+  30% {left:0}
+  38%{left:-5px}
+}
+
+@-moz-keyframes menumove /* Firefox */
+{
+  0% {left: -55px}
+  30% {left:0}
+  38%{left:-5px}
+}
+
+@-o-keyframes menumove /* Opera */
+{
+  0% {left: -55px}
+  30% {left:0}
+  38%{left:-5px}
+}
+@-ms-keyframes menumove /* Opera */
+{
+  0% {left: -55px}
+  30% {left:0}
+  38%{left:-5px}
+}
+.topMain,.navMain,.main,.others{
+  padding: 0 15px;
+}
+.header{
+  width: 100%;
+  overflow: hidden;
+  /*padding: 0 18.75%;
+  float: left;*/
+}
+.top{
+  /*float: left;*/
+  width: 100%;
+  background-color: #ffffff;
+  /*overflow: hidden;*/
+  /*margin: 0 auto;*/
+}
+.topMain{
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.call{
+  float: left;
+  font-size: 14px;
+  color: #29b078;
+  height: 40px;
+  line-height: 40px;
+}
+.callNumber{
+  color: #29b078;
+}
+.social{
+  float: right;
+}
+.social li{
+  float: left;
+  margin: 7px 0 8px 16px;
+}
+.social a{
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("images/spirit_job.png") no-repeat;
+}
+a.weChat{
+  background-position: 0 0;
+}
+a.qq{
+  background-position: -26px 0;
+}
+a.weiBo{
+  background-position: -53px 0;
+}
+.nav{
+  /*float: left;*/
+  width: 100%;
+  background-color: #29b078;
+  /*overflow: visible;*/
+}
+.navMain{
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;/*解决浮动子元素不能撑开父元素高度问题*/
+}
+a.logo{
+  display: inline-block;
+  float: left;
+  width: 108px;
+  height: 50px;
+  background: url("images/spirit_job.png") no-repeat 0 -133px;
+  margin-top: 27px;
+  padding: 0;border-bottom: 0;/*消除下面写的a的通用样式*/
+}
+/*.nav ul{
+    float: right;
+}
+.nav li{
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+
+}*/
+/*.nav li a{
+    color: #ffffff;
+    display: inline-block;
+    width: 101px;
+    height: 16px;
+    line-height: 16px;
+    padding:42px 0 38px 0;
+    text-align: center;
+    border-bottom: 4px solid #29b078;
+}*/
+.link{
+  float: right;
+}
+.link a{
+  color: #ffffff;
+  display: inline-block;
+  width: 101px;
+  height: 16px;
+  line-height: 16px;
+  padding:42px 0 38px 0;
+  text-align: center;
+  border-bottom: 4px solid #29b078;
+}
+.link .active{
+  border-bottom-color:#fefefe;
+}
+/*可随当前*/
+.link .last{
+  width: 69px;
+  text-align: right;
+}
+/*-header end-*/
+/*-main start-*/
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+.bread{
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  border-bottom: 1px solid #d0d6d9;
+
+}
+.bread li{
+  padding: 31px 0 33px 0;
+  float: left;
+  line-height: 16px;
+}
+.bread a{
+  color: #333333;
+}
+.bread .now{
+  color: #29b078;
+}
+/*可随当前页面*/
+.classes{
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #edf1f2;
+}
+.classes li{
+  float: left;
+  line-height: 14px;
+  margin: 20px 0;
+}
+li.direction{
+  color: #999999;
+  margin-right: 25px;
+  padding: 3px 0;
+  /*margin: 20px 25px 20px 0;*/
+}
+/*不加li不起作用，优先级低*/
+li.blankLi{
+  display: none;
+  clear: both;
+}
+.classes a{
+  display: block;
+  padding: 3px 4px;
+  margin-right: 32px;
+  font-size: 14px;
+  color:#333333;
+  /*margin: 20px 32px 20px 0;*/
+}
+a.selected{
+  background-color: #29b078;
+  color: #ffffff;
+}
+/*不加a优先级低,后面有同类的同理，为提高优先级*/
+.classDetails{
+  width: 100%;/*开始忘记加这个,导致h2的宽度显示随box的增减改变,导致border变短*/
+  float: left;
+}
+.classDetails h2{
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  padding: 32px 0;
+  line-height: 16px;
+  border-bottom: 1px solid #d0d6d9;
+  /*width: 100%;*/
+}
+.classDetails ul{
+  overflow: hidden;
+}
+.box{
+  max-width: 381px;
+  float: left;
+  border: 1px solid #eeeded;
+  border-top-color: #f6f6f6;
+  background-color: #ffffff;
+  /*可单独设置颜色*/
+  border-radius: 8px;
+  margin-top: 46px;/*使box排列换行后看起来有分隔,省下给h2加margin-bottom了*/
+  position: relative;
+}
+.box .img{
+  width: 139px;
+  height: 139px;
+  background: url("images/spirit_job.png") no-repeat -115px 0;
+  float: left;
+  margin: 20px 8px 16px 10px;
+  /*margin-left: 10px;*/
+}
+.introduction{
+  /*padding-left: 147px;*/
+  padding-right: 9px;
+  /*padding-left: 8px;*/
+  width: 215px;
+  float: left;
+}
+.introduction h3{
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 16px;
+}
+/*.introduction p{
+    color: #333333;
+    font-size: 14px;
+    /!*-ms-word-break: break-all;*!/
+    word-break: break-all;
+    line-height: 20px;
+    /!*padding-right: 9px;*!/
+}*/
+/*此处原来用的p元素，发现总对不齐，断词后也是，后放弃改用span正常了*/
+.introduction span{
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  word-break: break-all;
+}
+.tableTop,.tableUnder{
+  width: 100%;
+  font-size: 12px;
+  color: #999999;
+}
+/*.tableTop{
+    /!*border: solid #edf1f2;
+    border-width: 1px 0 0 0;*!/
+}*/
+.tableTop td {
+  /*padding-left: 10px;*/
+  padding: 12px 0 13px 10px;
+  /*line-height: 15px;*/
+  width: 50%;
+  border: 1px solid #edf1f2;
+  /*刚才width忘加分号了，结果border不能设置，颜色变为了橙色，也算教训*/
+}
+tr td:first-child{
+  border-left: 0;
+}
+tr td:last-child{
+  border-right: 0;
+}
+/*此处用了first-child，last-child解决了边框重合变粗问题*/
+.tableTop span{
+  display: inline-block;
+  margin-right: 13px;
+}
+.tableTop .star{
+  margin-right: 9px;
+  vertical-align: text-bottom;/*刚会，可以使文字相对图标垂直居中，不加图片会高于文字*/
+  width: 16px;
+  height: 15px;
+  background: url("images/spirit_job.png") no-repeat -90px -6px;
+}
+/*star可以复制增加*/
+.tableTop .numRed{
+  margin-right: 0;
+}
+.numRed{
+  color: #f01400;
+}
+/*为了下面可以用这个red属性故修改*/
+.blackWords{
+  color: #333;
+}
+.tableUnder td{
+  border:solid #edf1f2;
+  border-width: 0 1px 1px 1px;
+}
+/*今天刚学会的这种border写法，可以单独设置每条边的宽度*/
+.pay{
+  text-align: center;
+  width: 151px;
+}
+.payDetail{
+  padding: 10px 10px 11px 24px;
+  line-height: 13px;
+}
+/*同样不加line-height会出现高度比psd图上的高*/
+.years{
+  float: left;
+}
+.payMonth{
+  float:right;
+}
+.learning{
+  padding: 11px 0 12px 10px;
+  font-size: 14px;
+  line-height: 14px;
+}
+/*加line-height可以控制高度与psd一致，不加最后高度增加*/
+.foundation{
+  padding: 13px 0 14px 10px;
+  line-height: 12px;
+}
+.tableUnder tr:last-child td{
+  border-bottom: 0;
+}
+/*去掉table最底下的border*/
+/*-main end-*/
+
+/*-footer start-*/
+.footer {
+  width: 100%;
+  /*display: flex;
+  display: -ms-flexbox;*/
+  background-color: #26a26f;
+  /*flex-direction:column;*/
+  border-top: 1px solid #d0d6d9;
+  a {
+    color: #ffffff;
+  }
+  .others {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    /*flex-wrap: wrap;
+    -ms-flex-wrap: wrap;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 14px;
+    //overflow: hidden;
+    h4 {
+      font-size: 16px;
+      padding-bottom: 25px;
+    }
+    p {
+      height: 41px;
+    }
+    .about, .websites, .gongzhonghao {
+      padding: 35px 15px 8px;
+      flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+    }
+    /*.about{
+      //width: 361px;
+      //float: left;
+    }
+    .websites{
+      //width: 503px;
+      //float: left;
+    }*/
+    .about{
+      .aboutBr{
+        display: none;
+      }
+    }
+    .gongzhonghao {
+      //width: 166px;
+      //float: right;
+      text-align: right;
+      h4 {
+        padding-bottom: 8px;
+      }
+      .erweima {
+        width: 92px;
+        height: 92px;
+        //margin: 0 auto;
+        float: right;
+        background: url("images/spirit_job.png") no-repeat 0 -32px;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    padding: 8px 0;
+    border-top: 1px solid #32c086;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: arial, 'Microsoft YaHei',SimSun,sans-serif;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+.glass{
+  width:382px ;height: 358px;
+  display: none;
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  z-index: 100;
+  padding-top: 86px;
+}
+.glass h4{
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 37px;
+}
+.glass p{
+  margin: 0 auto;
+  width:292px;
+  color: #ffffff;
+}
+@media screen and (max-width: 700px) {
+  .top{
+    display: none;
+  }
+  .navMain{
+    text-align: center;
+    .logo{
+      float: none;
+      margin: 15px auto;
+    }
+    .link{
+      display: none;
+    }
+  }
+  .main{
+    li.blankLi{
+      display: inline-block;
+    }
+    .classDetails{
+      text-align: center;
+      .box{
+        float: none;
+        width: 100%;
+        margin: 20px auto 0;
+        span{
+          word-break: normal;
+        }
+        .first li{
+          float: none;
+          width: 100%;
+          &.img{
+            width: 139px;
+            margin: 0 auto;
+          }
+        }
+        .tableTop{
+          text-align: left;
+          td:last-child span{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    .others{
+      padding: 20px 5px 5px;
+      .about,.websites,.gongzhonghao{
+        padding: 0;
+      }
+      .about{
+        .blankP{
+          display: none;
+        }
+        a{
+          display: block;
+          width: 100%;
+        }
+        span{
+          display: none;
+        }
+      }
+      .websites{
+        a{
+          display: block;
+
+        }
+      }
+      .gongzhonghao{
+        h4{
+          text-align: center;
+        }
+        .erweima{
+          float: none;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer .others .about .aboutBr {
+    display: block;
+  }
+}
